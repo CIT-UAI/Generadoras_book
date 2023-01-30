@@ -1,0 +1,24 @@
+project:
+  type: book
+
+book:
+  title: "Generadoras_Book"
+  author: "Denis Berroeta"
+  date: "1/30/2023"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - rev_bib.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+
+
