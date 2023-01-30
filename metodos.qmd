@@ -1,0 +1,18 @@
+# Métodos {#sec-methods .numbered}
+
+Basàndose en el estado del arte ...
+
+
+
+
+## Resumen
+
+* Un SIG-MCDA es una alternativa al típico análisis binario o de "coincidencias", ya que ofrece una metodología más sólida basada en criterios. Por tanto, puede admitir múltiples valores de varios criterios a la vez. Esto permite una toma de decisiones más profunda.
+
+* Los modelos estadísticos adicionales, como AHP y FAHP, pueden integrarse en un SIG-MCDA, lo que suele aumentar la fiabilidad y la importancia global de un análisis.
+
+* Las partes interesadas/tomadores de decisiones son un componente crucial para que un análisis sea viable y aplicable. Son una parte valiosa a la hora de determinar los criterios de ponderación, aunque tienen el potencial de ser parciales.
+
+* Para elaborar un MCDA fundamentado es necesario contar con la opinión de las partes interesadas y la bibliografía aplicable, que pueden contrarrestar las incoherencias y los prejuicios de las partes interesadas.
+
+* El MCDA-SIG es una metodología relativamente reciente que se ha aplicado a toda una serie de campos y cuestiones espaciales.

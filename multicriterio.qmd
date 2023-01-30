@@ -1,0 +1,70 @@
+# Análisis Multicriterio
+
+![](images/shapes.jpeg){fig-align="center" width="300"}
+
+
+Muchos de los problemas a los que nos enfrentamos hoy en día son complicados, con muchos intereses y soluciones contrapuestos. Sin embargo, los grupos tienen que ser capaces de trabajar juntos y llegar a compromisos para encontrar una solución que sea la más factible. Estos problemas suelen tener un carácter espacial o geográfico, por lo que el uso de SIG con distintos marcos o análisis puede ayudar en el proceso de toma de decisiones.
+
+## Criterios
+
+### Criterios Binarios
+
+
+![Criterios Binarios](images/binary.png){fig-align="center" width="500" #fig-binary}
+
+Los criterios del tipo binario se clasifican como buenos (1) o malos (0) Se determina multiplicando el mapa de tres preferencias binarias individuales, por lo que los valores $0 \times 0 \times 0$ son iguales que $0 \times  1 \times 1$ (AND).
+
+La adición puede mostrar áreas en una escala que se ajustan a algunos de los criterios (O)
+
+
+
+### Criterios Ponderados
+
+definir los criterios binarios en el método de análisis jerarquico
+
+
+![Criterios Ponderados](images/weighted.jpeg){fig-align="center" width="500" #fig-weighted}
+
+Los criterios no son en blanco y negro, y pueden estar en un gradiente. Cada entrada puede ponderarse según su importancia o su porcentaje de influencia. La ponderación es un porcentaje relativo, y la suma de los porcentajes de influencia debe ser igual al 100%.
+
+![Ejemplo de cálculo análisis multcriterio estándar](images/multicriterio.png){fig-align="center" width="800" #fig-multicriterio}
+
+
+
+## Análisis de Decisiones Multicriterio (MCDA) {#sec-MCDA}
+
+La toma de decisiones multicriterio es un enfoque utilizado para facilitar la consideración de múltiples criterios por parte de los responsables de la toma de decisiones. El MCDA se utiliza para evaluar y comparar lógicamente múltiples criterios, a menudo contradictorios, con el fin de tomar la mejor decisión posible. Resulta especialmente útil cuando hay un amplio abanico de partes interesadas con intereses, valores y objetivos contrapuestos. 
+
+
+Un MCDA puede utilizarse en cualquier campo para estudiar una amplia gama de problemas en los que puede haber múltiples soluciones favorables. Se ha utilizado en el ámbito de la atención sanitaria, como tratamientos de enfermedades o priorización, elección de un coche nuevo, actividades turísticas, opciones de procesamiento, transporte, uso de la energía, evaluación de riesgos, uso del suelo y selección de emplazamientos. 
+
+![Ejemplo Análisis de Decisiones Multicriterio (MCDA) para la  compra](images/mcda.png){fig-align="center" width="500" #fig-mcda}
+
+
+## Análisis de Decisiones Multicriterio y los Sistemad de Información Geográfica (GIS-MCDA) {#sec-GIS-MCDA}
+
+Muchos de los problemas a los que se enfrenta la gente son de naturaleza geográfica, por lo que resulta muy útil combinar los SIG con el MCDA. Los problemas espaciales suelen implicar un amplio conjunto de alternativas viables y criterios de evaluación múltiples, conflictivos e inconmensurables. Utilizar un SIG-MCDA puede es un proceso que transforma y combina datos geográficos y juicios de valor para resolver problemas espaciales. Para ello, tiene en cuenta los modelos de datos geográficos, la dimensión espacial de los criterios de evaluación y las alternativas de decisión a la hora de evaluar los criterios.
+
+Algunos ejemplos de aplicaciones SIG-MCDA son el encaminamiento de vehículos, la selección de emplazamientos, la evaluación de escenarios, la adecuación de terrenos, la programación del transporte, la evaluación de impactos y la asignación de ubicaciones a diversos sectores.
+
+
+### Pasos del GIS-MCDA
+
+![Flujo de integración  GIS-MCDA](images/gis-mcda.png){fig-align="center" width="500" #fig-SIG-MCDA}
+
+
+1. Defina su problema, meta u objetivo. Intente comprender y definir el problema de la forma más exhaustiva posible.
+
+2. Determinar los criterios y las limitaciones. Utilizar una combinación de opiniones de expertos e información de diversas fuentes. Puede obtenerse a partir de conversaciones con expertos de los campos pertinentes, el estudio de la bibliografía y el análisis de datos históricos.
+
+
+3. Transformar los valores en una escala relativa. Esto permite comparar cada uno de los criterios y representar los juicios y conocimientos de los expertos con cifras significativas.
+Ponderar la importancia de cada criterio con respecto al objetivo, y entre sí.
+
+4. Combinar, sintetizar y agregar las capas/criterios.
+
+5. Analizar y validar los resultados.
+
+## Referencias
+
+[Multi-Criteria Decision Analysis and GIS - Siobhan Ryan and Ellis Nimick](https://storymaps.arcgis.com/stories/b60b7399f6944bca86d1be6616c178cf)

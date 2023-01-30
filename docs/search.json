@@ -1,0 +1,128 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Proyecto Generadoras",
+    "section": "",
+    "text": "This is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books."
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "See Knuth (1984) for additional discussion of literate programming.\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "3  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever."
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  },
+  {
+    "objectID": "multicriterio.html",
+    "href": "multicriterio.html",
+    "title": "2  Análisis Multicriterio",
+    "section": "",
+    "text": "Muchos de los problemas a los que nos enfrentamos hoy en día son complicados, con muchos intereses y soluciones contrapuestos. Sin embargo, los grupos tienen que ser capaces de trabajar juntos y llegar a compromisos para encontrar una solución que sea la más factible. Estos problemas suelen tener un carácter espacial o geográfico, por lo que el uso de SIG con distintos marcos o análisis puede ayudar en el proceso de toma de decisiones."
+  },
+  {
+    "objectID": "multicriterio.html#referencias",
+    "href": "multicriterio.html#referencias",
+    "title": "2  Análisis Multicriterio",
+    "section": "2.4 Referencias",
+    "text": "2.4 Referencias\nMulti-Criteria Decision Analysis and GIS - Siobhan Ryan and Ellis Nimick"
+  },
+  {
+    "objectID": "multicriterio.html#introducción",
+    "href": "multicriterio.html#introducción",
+    "title": "2  Análisis Multicriterio",
+    "section": "2.1 Introducción",
+    "text": "2.1 Introducción\nMuchos de los problemas a los que nos enfrentamos hoy en día son complicados, con muchos intereses y soluciones contrapuestos. Sin embargo, los grupos tienen que ser capaces de trabajar juntos y llegar a compromisos para encontrar una solución que sea la más factible. Estos problemas suelen tener un carácter espacial o geográfico, por lo que el uso de SIG con distintos marcos o análisis puede ayudar en el proceso de toma de decisiones."
+  },
+  {
+    "objectID": "multicriterio.html#criterios",
+    "href": "multicriterio.html#criterios",
+    "title": "2  Análisis Multicriterio",
+    "section": "2.1 Criterios",
+    "text": "2.1 Criterios\n\n2.1.1 Criterios Binarios\n\n\n\nFigure 2.1: Criterios Binarios\n\n\nLos criterios del tipo binario se clasifican como buenos (1) o malos (0) Se determina multiplicando el mapa de tres preferencias binarias individuales, por lo que los valores 0 \\times 0 \\times 0 son iguales que 0 \\times 1 \\times 1 (AND).\nLa adición puede mostrar áreas en una escala que se ajustan a algunos de los criterios (O)\n\n\n2.1.2 Criterios Ponderados\ndefinir los criterios binarios en el método de análisis jerarquico\n\n\n\nFigure 2.2: Criterios Ponderados\n\n\nLos criterios no son en blanco y negro, y pueden estar en un gradiente. Cada entrada puede ponderarse según su importancia o su porcentaje de influencia. La ponderación es un porcentaje relativo, y la suma de los porcentajes de influencia debe ser igual al 100%.\n\n\n\nFigure 2.3: Ejemplo de cálculo análisis multcriterio estándar"
+  },
+  {
+    "objectID": "multicriterio.html#análisis-de-decisiones-multicriterio-mcda",
+    "href": "multicriterio.html#análisis-de-decisiones-multicriterio-mcda",
+    "title": "2  Análisis Multicriterio",
+    "section": "2.2 Análisis de Decisiones Multicriterio (MCDA)",
+    "text": "2.2 Análisis de Decisiones Multicriterio (MCDA)\nLa toma de decisiones multicriterio es un enfoque utilizado para facilitar la consideración de múltiples criterios por parte de los responsables de la toma de decisiones. El MCDA se utiliza para evaluar y comparar lógicamente múltiples criterios, a menudo contradictorios, con el fin de tomar la mejor decisión posible. Resulta especialmente útil cuando hay un amplio abanico de partes interesadas con intereses, valores y objetivos contrapuestos.\nUn MCDA puede utilizarse en cualquier campo para estudiar una amplia gama de problemas en los que puede haber múltiples soluciones favorables. Se ha utilizado en el ámbito de la atención sanitaria, como tratamientos de enfermedades o priorización, elección de un coche nuevo, actividades turísticas, opciones de procesamiento, transporte, uso de la energía, evaluación de riesgos, uso del suelo y selección de emplazamientos.\n\n\n\nFigure 2.4: MCDA Ejemplo de compra"
+  },
+  {
+    "objectID": "multicriterio.html#sec-MCDA",
+    "href": "multicriterio.html#sec-MCDA",
+    "title": "2  Análisis Multicriterio",
+    "section": "2.2 Análisis de Decisiones Multicriterio (MCDA)",
+    "text": "2.2 Análisis de Decisiones Multicriterio (MCDA)\nLa toma de decisiones multicriterio es un enfoque utilizado para facilitar la consideración de múltiples criterios por parte de los responsables de la toma de decisiones. El MCDA se utiliza para evaluar y comparar lógicamente múltiples criterios, a menudo contradictorios, con el fin de tomar la mejor decisión posible. Resulta especialmente útil cuando hay un amplio abanico de partes interesadas con intereses, valores y objetivos contrapuestos.\nUn MCDA puede utilizarse en cualquier campo para estudiar una amplia gama de problemas en los que puede haber múltiples soluciones favorables. Se ha utilizado en el ámbito de la atención sanitaria, como tratamientos de enfermedades o priorización, elección de un coche nuevo, actividades turísticas, opciones de procesamiento, transporte, uso de la energía, evaluación de riesgos, uso del suelo y selección de emplazamientos.\n\n\n\nFigure 2.4: Ejemplo Análisis de Decisiones Multicriterio (MCDA) para la compra"
+  },
+  {
+    "objectID": "multicriterio.html#sec-GIS-MCDA",
+    "href": "multicriterio.html#sec-GIS-MCDA",
+    "title": "2  Análisis Multicriterio",
+    "section": "2.3 Análisis de Decisiones Multicriterio y los Sistemad de Información Geográfica (GIS-MCDA)",
+    "text": "2.3 Análisis de Decisiones Multicriterio y los Sistemad de Información Geográfica (GIS-MCDA)\nMuchos de los problemas a los que se enfrenta la gente son de naturaleza geográfica, por lo que resulta muy útil combinar los SIG con el MCDA. Los problemas espaciales suelen implicar un amplio conjunto de alternativas viables y criterios de evaluación múltiples, conflictivos e inconmensurables. Utilizar un SIG-MCDA puede es un proceso que transforma y combina datos geográficos y juicios de valor para resolver problemas espaciales. Para ello, tiene en cuenta los modelos de datos geográficos, la dimensión espacial de los criterios de evaluación y las alternativas de decisión a la hora de evaluar los criterios.\nAlgunos ejemplos de aplicaciones SIG-MCDA son el encaminamiento de vehículos, la selección de emplazamientos, la evaluación de escenarios, la adecuación de terrenos, la programación del transporte, la evaluación de impactos y la asignación de ubicaciones a diversos sectores.\n\n2.3.1 Pasos del GIS-MCDA\n\n\n\nFigure 2.5: Flujo de integración GIS-MCDA\n\n\n\nDefina su problema, meta u objetivo. Intente comprender y definir el problema de la forma más exhaustiva posible.\nDeterminar los criterios y las limitaciones. Utilizar una combinación de opiniones de expertos e información de diversas fuentes. Puede obtenerse a partir de conversaciones con expertos de los campos pertinentes, el estudio de la bibliografía y el análisis de datos históricos.\nTransformar los valores en una escala relativa. Esto permite comparar cada uno de los criterios y representar los juicios y conocimientos de los expertos con cifras significativas. Ponderar la importancia de cada criterio con respecto al objetivo, y entre sí.\nCombinar, sintetizar y agregar las capas/criterios.\nAnalizar y validar los resultados."
+  },
+  {
+    "objectID": "AHP.html",
+    "href": "AHP.html",
+    "title": "4  AHP",
+    "section": "",
+    "text": "Creado por Saaty (1980), AHP es un método de comparación por pares que se utiliza en los criterios con respecto al objetivo. Estas comparaciones por pares se llevan a cabo para todos los factores relevantes dentro de un análisis normalmente no más de 7, como por ejemplo la siguiente imagen Figure 4.1.\n\n\n\nFigure 4.1: Criterios de Relevancia para comparación de pares\n\n\nUna vez consolidados y clasificados los criterios en el MCDA, se utiliza el AHP para calcular las ponderaciones relativas, la importancia o el valor de cada factor. que son relevantes para el problema en cuestión. Una vez asignados los pesos relativos, se calcula un vector de prioridad, que nos da el valor modificador de relevancia global para cada factor, que se utilizará en los cálculos del SIG.\n\n\n\nFigure 4.2: Ejemplo de comparación de pares\n\n\nA continuación, se calcula el Coeficiente de Coherencia (Consistency Ratio CR) para medir el grado de coherencia de las valoraciones con respecto a grandes muestras de valoraciones puramente aleatorias. Si el CR es superior a 0,1, las valoraciones deben considerarse poco fiables."
+  },
+  {
+    "objectID": "AHP.html#beneficios-y-ventajas-del-uso-de-ahp",
+    "href": "AHP.html#beneficios-y-ventajas-del-uso-de-ahp",
+    "title": "4  AHP",
+    "section": "4.2 Beneficios y ventajas del uso de AHP",
+    "text": "4.2 Beneficios y ventajas del uso de AHP\n\nUn enfoque más estructurado para medir la idoneidad al dividir el problema en criterios jerárquicos.\nUn análisis más sistemático y profundo de los factores, que pueden comprenderse mejor al examinar específicamente sus formas o indicadores inferiores y más específicos.\nEl AHP permite la participación tanto de expertos como de partes interesadas en la aportación de información. Dicho marco permite incorporar y acomodar criterios tanto cualitativos como cuantitativos y la aportación de conocimientos de expertos."
+  },
+  {
+    "objectID": "AHP.html#referencias",
+    "href": "AHP.html#referencias",
+    "title": "4  AHP",
+    "section": "4.3 Referencias",
+    "text": "4.3 Referencias\nMulti-Criteria Decision Analysis and GIS - Siobhan Ryan and Ellis Nimick ir\n\n\n\n\nSaaty, T. L. 1980. “The Analytic Hierarchy Process.”"
+  },
+  {
+    "objectID": "fuzzy_logic.html",
+    "href": "fuzzy_logic.html",
+    "title": "5  Fuzzy Logic",
+    "section": "",
+    "text": "Los responsables de la toma de decisiones se enfrentan a situaciones numerosas y cada vez más complejas, y a menudo se muestran inseguros a la hora de asignar puntuaciones de evaluación como valor ponderación. Por ello, el diseño de un MCDA que incorpore la teoría de conjuntos difusos puede tener en cuenta esta incertidumbre. Un AHP difuso (FAHP) es la incorporación de matices de lógica difusa a la evaluación de criterios AHP.\nExisten varios tipos de números difusos y la nomenclatura de cada uno de ellos está asociada a su formato: números sinusoidales, en forma de campana, poligonales, triangulares, trapezoidales, etc. como se observan en la siguiente Figure 5.1\nPodemos hacer difusas dos partes del proceso SIG-MCDA:"
+  },
+  {
+    "objectID": "fuzzy_logic.html#referencias",
+    "href": "fuzzy_logic.html#referencias",
+    "title": "5  Fuzzy Logic",
+    "section": "5.1 Referencias",
+    "text": "5.1 Referencias\nMulti-Criteria Decision Analysis and GIS - Siobhan Ryan and Ellis Nimick"
+  },
+  {
+    "objectID": "metodos.html",
+    "href": "metodos.html",
+    "title": "Métodos",
+    "section": "",
+    "text": "Basàndose en el estado del arte …"
+  },
+  {
+    "objectID": "metodos.html#resumen",
+    "href": "metodos.html#resumen",
+    "title": "Métodos",
+    "section": "Resumen",
+    "text": "Resumen\n\nUn SIG-MCDA es una alternativa al típico análisis binario o de “coincidencias”, ya que ofrece una metodología más sólida basada en criterios. Por tanto, puede admitir múltiples valores de varios criterios a la vez. Esto permite una toma de decisiones más profunda.\nLos modelos estadísticos adicionales, como AHP y FAHP, pueden integrarse en un SIG-MCDA, lo que suele aumentar la fiabilidad y la importancia global de un análisis.\nLas partes interesadas/tomadores de decisiones son un componente crucial para que un análisis sea viable y aplicable. Son una parte valiosa a la hora de determinar los criterios de ponderación, aunque tienen el potencial de ser parciales.\nPara elaborar un MCDA fundamentado es necesario contar con la opinión de las partes interesadas y la bibliografía aplicable, que pueden contrarrestar las incoherencias y los prejuicios de las partes interesadas.\nEl MCDA-SIG es una metodología relativamente reciente que se ha aplicado a toda una serie de campos y cuestiones espaciales."
+  }
+]

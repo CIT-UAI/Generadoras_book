@@ -1,0 +1,33 @@
+---
+subtitle: Analytical Hierarchy Process (AHP)
+---
+
+# AHP
+
+## Introducción 
+
+Creado por @Saaty1980, AHP es un método de comparación por pares que se utiliza en los criterios con respecto al objetivo. Estas comparaciones por pares se llevan a cabo para todos los factores relevantes dentro de un análisis  normalmente no más de 7, como por ejemplo la siguiente imagen @fig-ahp-tab.
+
+
+![Criterios de Relevancia para comparación de pares](images/ahp-tab.png){fig-align="center" width="500" #fig-ahp-tab}
+
+
+Una vez consolidados y clasificados los criterios en el MCDA, se utiliza el AHP para calcular las ponderaciones relativas, la importancia o el valor de cada factor. que son relevantes para el problema en cuestión. Una vez asignados los pesos relativos, se calcula un vector de prioridad, que nos da el valor modificador de relevancia global para cada factor, que se utilizará en los cálculos del SIG. 
+
+![Ejemplo de comparación de pares](images/pairwise.png){fig-align="center" width="500" #fig-parirs-comp}
+
+A continuación, se calcula el Coeficiente de Coherencia (Consistency Ratio CR) para medir el grado de coherencia de las valoraciones con respecto a grandes muestras de valoraciones puramente aleatorias. Si el CR es superior a 0,1, las valoraciones deben considerarse poco fiables.
+
+
+## Beneficios y ventajas del uso de AHP
+
+* Un enfoque más estructurado para medir la idoneidad al dividir el problema en criterios jerárquicos.
+* Un análisis más sistemático y profundo de los factores, que pueden comprenderse mejor al examinar específicamente sus formas o indicadores inferiores y más específicos.
+* El AHP permite la participación tanto de expertos como de partes interesadas en la aportación de información. Dicho marco permite incorporar y acomodar criterios tanto cualitativos como cuantitativos y la aportación de conocimientos de expertos.
+
+
+
+## Referencias
+
+[Multi-Criteria Decision Analysis and GIS - Siobhan Ryan and Ellis Nimick](https://storymaps.arcgis.com/stories/b60b7399f6944bca86d1be6616c178cf)
+ir

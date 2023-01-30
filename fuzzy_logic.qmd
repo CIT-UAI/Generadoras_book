@@ -1,0 +1,24 @@
+# Fuzzy Logic
+
+Los responsables de la toma de decisiones se enfrentan a situaciones numerosas y cada vez más complejas, y a menudo se muestran inseguros a la hora de asignar puntuaciones de evaluación como valor ponderación. Por ello, el diseño de un MCDA que incorpore la teoría de conjuntos difusos puede tener en cuenta esta incertidumbre. Un AHP difuso (FAHP) es la incorporación de matices de lógica difusa a la evaluación de criterios AHP. 
+
+
+Existen varios tipos de números difusos y la nomenclatura de cada uno de ellos está asociada a su formato: números sinusoidales, en forma de campana, poligonales, triangulares, trapezoidales, etc. como se observan en la siguiente @fig-ffuzzy
+
+![Tipos de formatos de Fuzzy](images/format_fuzzy.png){fig-align="center" width="500" #fig-ffuzzy}
+
+
+Podemos hacer difusas dos partes del proceso SIG-MCDA:
+
+1. Podemos transformar los valores de cada criterio.
+2. Hacer difusas las ponderaciones o la importancia relativa de los criterios.
+
+
+![](images/variables_maps.jpeg){fig-align="center" width="600" #fig-vars}
+
+![](images/areas_selection.jpeg){fig-align="center" width="600" #fig-vars}
+
+## Referencias
+
+[Multi-Criteria Decision Analysis and GIS - Siobhan Ryan and Ellis Nimick](https://storymaps.arcgis.com/stories/b60b7399f6944bca86d1be6616c178cf)
+

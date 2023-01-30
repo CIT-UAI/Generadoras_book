@@ -1,15 +1,24 @@
 project:
   type: book
+  output-dir: docs
 
 book:
-  title: "Generadoras_Book"
-  author: "Denis Berroeta"
-  date: "1/30/2023"
+  title: " Proyecto Generadoras"
+  subtitle: "Centro de Inteligencia Territorial - UAI"
+  # affiliation: "Universidad Adolfo Ibáñez - Chile"
+  author: "Denis Berroeta González (denis.berroeta@uai.cl)"
+  date: "2023-01-30"
+  page-footer:
+    left: "Copyright 2023, Denis Berroeta"
   chapters:
     - index.qmd
     - intro.qmd
-    - rev_bib.qmd
-    - summary.qmd
+    - multicriterio.qmd
+    - estado_arte.qmd
+    - part: metodos.qmd
+      chapters: 
+        - AHP.qmd
+        - fuzzy_logic.qmd 
     - references.qmd
 
 bibliography: references.bib
@@ -17,8 +26,11 @@ bibliography: references.bib
 format:
   html:
     theme: cosmo
-  pdf:
-    documentclass: scrreprt
-
+    html-math-method: katex
+    css: style.css
+    fig-cap-location: "margin"
+    tab-cap-location: "bottom"
+    fig-align: "center"
+    mailto: "denis.berroeta@uai.cl"
 
 
