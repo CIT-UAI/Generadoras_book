@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Proyecto Generadoras - 3&nbsp; Summary</title>
+<title>Proyecto Generadoras - 4&nbsp; AHP</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -15,6 +15,25 @@ span.underline{text-decoration: underline;}
 div.column{display: inline-block; vertical-align: top; width: 50%;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -25,8 +44,8 @@ ul.task-list{list-style: none;}
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
-<link href="./rev_bib.html" rel="prev">
+<link href="./fuzzy_logic.html" rel="next">
+<link href="./metodos.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -60,13 +79,13 @@ ul.task-list{list-style: none;}
 <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar floating slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Summary</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">AHP</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -101,12 +120,17 @@ ul.task-list{list-style: none;}
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./rev_bib.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Revisión bibliográfica</span></a>
+  <a href="./multicriterio.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Análisis Multicriterio</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./estado_arte.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Estado del Arte</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Metodologia</a>
+            <a href="./metodos.html" class="sidebar-item-text sidebar-link">Métodos</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -114,7 +138,12 @@ ul.task-list{list-style: none;}
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Summary</span></a>
+  <a href="./AHP.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">AHP</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fuzzy_logic.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Fuzzy Logic</span></a>
   </div>
 </li>
       </ul>
@@ -129,14 +158,23 @@ ul.task-list{list-style: none;}
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción"> <span class="header-section-number">4.1</span> Introducción</a></li>
+  <li><a href="#beneficios-y-ventajas-del-uso-de-ahp" id="toc-beneficios-y-ventajas-del-uso-de-ahp" class="nav-link" data-scroll-target="#beneficios-y-ventajas-del-uso-de-ahp"> <span class="header-section-number">4.2</span> Beneficios y ventajas del uso de AHP</a></li>
+  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias"> <span class="header-section-number">4.3</span> Referencias</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Summary</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">AHP</span></h1>
+<p class="subtitle lead">Analytical Hierarchy Process (AHP)</p>
 </div>
 
 
@@ -150,9 +188,43 @@ ul.task-list{list-style: none;}
 
 </header>
 
-<p>In summary, this book has no content whatsoever.</p>
+<section id="introducción" class="level2 page-columns page-full" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="introducción"><span class="header-section-number">4.1</span> Introducción</h2>
+<p>Creado por <span class="citation" data-cites="Saaty1980">Saaty (<a href="references.html#ref-Saaty1980" role="doc-biblioref">1980</a>)</span>, AHP es un método de comparación por pares que se utiliza en los criterios con respecto al objetivo. Estas comparaciones por pares se llevan a cabo para todos los factores relevantes dentro de un análisis normalmente no más de 7, como por ejemplo la siguiente imagen <a href="#fig-ahp-tab">Figure&nbsp;<span>4.1</span></a>.</p>
+<div id="fig-ahp-tab" class="quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="images/ahp-tab.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption margin-caption">Figure 4.1: Criterios de Relevancia para comparación de pares</figcaption><p></p>
+</figure>
+</div>
+<p>Una vez consolidados y clasificados los criterios en el MCDA, se utiliza el AHP para calcular las ponderaciones relativas, la importancia o el valor de cada factor. que son relevantes para el problema en cuestión. Una vez asignados los pesos relativos, se calcula un vector de prioridad, que nos da el valor modificador de relevancia global para cada factor, que se utilizará en los cálculos del SIG.</p>
+<div id="fig-parirs-comp" class="quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="images/pairwise.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption margin-caption">Figure 4.2: Ejemplo de comparación de pares</figcaption><p></p>
+</figure>
+</div>
+<p>A continuación, se calcula el Coeficiente de Coherencia (Consistency Ratio CR) para medir el grado de coherencia de las valoraciones con respecto a grandes muestras de valoraciones puramente aleatorias. Si el CR es superior a 0,1, las valoraciones deben considerarse poco fiables.</p>
+</section>
+<section id="beneficios-y-ventajas-del-uso-de-ahp" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="beneficios-y-ventajas-del-uso-de-ahp"><span class="header-section-number">4.2</span> Beneficios y ventajas del uso de AHP</h2>
+<ul>
+<li>Un enfoque más estructurado para medir la idoneidad al dividir el problema en criterios jerárquicos.</li>
+<li>Un análisis más sistemático y profundo de los factores, que pueden comprenderse mejor al examinar específicamente sus formas o indicadores inferiores y más específicos.</li>
+<li>El AHP permite la participación tanto de expertos como de partes interesadas en la aportación de información. Dicho marco permite incorporar y acomodar criterios tanto cualitativos como cuantitativos y la aportación de conocimientos de expertos.</li>
+</ul>
+</section>
+<section id="referencias" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="referencias"><span class="header-section-number">4.3</span> Referencias</h2>
+<p><a href="https://storymaps.arcgis.com/stories/b60b7399f6944bca86d1be6616c178cf">Multi-Criteria Decision Analysis and GIS - Siobhan Ryan and Ellis Nimick</a> ir</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-Saaty1980" class="csl-entry" role="doc-biblioentry">
+Saaty, T. L. 1980. <span>“The Analytic Hierarchy Process.”</span>
+</div>
+</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -254,13 +326,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./rev_bib.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Revisión bibliográfica</span></span>
+      <a href="./metodos.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Métodos</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./fuzzy_logic.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Fuzzy Logic</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
