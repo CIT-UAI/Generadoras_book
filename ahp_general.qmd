@@ -4,30 +4,373 @@ editor_options:
   chunk_output_type: console
 ---
 
-# AHP Uso General
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
 
+suppressPackageStartupMessages(library(sf))
+suppressPackageStartupMessages(library(dplyr))
+suppressPackageStartupMessages(library(knitr))
+suppressPackageStartupMessages(library(kableExtra))
+suppressPackageStartupMessages(library(mapview))
+
+```
+
+
+# AHP Uso General
 
 La presente sección tiene como objetivo mostrar el uso de AHP en un caso de decisión multicriterio de uso general, considerando todas sus etapas en el leguaje de programación en R.
 
+Se urilizará AHP para decidir dónde localizar un depósito o centro de distribución. Estas resoluciones son siempre complejas, porque involucran inversiones importantes y porque una correcta ubicación puede impactar en ventajas competitivas.
+
+![Diagrama de Análisis Multicriterio que se usará de ejemplo](images/diagrama_ej.gif){#fig-diagr_ejemplo fig-align="center" width="400"}
+
+En el siguiente ejemplo, simplificaremos el tipo y la cantidad de variables para ilustrar la aplicación de este método. Imaginemos que se requiere encontrar la mejor ubicación para un Centro de Distribución. Se tienen tres ubicaciones posibles, que designaremos como I, II y III. Un equipo multidisciplinario, luego de una jornada de análisis, seleccionó cuatro criterios para decidir entre ellas:
+
+a)  Cercanía a los clientes
+b)  Cercanía a los proveedores
+c)  Precio del terreno
+d)  Vías de acceso
+
+Se debe encontrar la mejor ubicación para un centro de distribución, eligiendo la mejor combinación de los criterios A, B, C y D. Las ubicaciones posibles son I, II y III.
 
 ## Matriz de Comparación
 
+El primer paso es comparar de a pares los criterios A, B, C y D. El equipo encargado del análisis asignó notas comparando cada ubicación con otra. Así, por ejemplo, el criterio B (cercanía a los proveedores) se juzgó 7 veces más importante que el criterio A (cercanía a los clientes).
+
+```{r echo=FALSE}
+#| label: tbl-ej-criterios
+#| tbl-cap: Comparación de criterios bajo escala de Saaty
+
+
+n = 4
+m <- matrix(c(1, 1/7, 1/5, 1/3,
+              7, 1, 1/2, 2,
+              5, 2,1,2,
+              3, 1/2,1/2,1),
+            nrow = n, ncol = n, byrow = T)
+
+names_criterios <- c("A", "B", "C", "D") 
+colnames(m) <-  names_criterios 
+rownames(m) <-  names_criterios 
+
+
+m %>% 
+    round(2) %>% 
+    kbl() %>%
+    # kable_material_dark()
+    kable_styling(bootstrap_options = "striped", 
+                full_width = F, position = "center",
+                font_size = 15)
+
+```
+
+
+Construcción de una matriz de comparación de criterios (todos con todos),el valor de cada $a_{ij}$ corresponde a la importancia relativa del criterio $C_i$ (fila i) sobre el criterio $C_j$ (columna $j$), según la escala fundamental propuesta por Saati (@tbl-escala).
+
+
+
+
+
+```{r}
+m <- matrix(c(1, 1/7, 1/5, 1/3,
+              7, 1, 1/2, 2,
+              5, 2,1,2,
+              3, 1/2,1/2,1),
+            nrow = 4, ncol = 4, byrow = T)
+
+names_criterios <- c("A", "B", "C", "D") 
+colnames(m) <-  rownames(m) <-  names_criterios 
+
+m %>% round(2)
+```
+
+Se observa que cumple con los requisitos de robustez matemática de *Reciprocidad* y *Homeneidad* (@sec-robustez)
 
 ## Valor propio dominante ($\lambda_{max}$)
 
 
-## Vector propio ($w$) 
+
+```{r}
+
+# Obtener los autovalores de la matriz
+eigenvalues  <- function(matriz, normalize = F){
+    eigenvalues <- abs(eigen(matriz)$values)
+    if(normalize==T){
+        eigenvalues <- eigenvalues/sum(eigenvalues)
+    }
+    return(eigenvalues)
+}
+
+
+# Función lambda maximo
+lambda_max_fnc <-  function(matriz){
+    eigenvalues <- eigenvalues(matriz, F)
+    lambda_max <- max(abs(eigenvalues))
+    return(lambda_max)
+}
+
+```
+
+
+```{r}
+lambda_max <- lambda_max_fnc(m)
+lambda_max
+```
+
 
 
 ## Análisis de Consistencia
 
 
+## Vector propio ($w$)
+
+```{r}
+eigenvectors <- function(matriz, normalize = F){
+    eigenvectors <- abs(eigen(matriz)$vectors)[,1]
+    if(normalize==T){
+        eigenvectors <- eigenvectors/sum(eigenvectors)
+    }
+    return(eigenvectors)
+}
+
+
+```
+
+```{r}
+w <- eigenvectors(m, normalize = T)
+w
+```
+
+
+```{r}
+# conocer la dimensión de la matriz cuadrada
+dim_m <- function(matriz){
+    if(any(diag(matriz)!=1)) stop("Diagonal de la Matriz debe ser 1")
+    n <-  dim(matriz)[1]
+    return(n)
+}
+
+# Función para calcular el vector propio utilizando el método de potencias
+w_potencias <- function(A, tol = 1e-6, maxiter=100) {
+    x0 <- rep(1, dim_m(A))
+    n <- length(x0)
+    x <- x0/norm(matrix(x0, ncol = 1))
+    k <- 0
+    while (k < maxiter) {
+        k <- k + 1
+        y <- A %*% x
+        lambda <- sum(y * x)
+        x <- y/norm(y)
+        if (abs(lambda - sum(y * x)) < tol) break
+    }
+    # list(x = x, lambda = lambda)
+    x <- as.vector(x)
+    return(x)
+}
+```
+
+
+```{r}
+w2 <- w_potencias(m)
+w2
+```
+
 ## Ponderación de Alternativas
+
+**A. Cercarnía a Clientes**:
+
+```{r}
+mA <- matrix(c(1, 3, 1/3, 
+              1/3, 1, 5, 
+              3, 1/5,1),
+            nrow = 3, ncol = 3, byrow = T)
+
+names_alternativas <- c("I", "II", "III") 
+colnames(mA) <- rownames(mA) <-  names_alternativas 
+```
+
+```{r echo=F}
+mA %>% 
+    round(2) %>% 
+    kbl() %>%
+    # kable_material_dark()
+    kable_styling(bootstrap_options = "striped", 
+                full_width = F, position = "center",
+                font_size = 15)
+```
+
+
+```{r}
+wA <- eigenvectors(mA, normalize = T)
+wA
+```
+
+**B. Cercarnía a Proveedores**:
+
+```{r}
+mB <- matrix(c(1, 1/5, 3, 
+              5, 1, 7, 
+              1/3, 1/7,1),
+            nrow = 3, ncol = 3, byrow = T)
+
+names_alternativas <- c("I", "II", "III") 
+colnames(mB) <- rownames(mB) <-  names_alternativas
+```
+
+```{r echo=F}
+mB %>% 
+    round(2) %>% 
+    kbl() %>%
+    # kable_material_dark()
+    kable_styling(bootstrap_options = "striped", 
+                full_width = F, position = "center",
+                font_size = 15)
+```
+
+
+
+```{r}
+wB <- eigenvectors(mB, normalize = T)
+wB
+```
+
+
+**B. Cercarnía a Proveedores**:
+
+```{r}
+mB <- matrix(c(1, 1/5, 3, 
+              5, 1, 7, 
+              1/3, 1/7,1),
+            nrow = 3, ncol = 3, byrow = T)
+
+names_alternativas <- c("I", "II", "III") 
+colnames(mB) <- rownames(mB) <-  names_alternativas
+```
+
+```{r echo=F}
+mB %>% 
+    round(2) %>% 
+    kbl() %>%
+    # kable_material_dark()
+    kable_styling(bootstrap_options = "striped", 
+                full_width = F, position = "center",
+                font_size = 15)
+```
+
+
+
+```{r}
+wB <- eigenvectors(mB, normalize = T)
+wB
+```
+
+
+
+**C. Costo de Terreno**:
+
+```{r}
+mC <- matrix(c(1, 1/5, 3, 
+              5, 1, 7, 
+              1/3, 1/7,1),
+            nrow = 3, ncol = 3, byrow = T)
+
+names_alternativas <- c("I", "II", "III") 
+colnames(mC) <- rownames(mC) <-  names_alternativas
+```
+
+```{r echo=F}
+mC %>% 
+    round(2) %>% 
+    kbl() %>%
+    # kable_material_dark()
+    kable_styling(bootstrap_options = "striped", 
+                full_width = F, position = "center",
+                font_size = 15)
+```
+
+
+
+```{r}
+wC <- eigenvectors(mC, normalize = T)
+wC
+```
+
+
+**D. Costo de Terreno**:
+
+```{r}
+mD <- matrix(c(1, 5, 1/4, 
+              1/5, 1, 1/8, 
+              4, 8,1),
+            nrow = 3, ncol = 3, byrow = T)
+
+names_alternativas <- c("I", "II", "III") 
+colnames(mD) <- rownames(mD) <-  names_alternativas
+```
+
+```{r echo=F}
+mD %>% 
+    round(2) %>% 
+    kbl() %>%
+    # kable_material_dark()
+    kable_styling(bootstrap_options = "striped", 
+                full_width = F, position = "center",
+                font_size = 15)
+```
+
+
+
+```{r}
+wD <- eigenvectors(mD, normalize = T)
+wD
+```
 
 
 ## Decisión Final
 
+```{r}
+w_aternativas <- matrix(c(wA, wB, wC, wD),
+                        nrow = 3, ncol = 4, byrow = F)
+
+names_criterios <- c("A", "B", "C", "D") 
+names_alternativas <- c("I", "II", "III") 
+colnames(w_aternativas) <- names_criterios 
+rownames(w_aternativas)<-  names_alternativas
+```
+
+```{r echo=F}
+w_aternativas %>% 
+    # round(2) %>% 
+    kbl() %>%
+    # kable_material_dark()
+    kable_styling(bootstrap_options = "striped", 
+                full_width = F, position = "center",
+                font_size = 15)
+```
+
+Producto punto de los pesos del criterio `w` y pesos por cada alternativa en cada criterio `w_alternativas`
+
+```{r}
+resultados <- w_aternativas %*% w
+
+colnames(resultados) <- "Decisión"
+```
 
 
+```{r echo=F}
+
+resultados %>% 
+    # round(2) %>% 
+    kbl() %>%
+    # kable_material_dark()
+    kable_styling(bootstrap_options = "striped", 
+                full_width = F, position = "center",
+                font_size = 15)
+```
 
 
+De acuerdo a la tabla anterior se puede resolver que la alternativa idónea es la alternativa $II$ que tiene `r round(max(resultados[,1]),3)` de valoración.
+
+## Referencias de Sección
+
+- Valores de ejemplo obtenidos de: [Aplicando AHP para decisiones complejas](http://www.emb.cl/negociosglobales/articulo.mvc?xid=3277&tip=11&xit=aplicando-ahp-para-decisiones-complejas)
