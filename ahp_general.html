@@ -15,6 +15,69 @@ span.underline{text-decoration: underline;}
 div.column{display: inline-block; vertical-align: top; width: 50%;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -56,6 +119,9 @@ ul.task-list{list-style: none;}
   }
 }</script>
 
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
  var mathElements = document.getElementsByClassName("math");
@@ -76,7 +142,7 @@ ul.task-list{list-style: none;}
 <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar floating slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -196,15 +262,16 @@ ul.task-list{list-style: none;}
   <ul>
   <li><a href="#matriz-de-comparación" id="toc-matriz-de-comparación" class="nav-link active" data-scroll-target="#matriz-de-comparación"> <span class="header-section-number">9.1</span> Matriz de Comparación</a></li>
   <li><a href="#valor-propio-dominante-lambda_max" id="toc-valor-propio-dominante-lambda_max" class="nav-link" data-scroll-target="#valor-propio-dominante-lambda_max"> <span class="header-section-number">9.2</span> Valor propio dominante (<span class="math inline">\lambda_{max}</span>)</a></li>
-  <li><a href="#vector-propio-w" id="toc-vector-propio-w" class="nav-link" data-scroll-target="#vector-propio-w"> <span class="header-section-number">9.3</span> Vector propio (<span class="math inline">w</span>)</a></li>
-  <li><a href="#análisis-de-consistencia" id="toc-análisis-de-consistencia" class="nav-link" data-scroll-target="#análisis-de-consistencia"> <span class="header-section-number">9.4</span> Análisis de Consistencia</a></li>
+  <li><a href="#análisis-de-consistencia" id="toc-análisis-de-consistencia" class="nav-link" data-scroll-target="#análisis-de-consistencia"> <span class="header-section-number">9.3</span> Análisis de Consistencia</a></li>
+  <li><a href="#vector-propio-w" id="toc-vector-propio-w" class="nav-link" data-scroll-target="#vector-propio-w"> <span class="header-section-number">9.4</span> Vector propio (<span class="math inline">w</span>)</a></li>
   <li><a href="#ponderación-de-alternativas" id="toc-ponderación-de-alternativas" class="nav-link" data-scroll-target="#ponderación-de-alternativas"> <span class="header-section-number">9.5</span> Ponderación de Alternativas</a></li>
   <li><a href="#decisión-final" id="toc-decisión-final" class="nav-link" data-scroll-target="#decisión-final"> <span class="header-section-number">9.6</span> Decisión Final</a></li>
+  <li><a href="#referencias-de-sección" id="toc-referencias-de-sección" class="nav-link" data-scroll-target="#referencias-de-sección"> <span class="header-section-number">9.7</span> Referencias de Sección</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -224,23 +291,538 @@ ul.task-list{list-style: none;}
 </header>
 
 <p>La presente sección tiene como objetivo mostrar el uso de AHP en un caso de decisión multicriterio de uso general, considerando todas sus etapas en el leguaje de programación en R.</p>
+<p>Se urilizará AHP para decidir dónde localizar un depósito o centro de distribución. Estas resoluciones son siempre complejas, porque involucran inversiones importantes y porque una correcta ubicación puede impactar en ventajas competitivas.</p>
+<div id="fig-diagr_ejemplo" class="quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="images/diagrama_ej.gif" class="img-fluid figure-img" width="400"></p>
+<p></p><figcaption class="figure-caption margin-caption">Figure 9.1: Diagrama de Análisis Multicriterio que se usará de ejemplo</figcaption><p></p>
+</figure>
+</div>
+<p>En el siguiente ejemplo, simplificaremos el tipo y la cantidad de variables para ilustrar la aplicación de este método. Imaginemos que se requiere encontrar la mejor ubicación para un Centro de Distribución. Se tienen tres ubicaciones posibles, que designaremos como I, II y III. Un equipo multidisciplinario, luego de una jornada de análisis, seleccionó cuatro criterios para decidir entre ellas:</p>
+<ol type="a">
+<li>Cercanía a los clientes</li>
+<li>Cercanía a los proveedores</li>
+<li>Precio del terreno</li>
+<li>Vías de acceso</li>
+</ol>
+<p>Se debe encontrar la mejor ubicación para un centro de distribución, eligiendo la mejor combinación de los criterios A, B, C y D. Las ubicaciones posibles son I, II y III.</p>
 <section id="matriz-de-comparación" class="level2" data-number="9.1">
 <h2 data-number="9.1" class="anchored" data-anchor-id="matriz-de-comparación"><span class="header-section-number">9.1</span> Matriz de Comparación</h2>
+<p>El primer paso es comparar de a pares los criterios A, B, C y D. El equipo encargado del análisis asignó notas comparando cada ubicación con otra. Así, por ejemplo, el criterio B (cercanía a los proveedores) se juzgó 7 veces más importante que el criterio A (cercanía a los clientes).</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-ej-criterios" class="anchored">
+
+<table class="table table-striped" style="font-size: 15px; width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table 9.1:  Comparación de criterios bajo escala de Saaty </caption>
+ <thead>
+  <tr>
+   <th style="text-align:left;">   </th>
+   <th style="text-align:right;"> A </th>
+   <th style="text-align:right;"> B </th>
+   <th style="text-align:right;"> C </th>
+   <th style="text-align:right;"> D </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> A </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0.14 </td>
+   <td style="text-align:right;"> 0.2 </td>
+   <td style="text-align:right;"> 0.33 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> B </td>
+   <td style="text-align:right;"> 7 </td>
+   <td style="text-align:right;"> 1.00 </td>
+   <td style="text-align:right;"> 0.5 </td>
+   <td style="text-align:right;"> 2.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> C </td>
+   <td style="text-align:right;"> 5 </td>
+   <td style="text-align:right;"> 2.00 </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 2.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> D </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 0.50 </td>
+   <td style="text-align:right;"> 0.5 </td>
+   <td style="text-align:right;"> 1.00 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p>Construcción de una matriz de comparación de criterios (todos con todos),el valor de cada <span class="math inline">a_{ij}</span> corresponde a la importancia relativa del criterio <span class="math inline">C_i</span> (fila i) sobre el criterio <span class="math inline">C_j</span> (columna <span class="math inline">j</span>), según la escala fundamental propuesta por Saati (<a href="AHP.html#tbl-escala">Table&nbsp;<span>6.1</span></a>).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">7</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">5</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>,</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>              <span class="dv">7</span>, <span class="dv">1</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">2</span>, <span class="dv">2</span>,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>              <span class="dv">5</span>, <span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">2</span>,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>              <span class="dv">3</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">2</span>,<span class="dv">1</span><span class="sc">/</span><span class="dv">2</span>,<span class="dv">1</span>),</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">nrow =</span> <span class="dv">4</span>, <span class="at">ncol =</span> <span class="dv">4</span>, <span class="at">byrow =</span> T)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>names_criterios <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>, <span class="st">"D"</span>) </span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(m) <span class="ot">&lt;-</span>  <span class="fu">rownames</span>(m) <span class="ot">&lt;-</span>  names_criterios </span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>m <span class="sc">%&gt;%</span> <span class="fu">round</span>(<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  A    B   C    D
+A 1 0.14 0.2 0.33
+B 7 1.00 0.5 2.00
+C 5 2.00 1.0 2.00
+D 3 0.50 0.5 1.00</code></pre>
+</div>
+</div>
+<p>Se observa que cumple con los requisitos de robustez matemática de <em>Reciprocidad</em> y <em>Homeneidad</em> (<a href="AHP.html#sec-robustez"><span>Section&nbsp;6.3</span></a>)</p>
 </section>
 <section id="valor-propio-dominante-lambda_max" class="level2" data-number="9.2">
 <h2 data-number="9.2" class="anchored" data-anchor-id="valor-propio-dominante-lambda_max"><span class="header-section-number">9.2</span> Valor propio dominante (<span class="math inline">\lambda_{max}</span>)</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Obtener los autovalores de la matriz</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>eigenvalues  <span class="ot">&lt;-</span> <span class="cf">function</span>(matriz, <span class="at">normalize =</span> F){</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    eigenvalues <span class="ot">&lt;-</span> <span class="fu">abs</span>(<span class="fu">eigen</span>(matriz)<span class="sc">$</span>values)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(normalize<span class="sc">==</span>T){</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        eigenvalues <span class="ot">&lt;-</span> eigenvalues<span class="sc">/</span><span class="fu">sum</span>(eigenvalues)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(eigenvalues)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Función lambda maximo</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>lambda_max_fnc <span class="ot">&lt;-</span>  <span class="cf">function</span>(matriz){</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    eigenvalues <span class="ot">&lt;-</span> <span class="fu">eigenvalues</span>(matriz, F)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    lambda_max <span class="ot">&lt;-</span> <span class="fu">max</span>(<span class="fu">abs</span>(eigenvalues))</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(lambda_max)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>lambda_max <span class="ot">&lt;-</span> <span class="fu">lambda_max_fnc</span>(m)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>lambda_max</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 4.10159</code></pre>
+</div>
+</div>
 </section>
-<section id="vector-propio-w" class="level2" data-number="9.3">
-<h2 data-number="9.3" class="anchored" data-anchor-id="vector-propio-w"><span class="header-section-number">9.3</span> Vector propio (<span class="math inline">w</span>)</h2>
+<section id="análisis-de-consistencia" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="análisis-de-consistencia"><span class="header-section-number">9.3</span> Análisis de Consistencia</h2>
 </section>
-<section id="análisis-de-consistencia" class="level2" data-number="9.4">
-<h2 data-number="9.4" class="anchored" data-anchor-id="análisis-de-consistencia"><span class="header-section-number">9.4</span> Análisis de Consistencia</h2>
+<section id="vector-propio-w" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="vector-propio-w"><span class="header-section-number">9.4</span> Vector propio (<span class="math inline">w</span>)</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>eigenvectors <span class="ot">&lt;-</span> <span class="cf">function</span>(matriz, <span class="at">normalize =</span> F){</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    eigenvectors <span class="ot">&lt;-</span> <span class="fu">abs</span>(<span class="fu">eigen</span>(matriz)<span class="sc">$</span>vectors)[,<span class="dv">1</span>]</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(normalize<span class="sc">==</span>T){</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>        eigenvectors <span class="ot">&lt;-</span> eigenvectors<span class="sc">/</span><span class="fu">sum</span>(eigenvectors)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(eigenvectors)</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>w <span class="ot">&lt;-</span> <span class="fu">eigenvectors</span>(m, <span class="at">normalize =</span> T)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>w</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.0622688 0.3270286 0.4286519 0.1820507</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># conocer la dimensión de la matriz cuadrada</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>dim_m <span class="ot">&lt;-</span> <span class="cf">function</span>(matriz){</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(<span class="fu">any</span>(<span class="fu">diag</span>(matriz)<span class="sc">!=</span><span class="dv">1</span>)) <span class="fu">stop</span>(<span class="st">"Diagonal de la Matriz debe ser 1"</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    n <span class="ot">&lt;-</span>  <span class="fu">dim</span>(matriz)[<span class="dv">1</span>]</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(n)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Función para calcular el vector propio utilizando el método de potencias</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>w_potencias <span class="ot">&lt;-</span> <span class="cf">function</span>(A, <span class="at">tol =</span> <span class="fl">1e-6</span>, <span class="at">maxiter=</span><span class="dv">100</span>) {</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    x0 <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="dv">1</span>, <span class="fu">dim_m</span>(A))</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    n <span class="ot">&lt;-</span> <span class="fu">length</span>(x0)</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    x <span class="ot">&lt;-</span> x0<span class="sc">/</span><span class="fu">norm</span>(<span class="fu">matrix</span>(x0, <span class="at">ncol =</span> <span class="dv">1</span>))</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    k <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> (k <span class="sc">&lt;</span> maxiter) {</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>        k <span class="ot">&lt;-</span> k <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>        y <span class="ot">&lt;-</span> A <span class="sc">%*%</span> x</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>        lambda <span class="ot">&lt;-</span> <span class="fu">sum</span>(y <span class="sc">*</span> x)</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>        x <span class="ot">&lt;-</span> y<span class="sc">/</span><span class="fu">norm</span>(y)</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (<span class="fu">abs</span>(lambda <span class="sc">-</span> <span class="fu">sum</span>(y <span class="sc">*</span> x)) <span class="sc">&lt;</span> tol) <span class="cf">break</span></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>    <span class="co"># list(x = x, lambda = lambda)</span></span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>    x <span class="ot">&lt;-</span> <span class="fu">as.vector</span>(x)</span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(x)</span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>w2 <span class="ot">&lt;-</span> <span class="fu">w_potencias</span>(m)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>w2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.06226882 0.32702870 0.42865174 0.18205073</code></pre>
+</div>
+</div>
 </section>
 <section id="ponderación-de-alternativas" class="level2" data-number="9.5">
 <h2 data-number="9.5" class="anchored" data-anchor-id="ponderación-de-alternativas"><span class="header-section-number">9.5</span> Ponderación de Alternativas</h2>
+<p><strong>A. Cercarnía a Clientes</strong>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>mA <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>, </span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>              <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">5</span>, </span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>              <span class="dv">3</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">5</span>,<span class="dv">1</span>),</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">nrow =</span> <span class="dv">3</span>, <span class="at">ncol =</span> <span class="dv">3</span>, <span class="at">byrow =</span> T)</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>names_alternativas <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"I"</span>, <span class="st">"II"</span>, <span class="st">"III"</span>) </span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(mA) <span class="ot">&lt;-</span> <span class="fu">rownames</span>(mA) <span class="ot">&lt;-</span>  names_alternativas </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+
+<table class="table table-striped" style="font-size: 15px; width: auto !important; margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:left;">   </th>
+   <th style="text-align:right;"> I </th>
+   <th style="text-align:right;"> II </th>
+   <th style="text-align:right;"> III </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> I </td>
+   <td style="text-align:right;"> 1.00 </td>
+   <td style="text-align:right;"> 3.0 </td>
+   <td style="text-align:right;"> 0.33 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> II </td>
+   <td style="text-align:right;"> 0.33 </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 5.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> III </td>
+   <td style="text-align:right;"> 3.00 </td>
+   <td style="text-align:right;"> 0.2 </td>
+   <td style="text-align:right;"> 1.00 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>wA <span class="ot">&lt;-</span> <span class="fu">eigenvectors</span>(mA, <span class="at">normalize =</span> T)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>wA</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.3301350 0.3914183 0.2784467</code></pre>
+</div>
+</div>
+<p><strong>B. Cercarnía a Proveedores</strong>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>mB <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">5</span>, <span class="dv">3</span>, </span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>              <span class="dv">5</span>, <span class="dv">1</span>, <span class="dv">7</span>, </span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>              <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">7</span>,<span class="dv">1</span>),</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">nrow =</span> <span class="dv">3</span>, <span class="at">ncol =</span> <span class="dv">3</span>, <span class="at">byrow =</span> T)</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>names_alternativas <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"I"</span>, <span class="st">"II"</span>, <span class="st">"III"</span>) </span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(mB) <span class="ot">&lt;-</span> <span class="fu">rownames</span>(mB) <span class="ot">&lt;-</span>  names_alternativas</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+
+<table class="table table-striped" style="font-size: 15px; width: auto !important; margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:left;">   </th>
+   <th style="text-align:right;"> I </th>
+   <th style="text-align:right;"> II </th>
+   <th style="text-align:right;"> III </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> I </td>
+   <td style="text-align:right;"> 1.00 </td>
+   <td style="text-align:right;"> 0.20 </td>
+   <td style="text-align:right;"> 3 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> II </td>
+   <td style="text-align:right;"> 5.00 </td>
+   <td style="text-align:right;"> 1.00 </td>
+   <td style="text-align:right;"> 7 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> III </td>
+   <td style="text-align:right;"> 0.33 </td>
+   <td style="text-align:right;"> 0.14 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>wB <span class="ot">&lt;-</span> <span class="fu">eigenvectors</span>(mB, <span class="at">normalize =</span> T)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>wB</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.18839410 0.73064467 0.08096123</code></pre>
+</div>
+</div>
+<p><strong>B. Cercarnía a Proveedores</strong>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>mB <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">5</span>, <span class="dv">3</span>, </span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>              <span class="dv">5</span>, <span class="dv">1</span>, <span class="dv">7</span>, </span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>              <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">7</span>,<span class="dv">1</span>),</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">nrow =</span> <span class="dv">3</span>, <span class="at">ncol =</span> <span class="dv">3</span>, <span class="at">byrow =</span> T)</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>names_alternativas <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"I"</span>, <span class="st">"II"</span>, <span class="st">"III"</span>) </span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(mB) <span class="ot">&lt;-</span> <span class="fu">rownames</span>(mB) <span class="ot">&lt;-</span>  names_alternativas</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+
+<table class="table table-striped" style="font-size: 15px; width: auto !important; margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:left;">   </th>
+   <th style="text-align:right;"> I </th>
+   <th style="text-align:right;"> II </th>
+   <th style="text-align:right;"> III </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> I </td>
+   <td style="text-align:right;"> 1.00 </td>
+   <td style="text-align:right;"> 0.20 </td>
+   <td style="text-align:right;"> 3 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> II </td>
+   <td style="text-align:right;"> 5.00 </td>
+   <td style="text-align:right;"> 1.00 </td>
+   <td style="text-align:right;"> 7 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> III </td>
+   <td style="text-align:right;"> 0.33 </td>
+   <td style="text-align:right;"> 0.14 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>wB <span class="ot">&lt;-</span> <span class="fu">eigenvectors</span>(mB, <span class="at">normalize =</span> T)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>wB</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.18839410 0.73064467 0.08096123</code></pre>
+</div>
+</div>
+<p><strong>C. Costo de Terreno</strong>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>mC <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">5</span>, <span class="dv">3</span>, </span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>              <span class="dv">5</span>, <span class="dv">1</span>, <span class="dv">7</span>, </span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>              <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">7</span>,<span class="dv">1</span>),</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">nrow =</span> <span class="dv">3</span>, <span class="at">ncol =</span> <span class="dv">3</span>, <span class="at">byrow =</span> T)</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>names_alternativas <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"I"</span>, <span class="st">"II"</span>, <span class="st">"III"</span>) </span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(mC) <span class="ot">&lt;-</span> <span class="fu">rownames</span>(mC) <span class="ot">&lt;-</span>  names_alternativas</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+
+<table class="table table-striped" style="font-size: 15px; width: auto !important; margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:left;">   </th>
+   <th style="text-align:right;"> I </th>
+   <th style="text-align:right;"> II </th>
+   <th style="text-align:right;"> III </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> I </td>
+   <td style="text-align:right;"> 1.00 </td>
+   <td style="text-align:right;"> 0.20 </td>
+   <td style="text-align:right;"> 3 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> II </td>
+   <td style="text-align:right;"> 5.00 </td>
+   <td style="text-align:right;"> 1.00 </td>
+   <td style="text-align:right;"> 7 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> III </td>
+   <td style="text-align:right;"> 0.33 </td>
+   <td style="text-align:right;"> 0.14 </td>
+   <td style="text-align:right;"> 1 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>wC <span class="ot">&lt;-</span> <span class="fu">eigenvectors</span>(mC, <span class="at">normalize =</span> T)</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>wC</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.18839410 0.73064467 0.08096123</code></pre>
+</div>
+</div>
+<p><strong>D. Costo de Terreno</strong>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>mD <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">4</span>, </span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>              <span class="dv">1</span><span class="sc">/</span><span class="dv">5</span>, <span class="dv">1</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">8</span>, </span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>              <span class="dv">4</span>, <span class="dv">8</span>,<span class="dv">1</span>),</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">nrow =</span> <span class="dv">3</span>, <span class="at">ncol =</span> <span class="dv">3</span>, <span class="at">byrow =</span> T)</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>names_alternativas <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"I"</span>, <span class="st">"II"</span>, <span class="st">"III"</span>) </span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(mD) <span class="ot">&lt;-</span> <span class="fu">rownames</span>(mD) <span class="ot">&lt;-</span>  names_alternativas</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+
+<table class="table table-striped" style="font-size: 15px; width: auto !important; margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:left;">   </th>
+   <th style="text-align:right;"> I </th>
+   <th style="text-align:right;"> II </th>
+   <th style="text-align:right;"> III </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> I </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 5 </td>
+   <td style="text-align:right;"> 0.25 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> II </td>
+   <td style="text-align:right;"> 0.2 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0.12 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> III </td>
+   <td style="text-align:right;"> 4.0 </td>
+   <td style="text-align:right;"> 8 </td>
+   <td style="text-align:right;"> 1.00 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>wD <span class="ot">&lt;-</span> <span class="fu">eigenvectors</span>(mD, <span class="at">normalize =</span> T)</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>wD</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.23704170 0.06434302 0.69861528</code></pre>
+</div>
+</div>
 </section>
 <section id="decisión-final" class="level2" data-number="9.6">
 <h2 data-number="9.6" class="anchored" data-anchor-id="decisión-final"><span class="header-section-number">9.6</span> Decisión Final</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>w_aternativas <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(wA, wB, wC, wD),</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>                        <span class="at">nrow =</span> <span class="dv">3</span>, <span class="at">ncol =</span> <span class="dv">4</span>, <span class="at">byrow =</span> F)</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>names_criterios <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>, <span class="st">"D"</span>) </span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>names_alternativas <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"I"</span>, <span class="st">"II"</span>, <span class="st">"III"</span>) </span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(w_aternativas) <span class="ot">&lt;-</span> names_criterios </span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(w_aternativas)<span class="ot">&lt;-</span>  names_alternativas</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+
+<table class="table table-striped" style="font-size: 15px; width: auto !important; margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:left;">   </th>
+   <th style="text-align:right;"> A </th>
+   <th style="text-align:right;"> B </th>
+   <th style="text-align:right;"> C </th>
+   <th style="text-align:right;"> D </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> I </td>
+   <td style="text-align:right;"> 0.3301350 </td>
+   <td style="text-align:right;"> 0.1883941 </td>
+   <td style="text-align:right;"> 0.1883941 </td>
+   <td style="text-align:right;"> 0.2370417 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> II </td>
+   <td style="text-align:right;"> 0.3914183 </td>
+   <td style="text-align:right;"> 0.7306447 </td>
+   <td style="text-align:right;"> 0.7306447 </td>
+   <td style="text-align:right;"> 0.0643430 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> III </td>
+   <td style="text-align:right;"> 0.2784467 </td>
+   <td style="text-align:right;"> 0.0809612 </td>
+   <td style="text-align:right;"> 0.0809612 </td>
+   <td style="text-align:right;"> 0.6986153 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+<p>Producto punto de los pesos del criterio <code>w</code> y pesos por cada alternativa en cada criterio <code>w_alternativas</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>resultados <span class="ot">&lt;-</span> w_aternativas <span class="sc">%*%</span> w</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(resultados) <span class="ot">&lt;-</span> <span class="st">"Decisión"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+
+<table class="table table-striped" style="font-size: 15px; width: auto !important; margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:left;">   </th>
+   <th style="text-align:right;"> Decisión </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> I </td>
+   <td style="text-align:right;"> 0.2060765 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> II </td>
+   <td style="text-align:right;"> 0.5882208 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> III </td>
+   <td style="text-align:right;"> 0.2057028 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+<p>De acuerdo a la tabla anterior se puede resolver que la alternativa idónea es la alternativa <span class="math inline">II</span> que tiene 0.588 de valoración.</p>
+</section>
+<section id="referencias-de-sección" class="level2" data-number="9.7">
+<h2 data-number="9.7" class="anchored" data-anchor-id="referencias-de-sección"><span class="header-section-number">9.7</span> Referencias de Sección</h2>
+<ul>
+<li>Valores de ejemplo obtenidos de: <a href="http://www.emb.cl/negociosglobales/articulo.mvc?xid=3277&amp;tip=11&amp;xit=aplicando-ahp-para-decisiones-complejas">Aplicando AHP para decisiones complejas</a></li>
+</ul>
 
 
 </section>
