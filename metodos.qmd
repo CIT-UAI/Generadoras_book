@@ -16,3 +16,4 @@ Basàndose en el estado del arte ...
 * Para elaborar un MCDA fundamentado es necesario contar con la opinión de las partes interesadas y la bibliografía aplicable, que pueden contrarrestar las incoherencias y los prejuicios de las partes interesadas.
 
 * El MCDA-SIG es una metodología relativamente reciente que se ha aplicado a toda una serie de campos y cuestiones espaciales.
+

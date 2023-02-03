@@ -1,1 +1,63 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
 # Estado del Arte
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+suppressPackageStartupMessages(library(sf))
+suppressPackageStartupMessages(library(dplyr))
+suppressPackageStartupMessages(library(knitr))
+suppressPackageStartupMessages(library(kableExtra))
+suppressPackageStartupMessages(library(mapview))
+
+```
+
+
+```{r echo = FALSE}
+variables <-  read.csv("data/tablas/variables.csv", sep = ";", encoding = "latin-1", header = T)
+```
+
+La ubicación para proyectos de generación eléctrica es crucial. La planificación de estos proyectos es compleja debido a las muchas variables que hay que tener en cuenta. Deben evaluarse los impactos ambientales y los requisitos técnicos de la zona. El objetivo es encontrar una zona con la máxima rentabilidad económica y los impactos ambientales mínimos. La planificación se puede mejorar mediante la evaluación espacial con la ayuda de _Sistemas de Infcormación Geográfica (SIG)_ y métodos _Métodos de Decisión Multi-Criterio_ (MDMC).
+
+
+Los SIG y los MDMC son herramientas que se complementan. Los SIG ofrecen la posibilidad de adquirir, almacenar, visualizar y analizar la información georreferenciada. Basándose en dicha información, los MDMC proveen las técnicas y los procedimientos para estructurar un problema de decisión y evaluar las alternativas posibles (Malczewski, 1999). Dado el uso de los SIG, la calidad de los resultados depende de la calidad de los datos de entrada utilizados, en cuanto a resolución o escala, procedencia, distribución espacial, concordancia temporal y consistencia lógica. 
+
+
+
+En la literatura, la integración de los SIG con los MDMC ha sido empleada en diferentes estudios para determinar la ubicación de proyectos de energías renovables. Podemos mencionar como ejemplos recientes los trabajos de Tegou, Polatidis y Haralambopoulos (2010); Aydin, Kentel y Duzgun (2010); Uyan (2013); Atici, Simsek, Ulucan y Tosun (2015); Latinopoulos y Kechagia (2015); Siyal et al. (2015); Sánchez-Lozano, García-Cascales y Lamata (2016); Höfer, Sunak, Siddique y Madlener (2016), y Noorollahi, Yousefi y Mohammadi (2016). Estos estudios presentan diferentes metodologías de acuerdo con el tipo de energía o la zona de estudio. 
+
+
+En general, los resultados obtenidos corresponden a mapas de la distribución de zonas factibles para instalar turbinas de viento. Las zonas potenciales son elegidas conforme a criterios de restricción y evaluación y su importancia. La selección de estos criterios debe ser analizada cuidadosamente para cada área de estudio y los resultados obtenidos dependen directamente de los criterios seleccionados. Todo estudio de selección y evaluación de áreas con potencial eólico debe tener en cuenta, además de los impactos ambientales, aspectos técnicos y económicos (Tegou et al., 2010). 
+
+
+En la @tbl-vars realizada por  @guerrero_hoyos_energieolica_2020, se observan los criterios de restricción y evaluación elegidos por diferentes autores en trabajos donde se integran los SIG con los MDMC para seleccionar sitios apropiados en donde ubicar proyectos de energías renovables, además se muestran las metodologías utilizadas en los estudios. Como se puede observar en la tabla 1, en la literatura no existe un consenso en torno a la denición de los criterios o su clasifiiación en importancia. La mayoría de los estudios revisados presentan una deciencia común en la asignación de pesos, que representan la importancia relativa de cada criterio, y es que los pesos son asignados de acuerdo con la experiencia de los autores. La asignación de los pesos, al igual que la selección de los criterios de restricción o valores límite, debería hacerse teniendo en cuenta la opinión de expertos.
+
+
+
+```{r echo=FALSE}
+#| label: tbl-vars
+#| tbl-cap: Tabla de criterios de restricción o de evaluación utilizados por diferentes autores para identicar zonas viables para instalar parques eólicos.
+
+variables %>% 
+  kbl() %>%
+ # kable_material_dark()
+  kable_styling(bootstrap_options = "striped", 
+                full_width = F, position = "center",
+                font_size = 15)
+```
+
+
+
+
+De los estudios indicadors @tbl-vars la metodología multicriterio mas utilizada en es el _Proceso Análisis Jerárquico_ (AHP, por sus siglas en inglés) fue el MDMC más utilizado en los trabajos revisados. El AHP es un método diseñado para resolver problemas complejos que implican múltiples criterios u objetivos (Tegou et al., 2010). En la aplicación de este método, quien toma la decisión debe comparar la importancia de un criterio con respecto a otro. Con esto se obtiene una jerarquización de las alternativas posibles. Para aplicar el AHP se requiere: 
+
+a) definir el objetivo del problema, así como los criterios y las alternativas; además, se requiere estructurar el problema de decisión como una jerarquía; 
+b) crear una matriz de comparación por pares, en donde se compara la importancia de un criterio frente a otro; 
+c) calcular el vector de prioridades que indica la importancia relativa de los diferentes criterios, y 
+d) validar la consistencia de los resultados (R. W. Saaty, 1987; T. L. Saaty, 1980). La comparación por pares es la base fundamental del AHP.
+

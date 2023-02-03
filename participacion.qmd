@@ -1,0 +1,17 @@
+# Participación {#sec-part}
+
+
+
+## Participación Expertos
+
+![Ciclo 1 de Diseño: Este punto considera establecer el diseño del proyecto mediante la participación con expertos de los distintos ámbitos que abarca el proyecto.](images/cliclo_diseno.png){fig-align="center" width="800"}
+
+
+
+## Participación con Empresas
+![Ciclo 2 de Diseño: Este punto considera establecer el diseño del proyecto mediante la participación con empresas que tengan impactos en el territorio.](images/ciclo_diseno2.png){fig-align="center" width="800"}
+
+
+## Parcipación Actores Claves y la Comunidad
+
+![Ciclo 3 de Diseño: Este punto considera establecer el diseño del proyecto mediante la participación con empresas que tengan impactos en el territorio.](images/ciclo_diseno3.png){fig-align="center" width="800"}

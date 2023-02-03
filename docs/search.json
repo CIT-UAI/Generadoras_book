@@ -2,114 +2,51 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Proyecto Generadoras",
+    "title": "Análisis Multicriterio",
     "section": "",
-    "text": "This is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books."
+    "text": "El presetne libro digital tiene como objetivo principal ir registrando y documentando el proceso general de un análisis multicriterio espacial para identificar zonas idóneas para la construcción de un determinado proyeto de generación de energía eléctrica. Lo anterior, se enmarca en un proyecto de “Estándares para un desarrollo más sustentable” solictado por Generadoras Chile y Diseñado y ejecutado por el Centro de Inteligencia Territorial de la Universidad Afolfo Ibáñez"
   },
   {
     "objectID": "intro.html",
     "href": "intro.html",
-    "title": "1  Introduction",
+    "title": "1  Introducción",
     "section": "",
-    "text": "See Knuth (1984) for additional discussion of literate programming.\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
-  },
-  {
-    "objectID": "summary.html",
-    "href": "summary.html",
-    "title": "3  Summary",
-    "section": "",
-    "text": "In summary, this book has no content whatsoever."
-  },
-  {
-    "objectID": "references.html",
-    "href": "references.html",
-    "title": "References",
-    "section": "",
-    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "text": "EL proyecto de desarrollo de estándares para un desarrollo más sostenible solicitado por Generadoras Chile cuenta con dos etapas generales, y es en la primera de ellas se enmarca el desarrollo del presente documento de análisis multicriterio territorial, a continuación describen las etapas generales."
   },
   {
     "objectID": "multicriterio.html",
     "href": "multicriterio.html",
-    "title": "2  Análisis Multicriterio",
+    "title": "3  Análisis Multicriterio",
     "section": "",
     "text": "Muchos de los problemas a los que nos enfrentamos hoy en día son complicados, con muchos intereses y soluciones contrapuestos. Sin embargo, los grupos tienen que ser capaces de trabajar juntos y llegar a compromisos para encontrar una solución que sea la más factible. Estos problemas suelen tener un carácter espacial o geográfico, por lo que el uso de SIG con distintos marcos o análisis puede ayudar en el proceso de toma de decisiones."
   },
   {
-    "objectID": "multicriterio.html#referencias",
-    "href": "multicriterio.html#referencias",
-    "title": "2  Análisis Multicriterio",
-    "section": "2.4 Referencias",
-    "text": "2.4 Referencias\nMulti-Criteria Decision Analysis and GIS - Siobhan Ryan and Ellis Nimick"
-  },
-  {
-    "objectID": "multicriterio.html#introducción",
-    "href": "multicriterio.html#introducción",
-    "title": "2  Análisis Multicriterio",
-    "section": "2.1 Introducción",
-    "text": "2.1 Introducción\nMuchos de los problemas a los que nos enfrentamos hoy en día son complicados, con muchos intereses y soluciones contrapuestos. Sin embargo, los grupos tienen que ser capaces de trabajar juntos y llegar a compromisos para encontrar una solución que sea la más factible. Estos problemas suelen tener un carácter espacial o geográfico, por lo que el uso de SIG con distintos marcos o análisis puede ayudar en el proceso de toma de decisiones."
-  },
-  {
     "objectID": "multicriterio.html#criterios",
     "href": "multicriterio.html#criterios",
-    "title": "2  Análisis Multicriterio",
-    "section": "2.1 Criterios",
-    "text": "2.1 Criterios\n\n2.1.1 Criterios Binarios\n\n\n\nFigure 2.1: Criterios Binarios\n\n\nLos criterios del tipo binario se clasifican como buenos (1) o malos (0) Se determina multiplicando el mapa de tres preferencias binarias individuales, por lo que los valores 0 \\times 0 \\times 0 son iguales que 0 \\times 1 \\times 1 (AND).\nLa adición puede mostrar áreas en una escala que se ajustan a algunos de los criterios (O)\n\n\n2.1.2 Criterios Ponderados\ndefinir los criterios binarios en el método de análisis jerarquico\n\n\n\nFigure 2.2: Criterios Ponderados\n\n\nLos criterios no son en blanco y negro, y pueden estar en un gradiente. Cada entrada puede ponderarse según su importancia o su porcentaje de influencia. La ponderación es un porcentaje relativo, y la suma de los porcentajes de influencia debe ser igual al 100%.\n\n\n\nFigure 2.3: Ejemplo de cálculo análisis multcriterio estándar"
-  },
-  {
-    "objectID": "multicriterio.html#análisis-de-decisiones-multicriterio-mcda",
-    "href": "multicriterio.html#análisis-de-decisiones-multicriterio-mcda",
-    "title": "2  Análisis Multicriterio",
-    "section": "2.2 Análisis de Decisiones Multicriterio (MCDA)",
-    "text": "2.2 Análisis de Decisiones Multicriterio (MCDA)\nLa toma de decisiones multicriterio es un enfoque utilizado para facilitar la consideración de múltiples criterios por parte de los responsables de la toma de decisiones. El MCDA se utiliza para evaluar y comparar lógicamente múltiples criterios, a menudo contradictorios, con el fin de tomar la mejor decisión posible. Resulta especialmente útil cuando hay un amplio abanico de partes interesadas con intereses, valores y objetivos contrapuestos.\nUn MCDA puede utilizarse en cualquier campo para estudiar una amplia gama de problemas en los que puede haber múltiples soluciones favorables. Se ha utilizado en el ámbito de la atención sanitaria, como tratamientos de enfermedades o priorización, elección de un coche nuevo, actividades turísticas, opciones de procesamiento, transporte, uso de la energía, evaluación de riesgos, uso del suelo y selección de emplazamientos.\n\n\n\nFigure 2.4: MCDA Ejemplo de compra"
+    "title": "3  Análisis Multicriterio",
+    "section": "3.1 Criterios",
+    "text": "3.1 Criterios\n\n3.1.1 Criterios Binarios\n\n\n\nFigure 3.1: Criterios Binarios\n\n\nLos criterios del tipo binario se clasifican como buenos (1) o malos (0) Se determina multiplicando el mapa de tres preferencias binarias individuales, por lo que los valores 0 \\times 0 \\times 0 son iguales que 0 \\times 1 \\times 1 (AND).\nLa adición puede mostrar áreas en una escala que se ajustan a algunos de los criterios (O)\n\n\n3.1.2 Criterios Ponderados\ndefinir los criterios binarios en el método de análisis jerarquico\n\n\n\nFigure 3.2: Criterios Ponderados\n\n\nLos criterios no son en blanco y negro, y pueden estar en un gradiente. Cada entrada puede ponderarse según su importancia o su porcentaje de influencia. La ponderación es un porcentaje relativo, y la suma de los porcentajes de influencia debe ser igual al 100%.\n\n\n\nFigure 3.3: Ejemplo de cálculo análisis multcriterio estándar"
   },
   {
     "objectID": "multicriterio.html#sec-MCDA",
     "href": "multicriterio.html#sec-MCDA",
-    "title": "2  Análisis Multicriterio",
-    "section": "2.2 Análisis de Decisiones Multicriterio (MCDA)",
-    "text": "2.2 Análisis de Decisiones Multicriterio (MCDA)\nLa toma de decisiones multicriterio es un enfoque utilizado para facilitar la consideración de múltiples criterios por parte de los responsables de la toma de decisiones. El MCDA se utiliza para evaluar y comparar lógicamente múltiples criterios, a menudo contradictorios, con el fin de tomar la mejor decisión posible. Resulta especialmente útil cuando hay un amplio abanico de partes interesadas con intereses, valores y objetivos contrapuestos.\nUn MCDA puede utilizarse en cualquier campo para estudiar una amplia gama de problemas en los que puede haber múltiples soluciones favorables. Se ha utilizado en el ámbito de la atención sanitaria, como tratamientos de enfermedades o priorización, elección de un coche nuevo, actividades turísticas, opciones de procesamiento, transporte, uso de la energía, evaluación de riesgos, uso del suelo y selección de emplazamientos.\n\n\n\nFigure 2.4: Ejemplo Análisis de Decisiones Multicriterio (MCDA) para la compra"
+    "title": "3  Análisis Multicriterio",
+    "section": "3.2 Análisis de Decisiones Multicriterio (MCDA)",
+    "text": "3.2 Análisis de Decisiones Multicriterio (MCDA)\nLa toma de decisiones multicriterio es un enfoque utilizado para facilitar la consideración de múltiples criterios por parte de los responsables de la toma de decisiones. El MCDA se utiliza para evaluar y comparar lógicamente múltiples criterios, a menudo contradictorios, con el fin de tomar la mejor decisión posible. Resulta especialmente útil cuando hay un amplio abanico de partes interesadas con intereses, valores y objetivos contrapuestos.\nUn MCDA puede utilizarse en cualquier campo para estudiar una amplia gama de problemas en los que puede haber múltiples soluciones favorables. Se ha utilizado en el ámbito de la atención sanitaria, como tratamientos de enfermedades o priorización, elección de un coche nuevo, actividades turísticas, opciones de procesamiento, transporte, uso de la energía, evaluación de riesgos, uso del suelo y selección de emplazamientos.\n\n\n\nFigure 3.4: Ejemplo Análisis de Decisiones Multicriterio (MCDA) para la compra"
   },
   {
     "objectID": "multicriterio.html#sec-GIS-MCDA",
     "href": "multicriterio.html#sec-GIS-MCDA",
-    "title": "2  Análisis Multicriterio",
-    "section": "2.3 Análisis de Decisiones Multicriterio y los Sistemad de Información Geográfica (GIS-MCDA)",
-    "text": "2.3 Análisis de Decisiones Multicriterio y los Sistemad de Información Geográfica (GIS-MCDA)\nMuchos de los problemas a los que se enfrenta la gente son de naturaleza geográfica, por lo que resulta muy útil combinar los SIG con el MCDA. Los problemas espaciales suelen implicar un amplio conjunto de alternativas viables y criterios de evaluación múltiples, conflictivos e inconmensurables. Utilizar un SIG-MCDA puede es un proceso que transforma y combina datos geográficos y juicios de valor para resolver problemas espaciales. Para ello, tiene en cuenta los modelos de datos geográficos, la dimensión espacial de los criterios de evaluación y las alternativas de decisión a la hora de evaluar los criterios.\nAlgunos ejemplos de aplicaciones SIG-MCDA son el encaminamiento de vehículos, la selección de emplazamientos, la evaluación de escenarios, la adecuación de terrenos, la programación del transporte, la evaluación de impactos y la asignación de ubicaciones a diversos sectores.\n\n2.3.1 Pasos del GIS-MCDA\n\n\n\nFigure 2.5: Flujo de integración GIS-MCDA\n\n\n\nDefina su problema, meta u objetivo. Intente comprender y definir el problema de la forma más exhaustiva posible.\nDeterminar los criterios y las limitaciones. Utilizar una combinación de opiniones de expertos e información de diversas fuentes. Puede obtenerse a partir de conversaciones con expertos de los campos pertinentes, el estudio de la bibliografía y el análisis de datos históricos.\nTransformar los valores en una escala relativa. Esto permite comparar cada uno de los criterios y representar los juicios y conocimientos de los expertos con cifras significativas. Ponderar la importancia de cada criterio con respecto al objetivo, y entre sí.\nCombinar, sintetizar y agregar las capas/criterios.\nAnalizar y validar los resultados."
+    "title": "3  Análisis Multicriterio",
+    "section": "3.3 Análisis de Decisiones Multicriterio y los Sistemad de Información Geográfica (GIS-MCDA)",
+    "text": "3.3 Análisis de Decisiones Multicriterio y los Sistemad de Información Geográfica (GIS-MCDA)\nMuchos de los problemas a los que se enfrenta la gente son de naturaleza geográfica, por lo que resulta muy útil combinar los SIG con el MCDA. Los problemas espaciales suelen implicar un amplio conjunto de alternativas viables y criterios de evaluación múltiples, conflictivos e inconmensurables. Utilizar un SIG-MCDA puede es un proceso que transforma y combina datos geográficos y juicios de valor para resolver problemas espaciales. Para ello, tiene en cuenta los modelos de datos geográficos, la dimensión espacial de los criterios de evaluación y las alternativas de decisión a la hora de evaluar los criterios.\nAlgunos ejemplos de aplicaciones SIG-MCDA son el encaminamiento de vehículos, la selección de emplazamientos, la evaluación de escenarios, la adecuación de terrenos, la programación del transporte, la evaluación de impactos y la asignación de ubicaciones a diversos sectores.\n\n3.3.1 Pasos del GIS-MCDA\n\n\n\nFigure 3.5: Flujo de integración GIS-MCDA\n\n\n\nDefina su problema, meta u objetivo. Intente comprender y definir el problema de la forma más exhaustiva posible.\nDeterminar los criterios y las limitaciones. Utilizar una combinación de opiniones de expertos e información de diversas fuentes. Puede obtenerse a partir de conversaciones con expertos de los campos pertinentes, el estudio de la bibliografía y el análisis de datos históricos.\nTransformar los valores en una escala relativa. Esto permite comparar cada uno de los criterios y representar los juicios y conocimientos de los expertos con cifras significativas. Ponderar la importancia de cada criterio con respecto al objetivo, y entre sí.\nCombinar, sintetizar y agregar las capas/criterios.\nAnalizar y validar los resultados."
   },
   {
-    "objectID": "AHP.html",
-    "href": "AHP.html",
-    "title": "4  AHP",
-    "section": "",
-    "text": "Creado por Saaty (1980), AHP es un método de comparación por pares que se utiliza en los criterios con respecto al objetivo. Estas comparaciones por pares se llevan a cabo para todos los factores relevantes dentro de un análisis normalmente no más de 7, como por ejemplo la siguiente imagen Figure 4.1.\n\n\n\nFigure 4.1: Criterios de Relevancia para comparación de pares\n\n\nUna vez consolidados y clasificados los criterios en el MCDA, se utiliza el AHP para calcular las ponderaciones relativas, la importancia o el valor de cada factor. que son relevantes para el problema en cuestión. Una vez asignados los pesos relativos, se calcula un vector de prioridad, que nos da el valor modificador de relevancia global para cada factor, que se utilizará en los cálculos del SIG.\n\n\n\nFigure 4.2: Ejemplo de comparación de pares\n\n\nA continuación, se calcula el Coeficiente de Coherencia (Consistency Ratio CR) para medir el grado de coherencia de las valoraciones con respecto a grandes muestras de valoraciones puramente aleatorias. Si el CR es superior a 0,1, las valoraciones deben considerarse poco fiables."
-  },
-  {
-    "objectID": "AHP.html#beneficios-y-ventajas-del-uso-de-ahp",
-    "href": "AHP.html#beneficios-y-ventajas-del-uso-de-ahp",
-    "title": "4  AHP",
-    "section": "4.2 Beneficios y ventajas del uso de AHP",
-    "text": "4.2 Beneficios y ventajas del uso de AHP\n\nUn enfoque más estructurado para medir la idoneidad al dividir el problema en criterios jerárquicos.\nUn análisis más sistemático y profundo de los factores, que pueden comprenderse mejor al examinar específicamente sus formas o indicadores inferiores y más específicos.\nEl AHP permite la participación tanto de expertos como de partes interesadas en la aportación de información. Dicho marco permite incorporar y acomodar criterios tanto cualitativos como cuantitativos y la aportación de conocimientos de expertos."
-  },
-  {
-    "objectID": "AHP.html#referencias",
-    "href": "AHP.html#referencias",
-    "title": "4  AHP",
-    "section": "4.3 Referencias",
-    "text": "4.3 Referencias\nMulti-Criteria Decision Analysis and GIS - Siobhan Ryan and Ellis Nimick ir\n\n\n\n\nSaaty, T. L. 1980. “The Analytic Hierarchy Process.”"
-  },
-  {
-    "objectID": "fuzzy_logic.html",
-    "href": "fuzzy_logic.html",
-    "title": "5  Fuzzy Logic",
-    "section": "",
-    "text": "Los responsables de la toma de decisiones se enfrentan a situaciones numerosas y cada vez más complejas, y a menudo se muestran inseguros a la hora de asignar puntuaciones de evaluación como valor ponderación. Por ello, el diseño de un MCDA que incorpore la teoría de conjuntos difusos puede tener en cuenta esta incertidumbre. Un AHP difuso (FAHP) es la incorporación de matices de lógica difusa a la evaluación de criterios AHP.\nExisten varios tipos de números difusos y la nomenclatura de cada uno de ellos está asociada a su formato: números sinusoidales, en forma de campana, poligonales, triangulares, trapezoidales, etc. como se observan en la siguiente Figure 5.1\nPodemos hacer difusas dos partes del proceso SIG-MCDA:"
-  },
-  {
-    "objectID": "fuzzy_logic.html#referencias",
-    "href": "fuzzy_logic.html#referencias",
-    "title": "5  Fuzzy Logic",
-    "section": "5.1 Referencias",
-    "text": "5.1 Referencias\nMulti-Criteria Decision Analysis and GIS - Siobhan Ryan and Ellis Nimick"
+    "objectID": "multicriterio.html#referencias",
+    "href": "multicriterio.html#referencias",
+    "title": "3  Análisis Multicriterio",
+    "section": "3.4 Referencias",
+    "text": "3.4 Referencias\nMulti-Criteria Decision Analysis and GIS - Siobhan Ryan and Ellis Nimick"
   },
   {
     "objectID": "metodos.html",
@@ -124,5 +61,285 @@
     "title": "Métodos",
     "section": "Resumen",
     "text": "Resumen\n\nUn SIG-MCDA es una alternativa al típico análisis binario o de “coincidencias”, ya que ofrece una metodología más sólida basada en criterios. Por tanto, puede admitir múltiples valores de varios criterios a la vez. Esto permite una toma de decisiones más profunda.\nLos modelos estadísticos adicionales, como AHP y FAHP, pueden integrarse en un SIG-MCDA, lo que suele aumentar la fiabilidad y la importancia global de un análisis.\nLas partes interesadas/tomadores de decisiones son un componente crucial para que un análisis sea viable y aplicable. Son una parte valiosa a la hora de determinar los criterios de ponderación, aunque tienen el potencial de ser parciales.\nPara elaborar un MCDA fundamentado es necesario contar con la opinión de las partes interesadas y la bibliografía aplicable, que pueden contrarrestar las incoherencias y los prejuicios de las partes interesadas.\nEl MCDA-SIG es una metodología relativamente reciente que se ha aplicado a toda una serie de campos y cuestiones espaciales."
+  },
+  {
+    "objectID": "AHP.html",
+    "href": "AHP.html",
+    "title": "5  AHP",
+    "section": "",
+    "text": "Creado por Saaty (1980), AHP es un método de comparación por pares que se utiliza en los criterios con respecto al objetivo. Estas comparaciones por pares se llevan a cabo para todos los factores relevantes dentro de un análisis normalmente no más de 7, como por ejemplo la siguiente imagen Figure 5.1.\n\n\n\nFigure 5.1: Criterios de Relevancia para comparación de pares\n\n\nUna vez consolidados y clasificados los criterios en el MCDA, se utiliza el AHP para calcular las ponderaciones relativas, la importancia o el valor de cada factor. que son relevantes para el problema en cuestión. Una vez asignados los pesos relativos, se calcula un vector de prioridad, que nos da el valor modificador de relevancia global para cada factor, que se utilizará en los cálculos del SIG.\n\n\n\nFigure 5.2: Ejemplo de comparación de pares\n\n\nA continuación, se calcula el Coeficiente de Coherencia (Consistency Ratio CR) para medir el grado de coherencia de las valoraciones con respecto a grandes muestras de valoraciones puramente aleatorias. Si el CR es superior a 0,1, las valoraciones deben considerarse poco fiables."
+  },
+  {
+    "objectID": "AHP.html#beneficios-y-ventajas-del-uso-de-ahp",
+    "href": "AHP.html#beneficios-y-ventajas-del-uso-de-ahp",
+    "title": "6  AHP",
+    "section": "6.4 Beneficios y ventajas del uso de AHP",
+    "text": "6.4 Beneficios y ventajas del uso de AHP\n\nUn enfoque más estructurado para medir la idoneidad al dividir el problema en criterios jerárquicos.\nUn análisis más sistemático y profundo de los factores, que pueden comprenderse mejor al examinar específicamente sus formas o indicadores inferiores y más específicos.\nEl AHP permite la participación tanto de expertos como de partes interesadas en la aportación de información. Dicho marco permite incorporar y acomodar criterios tanto cualitativos como cuantitativos y la aportación de conocimientos de expertos."
+  },
+  {
+    "objectID": "AHP.html#referencias",
+    "href": "AHP.html#referencias",
+    "title": "6  AHP",
+    "section": "6.5 Referencias",
+    "text": "6.5 Referencias\nMulti-Criteria Decision Analysis and GIS - Siobhan Ryan and Ellis Nimick\nVideo: Proceso Analítico Jerárquico. AHP (Analytic Hierarchy Process), Unviversidad Técnica de Valencia UPV\n\n\n\n\nSaaty, T. L. 1980. “The Analytic Hierarchy Process.”\n\n\nSaaty, Thomas L. 2003. “Decision-Making with the AHP: Why Is the Principal Eigenvector Necessary.” European Journal of Operational Research 145 (1): 85–91. https://doi.org/10.1016/s0377-2217(02)00227-8."
+  },
+  {
+    "objectID": "fuzzy_logic.html",
+    "href": "fuzzy_logic.html",
+    "title": "7  Fuzzy Logic",
+    "section": "",
+    "text": "Los responsables de la toma de decisiones se enfrentan a situaciones numerosas y cada vez más complejas, y a menudo se muestran inseguros a la hora de asignar puntuaciones de evaluación como valor ponderación. Por ello, el diseño de un MCDA que incorpore la teoría de conjuntos difusos puede tener en cuenta esta incertidumbre. Un AHP difuso (FAHP) es la incorporación de matices de lógica difusa a la evaluación de criterios AHP.\nExisten varios tipos de números difusos y la nomenclatura de cada uno de ellos está asociada a su formato: números sinusoidales, en forma de campana, poligonales, triangulares, trapezoidales, etc. como se observan en la siguiente Figure 7.1\nPodemos hacer difusas dos partes del proceso SIG-MCDA:"
+  },
+  {
+    "objectID": "fuzzy_logic.html#referencias",
+    "href": "fuzzy_logic.html#referencias",
+    "title": "7  Fuzzy Logic",
+    "section": "7.1 Referencias",
+    "text": "7.1 Referencias\nMulti-Criteria Decision Analysis and GIS - Siobhan Ryan and Ellis Nimick"
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Guerrero Hoyos, Benito Gustavo, Fabio De Jesús Vélez Macías, and Diana\nElizabeth Morales Quintero. 2020. “Energía eólica y\nterritorio: sistemas de información geográfica y métodos de decisión\nmulticriterio en La Guajira (Colombia).” Ambiente y\nDesarrollo 23 (44). https://doi.org/10.11144/Javeriana.ayd23-44.eets.\n\n\nSaaty, T. L. 1980. “The Analytic Hierarchy Process.”\n\n\nSaaty, Thomas L. 2003. “Decision-Making with the AHP: Why Is the\nPrincipal Eigenvector Necessary.” European Journal of\nOperational Research 145 (1): 85–91. https://doi.org/10.1016/s0377-2217(02)00227-8."
+  },
+  {
+    "objectID": "estado_arte.html",
+    "href": "estado_arte.html",
+    "title": "4  Estado del Arte",
+    "section": "",
+    "text": "La ubicación para proyectos de generación eléctrica es crucial. La planificación de estos proyectos es compleja debido a las muchas variables que hay que tener en cuenta. Deben evaluarse los impactos ambientales y los requisitos técnicos de la zona. El objetivo es encontrar una zona con la máxima rentabilidad económica y los impactos ambientales mínimos. La planificación se puede mejorar mediante la evaluación espacial con la ayuda de Sistemas de Infcormación Geográfica (SIG) y métodos Métodos de Decisión Multi-Criterio (MDMC).\nLos SIG y los MDMC son herramientas que se complementan. Los SIG ofrecen la posibilidad de adquirir, almacenar, visualizar y analizar la información georreferenciada. Basándose en dicha información, los MDMC proveen las técnicas y los procedimientos para estructurar un problema de decisión y evaluar las alternativas posibles (Malczewski, 1999). Dado el uso de los SIG, la calidad de los resultados depende de la calidad de los datos de entrada utilizados, en cuanto a resolución o escala, procedencia, distribución espacial, concordancia temporal y consistencia lógica.\nEn la literatura, la integración de los SIG con los MDMC ha sido empleada en diferentes estudios para determinar la ubicación de proyectos de energías renovables. Podemos mencionar como ejemplos recientes los trabajos de Tegou, Polatidis y Haralambopoulos (2010); Aydin, Kentel y Duzgun (2010); Uyan (2013); Atici, Simsek, Ulucan y Tosun (2015); Latinopoulos y Kechagia (2015); Siyal et al. (2015); Sánchez-Lozano, García-Cascales y Lamata (2016); Höfer, Sunak, Siddique y Madlener (2016), y Noorollahi, Yousefi y Mohammadi (2016). Estos estudios presentan diferentes metodologías de acuerdo con el tipo de energía o la zona de estudio.\nEn general, los resultados obtenidos corresponden a mapas de la distribución de zonas factibles para instalar turbinas de viento. Las zonas potenciales son elegidas conforme a criterios de restricción y evaluación y su importancia. La selección de estos criterios debe ser analizada cuidadosamente para cada área de estudio y los resultados obtenidos dependen directamente de los criterios seleccionados. Todo estudio de selección y evaluación de áreas con potencial eólico debe tener en cuenta, además de los impactos ambientales, aspectos técnicos y económicos (Tegou et al., 2010).\nEn la Table 4.1 realizada por Guerrero Hoyos, Vélez Macías, and Morales Quintero (2020), se observan los criterios de restricción y evaluación elegidos por diferentes autores en trabajos donde se integran los SIG con los MDMC para seleccionar sitios apropiados en donde ubicar proyectos de energías renovables, además se muestran las metodologías utilizadas en los estudios. Como se puede observar en la tabla 1, en la literatura no existe un consenso en torno a la denición de los criterios o su clasifiiación en importancia. La mayoría de los estudios revisados presentan una deciencia común en la asignación de pesos, que representan la importancia relativa de cada criterio, y es que los pesos son asignados de acuerdo con la experiencia de los autores. La asignación de los pesos, al igual que la selección de los criterios de restricción o valores límite, debería hacerse teniendo en cuenta la opinión de expertos.\n\n\n\n\nTable 4.1:  Tabla de criterios de restricción o de evaluación utilizados por diferentes autores para identicar zonas viables para instalar parques eólicos. \n \n  \n    Variables \n    Tegou.2010 \n    Hoffer.2016 \n    Atici.2015 \n    Mentis.2015 \n    Latinopoulos.2015 \n    Noorollahi.2016 \n    Siyal.2015 \n    Sanchez.Lozano.2016 \n  \n \n\n  \n    Distancia a áreas residenciales (urbanas, rurales) \n    x \n    x \n    x \n    x \n    x \n    x \n    x \n    x \n  \n  \n    Distancias a Autopistas, carreteras, caminos \n    x \n    x \n    x \n     \n    x \n    x \n    x \n    x \n  \n  \n    Distancias a ferrovías \n     \n    x \n    x \n     \n    x \n    x \n    x \n     \n  \n  \n    Distancias a Aeropuertos \n    x \n     \n    x \n     \n    x \n    x \n    x \n    x \n  \n  \n    Ríos, Lagos, líneas costeras (cuerpos de agua) \n    x \n    x \n    x \n    x \n    x \n    x \n    x \n    x \n  \n  \n    Distancia a áreas protegidas (naturales o militares) \n    x \n    x \n    x \n    x \n    x \n    x \n    x \n    x \n  \n  \n    Distancias a áreas de Interés Nacional (culturales, arqueológicas, religiosas, recreacionales) \n    x \n    x \n     \n     \n    x \n    x \n    x \n    x \n  \n  \n    Fallas \n     \n     \n    x \n     \n     \n    x \n     \n     \n  \n  \n    Distancia a líneas de transmisión eléctrica \n    x \n    x \n    x \n    x \n     \n    x \n    x \n    x \n  \n  \n    Velocidad del Viento (potencial éolico) \n    x \n    x \n    x \n    x \n    x \n    x \n    x \n    x \n  \n  \n    Elevación \n     \n     \n    x \n    x \n     \n    x \n    x \n     \n  \n  \n    Pendiente (%) \n    x \n     \n    x \n    x \n    x \n    x \n    x \n     \n  \n  \n    Usos de la Tierra \n    x \n     \n     \n    x \n    x \n     \n     \n     \n  \n  \n    Demanda de Electricidad \n    x \n     \n     \n     \n     \n     \n     \n     \n  \n  \n    Factor de Capacidad \n     \n     \n    x \n     \n     \n     \n     \n     \n  \n  \n    Distancia a sitios de minería \n     \n     \n    x \n     \n     \n     \n     \n     \n  \n  \n    Distancia a estaciones de TV o Radio \n     \n     \n    x \n     \n     \n     \n     \n    x \n  \n\n\n\n\n\n\nDe los estudios indicadors Table 4.1 la metodología multicriterio mas utilizada en es el Proceso Análisis Jerárquico (AHP, por sus siglas en inglés) fue el MDMC más utilizado en los trabajos revisados. El AHP es un método diseñado para resolver problemas complejos que implican múltiples criterios u objetivos (Tegou et al., 2010). En la aplicación de este método, quien toma la decisión debe comparar la importancia de un criterio con respecto a otro. Con esto se obtiene una jerarquización de las alternativas posibles. Para aplicar el AHP se requiere:\n\ndefinir el objetivo del problema, así como los criterios y las alternativas; además, se requiere estructurar el problema de decisión como una jerarquía;\ncrear una matriz de comparación por pares, en donde se compara la importancia de un criterio frente a otro;\ncalcular el vector de prioridades que indica la importancia relativa de los diferentes criterios, y\nvalidar la consistencia de los resultados (R. W. Saaty, 1987; T. L. Saaty, 1980). La comparación por pares es la base fundamental del AHP.\n\n\n\n\n\nGuerrero Hoyos, Benito Gustavo, Fabio De Jesús Vélez Macías, and Diana Elizabeth Morales Quintero. 2020. “Energía eólica y territorio: sistemas de información geográfica y métodos de decisión multicriterio en La Guajira (Colombia).” Ambiente y Desarrollo 23 (44). https://doi.org/10.11144/Javeriana.ayd23-44.eets."
+  },
+  {
+    "objectID": "intro.html#etapa-1",
+    "href": "intro.html#etapa-1",
+    "title": "1  Introducción",
+    "section": "1.1 Etapa 1",
+    "text": "1.1 Etapa 1\nDesarrollo de estándares para la localización de proyectos de generación eléctrica\nActividad 1: Análisis de aspectos asociados a la localización de proyectos\n\nCaracterización social y geográfica del territorio por medio de la Matriz de Bienestar Humano Territorial (MBHT)\nLevantamiento de brechas de desarrollo territorial\nLevantamiento de oferta laboral y productiva del territorio\nTendencias de desarrollo comunal o de sectores asociados al emplazamiento del terreno\nLevantamiento de condiciones especiales y limitaciones del territorio (zonas de protección, pueblos originarios, conflictos socioambientales)\nLevantamiento de riesgos asociados a localización\nLevantamiento de las condiciones normativas actualmente aplicables al terreno.\nLevantamiento de buenas practicas entorno al desarrollo de proyectos de generación eléctrica nacional e internacional."
+  },
+  {
+    "objectID": "intro.html#etapa-1desarrollo-de-estándares-para-la-localización-de-proyectos-de-generación-eléctrica",
+    "href": "intro.html#etapa-1desarrollo-de-estándares-para-la-localización-de-proyectos-de-generación-eléctrica",
+    "title": "1  Introducción",
+    "section": "1.1 Etapa 1Desarrollo de estándares para la localización de proyectos de generación eléctrica",
+    "text": "1.1 Etapa 1Desarrollo de estándares para la localización de proyectos de generación eléctrica\nDesarrollo de estándares para la localización de proyectos de generación eléctrica\nActividad 1: Análisis de aspectos asociados a la localización de proyectos\n\nCaracterización social y geográfica del territorio por medio de la Matriz de Bienestar Humano Territorial (MBHT)\nLevantamiento de brechas de desarrollo territorial\nLevantamiento de oferta laboral y productiva del territorio\nTendencias de desarrollo comunal o de sectores asociados al emplazamiento del terreno\nLevantamiento de condiciones especiales y limitaciones del territorio (zonas de protección, pueblos originarios, conflictos socioambientales)\nLevantamiento de riesgos asociados a localización\nLevantamiento de las condiciones normativas actualmente aplicables al terreno.\nLevantamiento de buenas practicas entorno al desarrollo de proyectos de generación eléctrica nacional e internacional."
+  },
+  {
+    "objectID": "intro.html#etapa-1-desarrollo-de-estándares-para-la-localización-de-proyectos-de-generación-eléctrica",
+    "href": "intro.html#etapa-1-desarrollo-de-estándares-para-la-localización-de-proyectos-de-generación-eléctrica",
+    "title": "1  Introducción",
+    "section": "1.1 Etapa 1: Desarrollo de estándares para la localización de proyectos de generación eléctrica",
+    "text": "1.1 Etapa 1: Desarrollo de estándares para la localización de proyectos de generación eléctrica\nActividad 1: Análisis de aspectos asociados a la localización de proyectos\n\nCaracterización social y geográfica del territorio por medio de la Matriz de Bienestar Humano Territorial (MBHT)\nLevantamiento de brechas de desarrollo territorial\nLevantamiento de oferta laboral y productiva del territorio\nTendencias de desarrollo comunal o de sectores asociados al emplazamiento del terreno\nLevantamiento de condiciones especiales y limitaciones del territorio (zonas de protección, pueblos originarios, conflictos socioambientales)\nLevantamiento de riesgos asociados a localización\nLevantamiento de las condiciones normativas actualmente aplicables al terreno.\nLevantamiento de buenas practicas entorno al desarrollo de proyectos de generación eléctrica nacional e internacional.\n\nActividad 2: Análisis multicriterio territorial (da origen al presente documento)\nMetodología para afrontar problemas de toma de decisiones en los que varios los objetivos o criterios deben cubrirse simultáneamente y ponderarlo según necesidades particulares.\n\n\n\n\n\nEn base a la actividad 1, se establecerán las ponderaciones de cada criterio consensuado asociado a la localización de terrenos de acuerdo a:\n\nAsignación de pesos que establezcan las primeras ponderaciones y escenarios de localización.\nMesa de conversación de prioridades con los actores locales relevantes, expertos y empresas que conviven en el territorio para desarrollar una re asignación de ponderaciones y así ara corroborar los escenarios de localización y/o generar nuevos escenarios de localización\nCalibración de ponderaciones de acuerdo a la sensibilidad de los criterios definidos en las actividades anteriores se termina de afinar la definición de los escenarios de localización para proyectos de generación eléctrica.\nPropuesta de escenarios de localización de proyectos de generación eléctrica.\n\n\n\n\nDiagrama general del análisis multicriterio territorial"
+  },
+  {
+    "objectID": "intro.html#etapa-2-desarrollo-de-estándares-para-la-incidencia-en-etapas-de-diseño-de-proyectos-de-generación-eléctrica",
+    "href": "intro.html#etapa-2-desarrollo-de-estándares-para-la-incidencia-en-etapas-de-diseño-de-proyectos-de-generación-eléctrica",
+    "title": "1  Introducción",
+    "section": "1.2 Etapa 2: Desarrollo de estándares para la incidencia en etapas de diseño de proyectos de generación eléctrica",
+    "text": "1.2 Etapa 2: Desarrollo de estándares para la incidencia en etapas de diseño de proyectos de generación eléctrica\nActividad 1: Análisis e identificación de diseño de proyectos de generación eléctrica\n\nIdentificación de diseños de proyectos implementados a escala nacional e internacional de buenas practicas participativas.\nLevantamiento de líneas de compensación socio ambientales en las Resolución de Calificación Ambiental (RCA) en Chile.\nIdentificación y localización de impactos, mitigación y conflictos socio ambientales de proyectos de generación eléctrica en el territorio.\nLevantamiento de las condiciones normativas actualmente aplicables entorno a proyectos de generación eléctrica.\nLevantamiento de buenas prácticas implementadas entorno al diseño de proyectos de generación eléctrica nacional como internacional.\nIdentificación de actores clave entorno al diseño de proyectos de generación eléctrica.\n\nActividad 2: Caracterización territorial de los territorios de interés de la región piloto\n\nLevantamiento de actores locales en los territorios.\nTendencias de desarrollo comunal o de sectores asociados al emplazamiento de proyectos.\nLevantamiento de condiciones especiales y limitaciones del territorio (p.e. zonas de protección, pueblos originarios, conflictos socio ambientales, entre otros).\nLevantamiento de Brechas de desarrollo territorial mediante la simulación de escenarios de compensaciones de proyectos con la Matriz de Bienestar Humano Territorial (MBHT).\n\nActividad 3: Determinación de estándares para un diseño de proyectos participativos y de diálogo temprano\nSe establecerá el diseño de estándares para la incidencia de proyectos de generación eléctrica en sus etapas de diseño mediante la participación anticipada y consenso temprano y vinculante de actores claves, empresas y expertos locales en el territorio. El desarrollo de esta actividad será por medio de 3 ciclos de diseño participativos, ajustando el o los diseños de estándares, de acuerdo a los resultados obtenidos en los ciclos de participación con expertos, actores locales y empresas del territorio, con el fin de avanzar en el diseño, que permitan disminuir los impactos y ofrecer mitigaciones oportunas y atingentes en el territorio.\nUna vez desarrollado los 3 ciclos de participación para los estándares del diseño del proyecto, se procederá a ajustar el escenario de diseño consolidado de acuerdo a los ciclos de participación, para ser expuesto nuevamente en la mesa de expertos, para eventuales ajustes. Una vez ajustados y definidos los estándares de diseño para un proyecto participativo y de diálogo temprano, se presentarán con las empresas y la comunidad de los territorios, visualizando la participación vinculante en el diseño del proyecto.\n\n\n\nDiseño consolidado"
+  },
+  {
+    "objectID": "participacion.html",
+    "href": "participacion.html",
+    "title": "2  Participación",
+    "section": "",
+    "text": "Ciclo 1 de Diseño: Este punto considera establecer el diseño del proyecto mediante la participación con expertos de los distintos ámbitos que abarca el proyecto."
+  },
+  {
+    "objectID": "participacion.html#participación-con-empresas",
+    "href": "participacion.html#participación-con-empresas",
+    "title": "2  Participación",
+    "section": "2.2 Participación con Empresas",
+    "text": "2.2 Participación con Empresas\n\n\n\nCiclo 2 de Diseño: Este punto considera establecer el diseño del proyecto mediante la participación con empresas que tengan impactos en el territorio."
+  },
+  {
+    "objectID": "participacion.html#parcipación-actores-claves-y-la-comunidad",
+    "href": "participacion.html#parcipación-actores-claves-y-la-comunidad",
+    "title": "2  Participación",
+    "section": "2.3 Parcipación Actores Claves y la Comunidad",
+    "text": "2.3 Parcipación Actores Claves y la Comunidad\n\n\n\nCiclo 3 de Diseño: Este punto considera establecer el diseño del proyecto mediante la participación con empresas que tengan impactos en el territorio."
+  },
+  {
+    "objectID": "diseno.html",
+    "href": "diseno.html",
+    "title": "8  Diseño de Solución",
+    "section": "",
+    "text": "A continuación se presenta un esquema preliminar de aplicación de un sistema de análisis multicriterio territorial (Figure 8.1).\n\n\n\nFigure 8.1: Diagrama general del análisis multicriterio territorial"
+  },
+  {
+    "objectID": "AHP.html#algoritmo",
+    "href": "AHP.html#algoritmo",
+    "title": "5  AHP",
+    "section": "5.2 Algoritmo",
+    "text": "5.2 Algoritmo\nDe acuerdo con T. L. Saaty (1980), para n criterios es posible construir una matriz A=[a_{ij}], con i,j =1,2,...,n. El valor de cada a_{ij} corresponde a la importancia relativa del criterio C_i (fila i) sobre el criterio C_j (columna j), según la escala fundamental propuesta por Saati (Table 5.1). Cuando i=j, el valor de a_{ij} será igual a 1 ya que estamos comparando un criterio con el mismo.\n\nA= \\begin{bmatrix}\n1 & a_{1,2} & a_{1,3} & \\dots & a_{1,n} \\\\\na_{2,1} & 1 & a_{2,3} & \\dots & a_{2,n} \\\\\n\\vdots & \\vdots & \\vdots & \\ddots & \\vdots \\\\\na_{n,1} & a_{n,2} & a_{n,3} & \\dots & 1\n\\end{bmatrix}\n\nLuego de construir la matriz de comparación por pares, se procede a calcular el vector de prioridades. Este vector indica la influencia de un criterio sobre el objetivo global, en estos casos la ubicación optima de una planta de generarción de energía eléctrica. Existen múltiples formas de calcular este vector, una de ellas es usando el método del vector propio principal w tal que:\nA \\times W = \\lambda_{max} \\times w\nDonde \\lambda_{max} es el máximo valor propio de la matriz A\nFinalmente se verifica la consistencia de la matriz de comparaciones pareadas. La matriz A es consistente si aij.ajk = aik para i,j,k = 1,2,...,n. Para validar la consistencia razonable de los juicios en la matriz de comparación por pares se calcula el índice de consistencia (IC) (Equation 5.1) y la razón de consistencia (RC) (Equation 5.2).\nLa razón de consistencia (RC) se calcula a partir de un índice de consistencia aleatorio (IA), que varía de acuerdo con el tamaño de la matriz A (Table 5.2). La matriz se considera consistente si RC < 0.1; en caso contrario, se considera inconsistente y se aplica la corrección de consistencia planteada por Saaty (T. L. Saaty, 2003).\nIC = \\frac{\\lambda_{max}-n}{n-1} \\tag{5.1}\nRC = \\frac{IC}{IA} \\tag{5.2}\n\n\n\n\nTable 5.2:  Índice de consistencia aleatorio (IA) \n\n  \n    1 \n    2 \n    3 \n    4 \n    5 \n    6 \n    7 \n    8 \n    9 \n    10 \n    11 \n    12 \n  \n  \n    0.00 \n    0.00 \n    0.52 \n    0.89 \n    1.11 \n    1.25 \n    1.35 \n    1.40 \n    1.45 \n    1.49 \n    1.52 \n    1.54"
+  },
+  {
+    "objectID": "AHP.html#introducción",
+    "href": "AHP.html#introducción",
+    "title": "6  AHP",
+    "section": "6.1 Introducción",
+    "text": "6.1 Introducción\nCreado por T. L. Saaty (1980), AHP es un método de comparación por pares que se utiliza en los criterios con respecto al objetivo, el cual es tomar la mejor decisión tomando en consideración diferentes criterios, por cada una de las alternativas, en el caso territorial serían las diferentes áreas (Figure 6.1).\n\n\n\nFigure 6.1: Diagrama de objetivos con criterios y alternativas espaciales\n\n\nEstas comparaciones por pares se llevan a cabo para todos los factores relevantes dentro de un análisis considerando la siguiente escala. (Table 6.1)\n\n\n\n\nTable 6.1:  Escala fundamental, de acuerdo con Saaty. \n \n  \n    Intensidad \n    Deninición \n    Explicación \n  \n \n\n  \n    1 \n    Igual importancia \n    Dos criterios o elementos contribuyen de igual forma al cumplimiento del objetivo \n  \n  \n    3 \n    Importancia moderada de un criterio sonbre el otro \n    La experiencia y el juicio favorecen levemente una actividad sobre la otra \n  \n  \n    5 \n    Importancia esencial o fuerte \n    La experiencia y el juicio favorecen fuertemente una actividad sobre la otra \n  \n  \n    7 \n    Importancia muy fuerte o demostrada \n    Una actividad es mucho más favorecida que la otra y su predominancia se demostró en la práctica predominancia se demostró en la práctica \n  \n  \n    9 \n    Importancia extrema o absoluta \n    La evidencia que favorece una actividad sobre la otra es absoluta y totalmente clara \n  \n  \n    2, 4, 6, 8 \n    Valores Intermedios \n    Cuando es necesario llegar a un compromiso entre dos sentencias adyacentes \n  \n\n\n\n\n\n\nUna vez consolidados y clasificados los criterios en el MCDA en una matriz (Figure 6.2), se utiliza el AHP para calcular las ponderaciones relativas, la importancia de cada criterio, que son relevantes para el problema en cuestión. Para validar la consistencia razonable de los juicios en la matriz de comparación por pares se calcula el índice de consistencia como validación.\n\n\n\nFigure 6.2: Ejemplo de comparación de pares\n\n\nUna vez asignados los pesos relativos, se calcula un vector de prioridad, que nos da el valor modificador de relevancia global para cada factor, que se utilizará en los cálculos del SIG."
+  },
+  {
+    "objectID": "AHP.html#saaty2003algoritmo",
+    "href": "AHP.html#saaty2003algoritmo",
+    "title": "6  AHP",
+    "section": "6.2 (Thomas L. Saaty 2003)Algoritmo",
+    "text": "6.2 (Thomas L. Saaty 2003)Algoritmo\nDe acuerdo con T. L. T. L. Saaty (1980), para n criterios es posible construir una matriz A=[a_{ij}], con i,j =1,2,...,n. El valor de cada a_{ij} corresponde a la importancia relativa del criterio C_i (fila i) sobre el criterio C_j (columna j), según la escala fundamental propuesta por Saati (Table 6.1). Cuando i=j, el valor de a_{ij} será igual a 1 ya que estamos comparando un criterio con el mismo.\n\nA= \\begin{bmatrix}\n1 & a_{1,2} & a_{1,3} & \\dots & a_{1,n} \\\\\na_{2,1} & 1 & a_{2,3} & \\dots & a_{2,n} \\\\\n\\vdots & \\vdots & \\vdots & \\ddots & \\vdots \\\\\na_{n,1} & a_{n,2} & a_{n,3} & \\dots & 1\n\\end{bmatrix}\n\nLuego de construir la matriz de comparación por pares, se procede a calcular el vector de prioridades. Este vector indica la influencia de un criterio sobre el objetivo global, en estos casos la ubicación optima de una planta de generarción de energía eléctrica. Existen múltiples formas de calcular este vector, una de ellas es usando el método del vector propio principal w tal que:\nA \\times W = \\lambda_{max} \\times w\nDonde \\lambda_{max} es el máximo valor propio de la matriz A\nPara calcular los vectores propios en el AHP, se normaliza la matriz de comparación pairwise y luego se encuentra su valor propio dominante y el correspondiente vector propio. El valor propio dominante representa el grado en que las alternativas se han priorizado y el vector propio representa los pesos asignados a cada alternativa en términos de su prioridad.\nEl proceso de normalización consiste en dividir cada fila de la matriz de comparación pairwise por la suma de las filas. De esta manera, la matriz normalizada representa una distribución de probabilidad, donde cada fila suma 1.\nLuego, se calcula el valor propio dominante y el correspondiente vector propio usando técnicas matemáticas, como el método de potencias. El valor propio dominante se interpreta como el grado en que las alternativas se han priorizado, y el vector propio se interpreta como los pesos asignados a cada alternativa en términos de su prioridad.\nEn resumen, los vectores propios son una herramienta importante en el AHP para calcular la prioridad de las alternativas y ayudar a tomar decisiones informadas.\nFinalmente se verifica la consistencia de la matriz de comparaciones pareadas. La matriz A es consistente si aij.ajk = aik para i,j,k = 1,2,...,n. Para validar la consistencia razonable de los juicios en la matriz de comparación por pares se calcula el índice de consistencia (IC) (Equation 6.1) y la razón de consistencia (RC) (Equation 6.2).\nLa razón de consistencia (RC) se calcula a partir de un índice de consistencia aleatorio (IA), que varía de acuerdo con el tamaño de la matriz A (Table 6.2). La matriz se considera consistente si RC < IA; en caso contrario, se considera inconsistente y se aplica la corrección de consistencia planteada por Thomas L. Saaty (2003)\nIC = \\frac{\\lambda_{max}-n}{n-1} \\tag{6.1}\nRC = \\frac{IC}{IA} \\tag{6.2}\n\n\n\n\nTable 6.2:  Índice de consistencia aleatorio (IA) \n\n  \n    1 \n    2 \n    3 \n    4 \n    5 \n    6 \n    7 \n    8 \n    9 \n    10 \n    11 \n    12 \n  \n  \n    0.00 \n    0.00 \n    0.52 \n    0.89 \n    1.11 \n    1.25 \n    1.35 \n    1.40 \n    1.45 \n    1.49 \n    1.52 \n    1.54"
+  },
+  {
+    "objectID": "a_estudio.html",
+    "href": "a_estudio.html",
+    "title": "5  Área de Estudio",
+    "section": "",
+    "text": "Región de Antofagasta"
+  },
+  {
+    "objectID": "diseno.html#etapas",
+    "href": "diseno.html#etapas",
+    "title": "8  Diseño de Solución",
+    "section": "8.2 Etapas:",
+    "text": "8.2 Etapas:\n\nEntrevistas:\n\nCorresponde al proceso donde se obtiene la opinión, argumentos y experiencia de de los Expertos en la temática; empresas desde técnica y a la comunidad. Lo anterifor, detallado en la Chapter 2.\n\nCriterios:\n\nDefinción de los criterios de evaluación para los proyectos de generación de energía eléctrica.\n\nMatriz de Comparaciones:\n\nConfiguración de una matriz de comparación cuya valoración conrresponde a las ponderaciones de todos los criterios con todos, bajo la escala consignados en Table 6.1 de Saaty (1980).\n\nPnderacion de los criterios w:\n\nCalcular los autovalores de la matriz de comparación, que se definirán como pesos (w) por cada uno de los criterios, cuya suma es igual a 1.\n\n\nRasterización: :Completar…\n\nEscalado:\n\nCompletar…\n\nReclasificacion:\n\nCompletar…\n\nEvaluación de Área por Criterio:\n\nCompletar…\n\nRasterización Binaria:\n\n\nRestricciones de contrucción\n\n\nMapa de Factibilidad de áreas:\n\nCompletar…\n\n\n\n\n\n\nSaaty, T. L. 1980. “The Analytic Hierarchy Process.”"
+  },
+  {
+    "objectID": "AHP.html#algoritmo-saaty2003",
+    "href": "AHP.html#algoritmo-saaty2003",
+    "title": "6  AHP",
+    "section": "6.2 Algoritmo (Thomas L. Saaty 2003)",
+    "text": "6.2 Algoritmo (Thomas L. Saaty 2003)\nDe acuerdo con T. L. T. L. Saaty (1980), para n criterios es posible construir una matriz A=[a_{ij}], con i,j =1,2,...,n. El valor de cada a_{ij} corresponde a la importancia relativa del criterio C_i (fila i) sobre el criterio C_j (columna j), según la escala fundamental propuesta por Saati (Table 6.1). Cuando i=j, el valor de a_{ij} será igual a 1 ya que estamos comparando un criterio con el mismo.\n\nA= \\begin{bmatrix}\n1 & a_{1,2} & a_{1,3} & \\dots & a_{1,n} \\\\\na_{2,1} & 1 & a_{2,3} & \\dots & a_{2,n} \\\\\n\\vdots & \\vdots & \\vdots & \\ddots & \\vdots \\\\\na_{n,1} & a_{n,2} & a_{n,3} & \\dots & 1\n\\end{bmatrix}\n\nLuego de construir la matriz de comparación por pares, se procede a calcular el vector de prioridades. Este vector indica la influencia de un criterio sobre el objetivo global, en estos casos la ubicación optima de una planta de generarción de energía eléctrica. Existen múltiples formas de calcular este vector, una de ellas es usando el método del vector propio principal w tal que:\nA \\times W = \\lambda_{max} \\times w\nDonde \\lambda_{max} es el máximo valor propio de la matriz A\nPara calcular los vectores propios en el AHP, se normaliza la matriz de comparación pairwise y luego se encuentra su valor propio dominante y el correspondiente vector propio. El valor propio dominante representa el grado en que las alternativas se han priorizado y el vector propio representa los pesos asignados a cada alternativa en términos de su prioridad.\nEl proceso de normalización consiste en dividir cada fila de la matriz de comparación pairwise por la suma de las filas. De esta manera, la matriz normalizada representa una distribución de probabilidad, donde cada fila suma 1.\nLuego, se calcula el valor propio dominante y el correspondiente vector propio usando técnicas matemáticas, como el método de potencias. El valor propio dominante se interpreta como el grado en que las alternativas se han priorizado, y el vector propio se interpreta como los pesos asignados a cada alternativa en términos de su prioridad.\nEn resumen, los vectores propios son una herramienta importante en el AHP para calcular la prioridad de las alternativas y ayudar a tomar decisiones informadas.\nFinalmente se verifica la consistencia de la matriz de comparaciones pareadas. La matriz A es consistente si aij.ajk = aik para i,j,k = 1,2,...,n. Para validar la consistencia razonable de los juicios en la matriz de comparación por pares se calcula el índice de consistencia (IC) (Equation 6.1) y la razón de consistencia (RC) (Equation 6.2).\nLa razón de consistencia (RC) se calcula a partir de un índice de consistencia aleatorio (IA), que varía de acuerdo con el tamaño de la matriz A (Table 6.2). La matriz se considera consistente si RC < IA; en caso contrario, se considera inconsistente y se aplica la corrección de consistencia planteada por Thomas L. Saaty (2003)\nIC = \\frac{\\lambda_{max}-n}{n-1} \\tag{6.1}\nRC = \\frac{IC}{IA} \\tag{6.2}\n\n\n\n\nTable 6.2:  Índice de consistencia aleatorio (IA) \n\n  \n    1 \n    2 \n    3 \n    4 \n    5 \n    6 \n    7 \n    8 \n    9 \n    10 \n    11 \n    12 \n  \n  \n    0.00 \n    0.00 \n    0.52 \n    0.89 \n    1.11 \n    1.25 \n    1.35 \n    1.40 \n    1.45 \n    1.49 \n    1.52 \n    1.54"
+  },
+  {
+    "objectID": "AHP.html#robustez-matemática",
+    "href": "AHP.html#robustez-matemática",
+    "title": "6  AHP",
+    "section": "6.3 Robustez Matemática",
+    "text": "6.3 Robustez Matemática\n\nReciprocidad: Si A_{ij} = X, entonces A_{ji} = 1/X, con 1/9 \\leq X\\leq 9.\nHomogeneidad: Si los elemntos i y j son considerados igualmente importantes entonces\n\nA_{ij}= A_{ji}= 1\nademás A_{ii} = 1 para todo i.\n\nConsistencia: Se satisface que A_{ik}*A_{kj}= A_{ij} para todo 1\\leq i,j,k\\leq q"
+  },
+  {
+    "objectID": "AHP.html#algoritmo-saaty1980",
+    "href": "AHP.html#algoritmo-saaty1980",
+    "title": "6  AHP",
+    "section": "6.2 Algoritmo (T. L. Saaty 1980)",
+    "text": "6.2 Algoritmo (T. L. Saaty 1980)\nDe acuerdo con T. L. Saaty (1980), para n criterios es posible construir una matriz A=[a_{ij}], con i,j =1,2,...,n. El valor de cada a_{ij} corresponde a la importancia relativa del criterio C_i (fila i) sobre el criterio C_j (columna j), según la escala fundamental propuesta por Saati (Table 6.1). Cuando i=j, el valor de a_{ij} será igual a 1 ya que estamos comparando un criterio con el mismo.\n\nA= \\begin{bmatrix}\n1 & a_{1,2} & a_{1,3} & \\dots & a_{1,n} \\\\\na_{2,1} & 1 & a_{2,3} & \\dots & a_{2,n} \\\\\n\\vdots & \\vdots & \\vdots & \\ddots & \\vdots \\\\\na_{n,1} & a_{n,2} & a_{n,3} & \\dots & 1\n\\end{bmatrix}\n\nLuego de construir la matriz de comparación por pares, se procede a calcular el vector de prioridades. Este vector indica la influencia de un criterio sobre el objetivo global, en estos casos la ubicación óptima de una planta de generarción de energía eléctrica. Existen múltiples formas de calcular este vector, una de ellas es usando el método del vector propio principal w tal que:\nA \\times W = \\lambda_{max} \\times w\nDonde \\lambda_{max} es el máximo valor propio de la matriz A\nPara calcular los vectores propios en el AHP, se normaliza la matriz de comparación pairwise y luego se encuentra su valor propio dominante y el correspondiente vector propio. El valor propio dominante representa el grado en que las alternativas se han priorizado y el vector propio representa los pesos asignados a cada alternativa en términos de su prioridad.\nLuego, se calcula el valor propio dominante y el correspondiente vector propio usando técnicas matemáticas, como el método de potencias. El valor propio dominante (\\lambda_{max}) se interpreta como el grado en que las alternativas se han priorizado, y el vector propio (w) se interpreta como los pesos asignados a cada alternativa en términos de su prioridad.\nFinalmente se verifica la consistencia de la matriz de comparaciones pareadas. La matriz A es consistente si aij.ajk = aik para i,j,k = 1,2,...,n (Section 6.3). Para validar la consistencia razonable de los juicios en la matriz de comparación por pares se calcula el índice de consistencia (IC) (Equation 6.1) y la razón de consistencia (RC) (Equation 6.2).\nLa razón de consistencia (RC) se calcula a partir de un índice de consistencia aleatorio (IA), que varía de acuerdo con el tamaño de la matriz A (Table 6.2). La matriz se considera consistente si RC < IA; en caso contrario, se considera inconsistente y se aplica la corrección de consistencia planteada por Thomas L. Saaty (2003)\nIC = \\frac{\\lambda_{max}-n}{n-1} \\tag{6.1}\nRC = \\frac{IC}{IA} \\tag{6.2}\n\n\n\n\nTable 6.2:  Índice de consistencia aleatorio (IA) \n\n  \n    1 \n    2 \n    3 \n    4 \n    5 \n    6 \n    7 \n    8 \n    9 \n    10 \n    11 \n    12 \n  \n  \n    0.00 \n    0.00 \n    0.52 \n    0.89 \n    1.11 \n    1.25 \n    1.35 \n    1.40 \n    1.45 \n    1.49 \n    1.52 \n    1.54"
+  },
+  {
+    "objectID": "AHP.html#sec-robustez",
+    "href": "AHP.html#sec-robustez",
+    "title": "6  AHP",
+    "section": "6.3 Robustez Matemática",
+    "text": "6.3 Robustez Matemática\n\nReciprocidad: Si A_{ij} = X, entonces A_{ji} = 1/X, con 1/9 \\leq X\\leq 9.\nHomogeneidad: Si los elemntos i y j son considerados igualmente importantes entonces\n\nA_{ij}= A_{ji}= 1\nademás A_{ii} = 1 para todo i.\n\nConsistencia: Se satisface que A_{ik}*A_{kj}= A_{ij} para todo 1\\leq i,j,k\\leq q"
+  },
+  {
+    "objectID": "alternativa_a.html",
+    "href": "alternativa_a.html",
+    "title": "9  AHP Uso General",
+    "section": "",
+    "text": "La presente sección tiene como objetivo mostrar el uso de AHP en un caso de decisión multicriterio de uso general, considerando todas sus etapas en el leguaje de programación en R."
+  },
+  {
+    "objectID": "alternativa_a.html#matriz-de-comparación",
+    "href": "alternativa_a.html#matriz-de-comparación",
+    "title": "9  AHP Uso General",
+    "section": "9.1 Matriz de Comparación",
+    "text": "9.1 Matriz de Comparación"
+  },
+  {
+    "objectID": "alternativa_a.html#valor-propio-dominante-lambdamax",
+    "href": "alternativa_a.html#valor-propio-dominante-lambdamax",
+    "title": "9  AHP Uso General",
+    "section": "9.2 Valor propio dominante \\lambda{max}",
+    "text": "9.2 Valor propio dominante \\lambda{max}"
+  },
+  {
+    "objectID": "alternativa_a.html#autovector",
+    "href": "alternativa_a.html#autovector",
+    "title": "9  AHP Uso General",
+    "section": "9.3 Autovector",
+    "text": "9.3 Autovector"
+  },
+  {
+    "objectID": "alternativa_a.html#valor-propio-dominante-lambda_max",
+    "href": "alternativa_a.html#valor-propio-dominante-lambda_max",
+    "title": "9  AHP Uso General",
+    "section": "9.2 Valor propio dominante (\\lambda_{max})",
+    "text": "9.2 Valor propio dominante (\\lambda_{max})"
+  },
+  {
+    "objectID": "alternativa_a.html#vector-propio-w",
+    "href": "alternativa_a.html#vector-propio-w",
+    "title": "9  AHP Uso General",
+    "section": "9.3 Vector propio (w)",
+    "text": "9.3 Vector propio (w)"
+  },
+  {
+    "objectID": "alternativa_a.html#análisis-de-consistencia",
+    "href": "alternativa_a.html#análisis-de-consistencia",
+    "title": "9  AHP Uso General",
+    "section": "9.4 Análisis de Consistencia",
+    "text": "9.4 Análisis de Consistencia"
+  },
+  {
+    "objectID": "alternativa_a.html#ponderación-de-alternativas",
+    "href": "alternativa_a.html#ponderación-de-alternativas",
+    "title": "9  AHP Uso General",
+    "section": "9.5 Ponderación de Alternativas",
+    "text": "9.5 Ponderación de Alternativas"
+  },
+  {
+    "objectID": "alternativa_a.html#decisión-final",
+    "href": "alternativa_a.html#decisión-final",
+    "title": "9  AHP Uso General",
+    "section": "9.6 Decisión Final",
+    "text": "9.6 Decisión Final"
+  },
+  {
+    "objectID": "ahp_general.html",
+    "href": "ahp_general.html",
+    "title": "9  AHP Uso General",
+    "section": "",
+    "text": "La presente sección tiene como objetivo mostrar el uso de AHP en un caso de decisión multicriterio de uso general, considerando todas sus etapas en el leguaje de programación en R."
+  },
+  {
+    "objectID": "ahp_general.html#matriz-de-comparación",
+    "href": "ahp_general.html#matriz-de-comparación",
+    "title": "9  AHP Uso General",
+    "section": "9.1 Matriz de Comparación",
+    "text": "9.1 Matriz de Comparación"
+  },
+  {
+    "objectID": "ahp_general.html#valor-propio-dominante-lambda_max",
+    "href": "ahp_general.html#valor-propio-dominante-lambda_max",
+    "title": "9  AHP Uso General",
+    "section": "9.2 Valor propio dominante (\\lambda_{max})",
+    "text": "9.2 Valor propio dominante (\\lambda_{max})"
+  },
+  {
+    "objectID": "ahp_general.html#vector-propio-w",
+    "href": "ahp_general.html#vector-propio-w",
+    "title": "9  AHP Uso General",
+    "section": "9.3 Vector propio (w)",
+    "text": "9.3 Vector propio (w)"
+  },
+  {
+    "objectID": "ahp_general.html#análisis-de-consistencia",
+    "href": "ahp_general.html#análisis-de-consistencia",
+    "title": "9  AHP Uso General",
+    "section": "9.4 Análisis de Consistencia",
+    "text": "9.4 Análisis de Consistencia"
+  },
+  {
+    "objectID": "ahp_general.html#ponderación-de-alternativas",
+    "href": "ahp_general.html#ponderación-de-alternativas",
+    "title": "9  AHP Uso General",
+    "section": "9.5 Ponderación de Alternativas",
+    "text": "9.5 Ponderación de Alternativas"
+  },
+  {
+    "objectID": "ahp_general.html#decisión-final",
+    "href": "ahp_general.html#decisión-final",
+    "title": "9  AHP Uso General",
+    "section": "9.6 Decisión Final",
+    "text": "9.6 Decisión Final"
   }
 ]

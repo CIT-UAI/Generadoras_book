@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Proyecto Generadoras - 4&nbsp; AHP</title>
+<title>Análisis Multicriterio - 6&nbsp; AHP</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -75,6 +75,25 @@ div.csl-indent {
   }
 }</script>
 
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 
 <link rel="stylesheet" href="style.css">
 </head>
@@ -85,7 +104,7 @@ div.csl-indent {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">AHP</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">AHP</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -98,7 +117,7 @@ div.csl-indent {
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Proyecto Generadoras</a> 
+      <a href="./">Análisis Multicriterio</a> 
     </div>
       </div>
       <div class="mt-2 flex-shrink-0 align-items-center">
@@ -115,17 +134,27 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a>
+  <a href="./intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introducción</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./multicriterio.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Análisis Multicriterio</span></a>
+  <a href="./participacion.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Participación</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./estado_arte.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Estado del Arte</span></a>
+  <a href="./multicriterio.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Análisis Multicriterio</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./estado_arte.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Estado del Arte</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./a_estudio.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Área de Estudio</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -138,12 +167,32 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./AHP.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">AHP</span></a>
+  <a href="./AHP.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">AHP</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./fuzzy_logic.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Fuzzy Logic</span></a>
+  <a href="./fuzzy_logic.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Fuzzy Logic</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./diseno.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Diseño de Solución</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./experimentacion.html" class="sidebar-item-text sidebar-link">Experimentación</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./alternativa_a.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Alternativa A</span></a>
   </div>
 </li>
       </ul>
@@ -162,9 +211,11 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción"> <span class="header-section-number">4.1</span> Introducción</a></li>
-  <li><a href="#beneficios-y-ventajas-del-uso-de-ahp" id="toc-beneficios-y-ventajas-del-uso-de-ahp" class="nav-link" data-scroll-target="#beneficios-y-ventajas-del-uso-de-ahp"> <span class="header-section-number">4.2</span> Beneficios y ventajas del uso de AHP</a></li>
-  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias"> <span class="header-section-number">4.3</span> Referencias</a></li>
+  <li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción"> <span class="header-section-number">6.1</span> Introducción</a></li>
+  <li><a href="#algoritmo-saaty1980" id="toc-algoritmo-saaty1980" class="nav-link" data-scroll-target="#algoritmo-saaty1980"> <span class="header-section-number">6.2</span> Algoritmo <span class="citation" data-cites="Saaty1980">(<span>T. L. Saaty 1980</span>)</span></a></li>
+  <li><a href="#sec-robustez" id="toc-sec-robustez" class="nav-link" data-scroll-target="#sec-robustez"> <span class="header-section-number">6.3</span> Robustez Matemática</a></li>
+  <li><a href="#beneficios-y-ventajas-del-uso-de-ahp" id="toc-beneficios-y-ventajas-del-uso-de-ahp" class="nav-link" data-scroll-target="#beneficios-y-ventajas-del-uso-de-ahp"> <span class="header-section-number">6.4</span> Beneficios y ventajas del uso de AHP</a></li>
+  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias"> <span class="header-section-number">6.5</span> Referencias</a></li>
   </ul>
 </nav>
     </div>
@@ -173,7 +224,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">AHP</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">AHP</span></h1>
 <p class="subtitle lead">Analytical Hierarchy Process (AHP)</p>
 </div>
 
@@ -188,40 +239,170 @@ div.csl-indent {
 
 </header>
 
-<section id="introducción" class="level2 page-columns page-full" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="introducción"><span class="header-section-number">4.1</span> Introducción</h2>
-<p>Creado por <span class="citation" data-cites="Saaty1980">Saaty (<a href="references.html#ref-Saaty1980" role="doc-biblioref">1980</a>)</span>, AHP es un método de comparación por pares que se utiliza en los criterios con respecto al objetivo. Estas comparaciones por pares se llevan a cabo para todos los factores relevantes dentro de un análisis normalmente no más de 7, como por ejemplo la siguiente imagen <a href="#fig-ahp-tab">Figure&nbsp;<span>4.1</span></a>.</p>
-<div id="fig-ahp-tab" class="quarto-figure quarto-figure-center anchored page-columns page-full">
+<div class="cell">
+
+</div>
+<section id="introducción" class="level2 page-columns page-full" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="introducción"><span class="header-section-number">6.1</span> Introducción</h2>
+<p>Creado por <span class="citation" data-cites="Saaty1980">T. L. Saaty (<a href="references.html#ref-Saaty1980" role="doc-biblioref">1980</a>)</span>, AHP es un método de comparación por pares que se utiliza en los criterios con respecto al objetivo, el cual es tomar la mejor decisión tomando en consideración diferentes criterios, por cada una de las alternativas, en el caso territorial serían las diferentes áreas (<a href="#fig-criterios-diagr">Figure&nbsp;<span>6.1</span></a>).</p>
+<div id="fig-criterios-diagr" class="quarto-figure quarto-figure-center anchored page-columns page-full">
 <figure class="figure page-columns page-full">
-<p><img src="images/ahp-tab.png" class="img-fluid figure-img" width="500"></p>
-<p></p><figcaption class="figure-caption margin-caption">Figure 4.1: Criterios de Relevancia para comparación de pares</figcaption><p></p>
+<p><img src="images/diagrama_criterios.png" class="img-fluid figure-img" width="800"></p>
+<p></p><figcaption class="figure-caption margin-caption">Figure 6.1: Diagrama de objetivos con criterios y alternativas espaciales</figcaption><p></p>
 </figure>
 </div>
-<p>Una vez consolidados y clasificados los criterios en el MCDA, se utiliza el AHP para calcular las ponderaciones relativas, la importancia o el valor de cada factor. que son relevantes para el problema en cuestión. Una vez asignados los pesos relativos, se calcula un vector de prioridad, que nos da el valor modificador de relevancia global para cada factor, que se utilizará en los cálculos del SIG.</p>
+<p>Estas comparaciones por pares se llevan a cabo para todos los factores relevantes dentro de un análisis considerando la siguiente escala. (<a href="#tbl-escala">Table&nbsp;<span>6.1</span></a>)</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-escala" class="anchored">
+
+<table class="table table-striped" style="font-size: 15px; width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table 6.1:  Escala fundamental, de acuerdo con Saaty. </caption>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Intensidad </th>
+   <th style="text-align:left;"> Deninición </th>
+   <th style="text-align:left;"> Explicación </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> 1 </td>
+   <td style="text-align:left;"> Igual importancia </td>
+   <td style="text-align:left;"> Dos criterios o elementos contribuyen de igual forma al cumplimiento del objetivo </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 3 </td>
+   <td style="text-align:left;"> Importancia moderada de un criterio sonbre el otro </td>
+   <td style="text-align:left;"> La experiencia y el juicio favorecen levemente una actividad sobre la otra </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 5 </td>
+   <td style="text-align:left;"> Importancia esencial o fuerte </td>
+   <td style="text-align:left;"> La experiencia y el juicio favorecen fuertemente una actividad sobre la otra </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 7 </td>
+   <td style="text-align:left;"> Importancia muy fuerte o demostrada </td>
+   <td style="text-align:left;"> Una actividad es mucho más favorecida que la otra y su predominancia se demostró en la práctica predominancia se demostró en la práctica </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 9 </td>
+   <td style="text-align:left;"> Importancia extrema o absoluta </td>
+   <td style="text-align:left;"> La evidencia que favorece una actividad sobre la otra es absoluta y totalmente clara </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 2, 4, 6, 8 </td>
+   <td style="text-align:left;"> Valores Intermedios </td>
+   <td style="text-align:left;"> Cuando es necesario llegar a un compromiso entre dos sentencias adyacentes </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p>Una vez consolidados y clasificados los criterios en el MCDA en una matriz (<a href="#fig-parirs-comp">Figure&nbsp;<span>6.2</span></a>), se utiliza el AHP para calcular las ponderaciones relativas, la importancia de cada criterio, que son relevantes para el problema en cuestión. Para validar la consistencia razonable de los juicios en la matriz de comparación por pares se calcula el índice de consistencia como validación.</p>
 <div id="fig-parirs-comp" class="quarto-figure quarto-figure-center anchored page-columns page-full">
 <figure class="figure page-columns page-full">
-<p><img src="images/pairwise.png" class="img-fluid figure-img" width="500"></p>
-<p></p><figcaption class="figure-caption margin-caption">Figure 4.2: Ejemplo de comparación de pares</figcaption><p></p>
+<p><img src="images/pairwise-matrix.png" class="img-fluid figure-img" width="600"></p>
+<p></p><figcaption class="figure-caption margin-caption">Figure 6.2: Ejemplo de comparación de pares</figcaption><p></p>
 </figure>
 </div>
-<p>A continuación, se calcula el Coeficiente de Coherencia (Consistency Ratio CR) para medir el grado de coherencia de las valoraciones con respecto a grandes muestras de valoraciones puramente aleatorias. Si el CR es superior a 0,1, las valoraciones deben considerarse poco fiables.</p>
+<p>Una vez asignados los pesos relativos, se calcula un vector de prioridad, que nos da el valor modificador de relevancia global para cada factor, que se utilizará en los cálculos del SIG.</p>
 </section>
-<section id="beneficios-y-ventajas-del-uso-de-ahp" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="beneficios-y-ventajas-del-uso-de-ahp"><span class="header-section-number">4.2</span> Beneficios y ventajas del uso de AHP</h2>
+<section id="algoritmo-saaty1980" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="algoritmo-saaty1980"><span class="header-section-number">6.2</span> Algoritmo <span class="citation" data-cites="Saaty1980">(<a href="references.html#ref-Saaty1980" role="doc-biblioref">T. L. Saaty 1980</a>)</span></h2>
+<p>De acuerdo con <span class="citation" data-cites="Saaty1980">T. L. Saaty (<a href="references.html#ref-Saaty1980" role="doc-biblioref">1980</a>)</span>, para <span class="math inline">n</span> criterios es posible construir una matriz <span class="math inline">A=[a_{ij}]</span>, con <span class="math inline">i,j =1,2,...,n</span>. El valor de cada <span class="math inline">a_{ij}</span> corresponde a la importancia relativa del criterio <span class="math inline">C_i</span> (fila i) sobre el criterio <span class="math inline">C_j</span> (columna <span class="math inline">j</span>), según la escala fundamental propuesta por Saati (<a href="#tbl-escala">Table&nbsp;<span>6.1</span></a>). Cuando <span class="math inline">i=j</span>, el valor de <span class="math inline">a_{ij}</span> será igual a 1 ya que estamos comparando un criterio con el mismo.</p>
+<p><span class="math display">
+A= \begin{bmatrix}
+1 &amp; a_{1,2} &amp; a_{1,3} &amp; \dots &amp; a_{1,n} \\
+a_{2,1} &amp; 1 &amp; a_{2,3} &amp; \dots &amp; a_{2,n} \\
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{n,1} &amp; a_{n,2} &amp; a_{n,3} &amp; \dots &amp; 1
+\end{bmatrix}
+</span></p>
+<p>Luego de construir la matriz de comparación por pares, se procede a calcular el vector de prioridades. Este vector indica la influencia de un criterio sobre el objetivo global, en estos casos la ubicación óptima de una planta de generarción de energía eléctrica. Existen múltiples formas de calcular este vector, una de ellas es usando el método del vector propio principal <span class="math inline">w</span> tal que:</p>
+<p><span class="math display">A \times W = \lambda_{max} \times w</span></p>
+<p>Donde <span class="math inline">\lambda_{max}</span> es el máximo valor propio de la matriz <span class="math inline">A</span></p>
+<p>Para calcular los vectores propios en el AHP, se normaliza la matriz de comparación pairwise y luego se encuentra su valor propio dominante y el correspondiente vector propio. El valor propio dominante representa el grado en que las alternativas se han priorizado y el vector propio representa los pesos asignados a cada alternativa en términos de su prioridad.</p>
+<p>Luego, se calcula el valor propio dominante y el correspondiente vector propio usando técnicas matemáticas, como el método de potencias. El valor propio dominante (<span class="math inline">\lambda_{max}</span>) se interpreta como el grado en que las alternativas se han priorizado, y el vector propio (<span class="math inline">w</span>) se interpreta como los pesos asignados a cada alternativa en términos de su prioridad.</p>
+<p>Finalmente se verifica la consistencia de la matriz de comparaciones pareadas. La matriz <span class="math inline">A</span> es consistente si <span class="math inline">aij.ajk = aik</span> para <span class="math inline">i,j,k = 1,2,...,n</span> (<a href="#sec-robustez"><span>Section&nbsp;6.3</span></a>). Para validar la consistencia razonable de los juicios en la matriz de comparación por pares se calcula el índice de consistencia (IC) (<a href="#eq-IC">Equation&nbsp;<span>6.1</span></a>) y la razón de consistencia (RC) (<a href="#eq-RC">Equation&nbsp;<span>6.2</span></a>).</p>
+<p>La razón de consistencia (RC) se calcula a partir de un índice de consistencia aleatorio (IA), que varía de acuerdo con el tamaño de la matriz A (<a href="#tbl-ia">Table&nbsp;<span>6.2</span></a>). La matriz se considera consistente si <span class="math inline">RC &lt; IA</span>; en caso contrario, se considera inconsistente y se aplica la corrección de consistencia planteada por <span class="citation" data-cites="saaty2003">Thomas L. Saaty (<a href="references.html#ref-saaty2003" role="doc-biblioref">2003</a>)</span></p>
+<p><span id="eq-IC"><span class="math display">IC = \frac{\lambda_{max}-n}{n-1} \tag{6.1}</span></span></p>
+<p><span id="eq-RC"><span class="math display">RC = \frac{IC}{IA} \tag{6.2}</span></span></p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-ia" class="anchored">
+
+<table class="table table-striped table-hover table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table 6.2:  Índice de consistencia aleatorio (IA) </caption>
+<tbody>
+  <tr>
+   <td style="text-align:center;"> 1 </td>
+   <td style="text-align:center;"> 2 </td>
+   <td style="text-align:center;"> 3 </td>
+   <td style="text-align:center;"> 4 </td>
+   <td style="text-align:center;"> 5 </td>
+   <td style="text-align:center;"> 6 </td>
+   <td style="text-align:center;"> 7 </td>
+   <td style="text-align:center;"> 8 </td>
+   <td style="text-align:center;"> 9 </td>
+   <td style="text-align:center;"> 10 </td>
+   <td style="text-align:center;"> 11 </td>
+   <td style="text-align:center;"> 12 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> 0.00 </td>
+   <td style="text-align:center;"> 0.00 </td>
+   <td style="text-align:center;"> 0.52 </td>
+   <td style="text-align:center;"> 0.89 </td>
+   <td style="text-align:center;"> 1.11 </td>
+   <td style="text-align:center;"> 1.25 </td>
+   <td style="text-align:center;"> 1.35 </td>
+   <td style="text-align:center;"> 1.40 </td>
+   <td style="text-align:center;"> 1.45 </td>
+   <td style="text-align:center;"> 1.49 </td>
+   <td style="text-align:center;"> 1.52 </td>
+   <td style="text-align:center;"> 1.54 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="sec-robustez" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="sec-robustez"><span class="header-section-number">6.3</span> Robustez Matemática</h2>
+<ul>
+<li><p><strong>Reciprocidad</strong>: Si <span class="math inline">A_{ij} = X</span>, entonces <span class="math inline">A_{ji} = 1/X</span>, con <span class="math inline">1/9 \leq X\leq 9</span>.</p></li>
+<li><p><strong>Homogeneidad</strong>: Si los elemntos <span class="math inline">i</span> y <span class="math inline">j</span> son considerados igualmente importantes entonces</p></li>
+</ul>
+<p><span class="math display">A_{ij}= A_{ji}= 1</span></p>
+<p>además <span class="math inline">A_{ii} = 1</span> para todo <span class="math inline">i</span>.</p>
+<ul>
+<li><strong>Consistencia</strong>: Se satisface que <span class="math inline">A_{ik}*A_{kj}= A_{ij}</span> para todo <span class="math inline">1\leq i,j,k\leq q</span></li>
+</ul>
+</section>
+<section id="beneficios-y-ventajas-del-uso-de-ahp" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="beneficios-y-ventajas-del-uso-de-ahp"><span class="header-section-number">6.4</span> Beneficios y ventajas del uso de AHP</h2>
 <ul>
 <li>Un enfoque más estructurado para medir la idoneidad al dividir el problema en criterios jerárquicos.</li>
 <li>Un análisis más sistemático y profundo de los factores, que pueden comprenderse mejor al examinar específicamente sus formas o indicadores inferiores y más específicos.</li>
 <li>El AHP permite la participación tanto de expertos como de partes interesadas en la aportación de información. Dicho marco permite incorporar y acomodar criterios tanto cualitativos como cuantitativos y la aportación de conocimientos de expertos.</li>
 </ul>
 </section>
-<section id="referencias" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="referencias"><span class="header-section-number">4.3</span> Referencias</h2>
-<p><a href="https://storymaps.arcgis.com/stories/b60b7399f6944bca86d1be6616c178cf">Multi-Criteria Decision Analysis and GIS - Siobhan Ryan and Ellis Nimick</a> ir</p>
+<section id="referencias" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="referencias"><span class="header-section-number">6.5</span> Referencias</h2>
+<p><a href="https://storymaps.arcgis.com/stories/b60b7399f6944bca86d1be6616c178cf">Multi-Criteria Decision Analysis and GIS - Siobhan Ryan and Ellis Nimick</a></p>
+<p><a href="https://www.youtube.com/watch?v=gaML3XIHiGc">Video: Proceso Analítico Jerárquico. AHP (Analytic Hierarchy Process), Unviversidad Técnica de Valencia UPV</a></p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
 <div id="ref-Saaty1980" class="csl-entry" role="doc-biblioentry">
 Saaty, T. L. 1980. <span>“The Analytic Hierarchy Process.”</span>
+</div>
+<div id="ref-saaty2003" class="csl-entry" role="doc-biblioentry">
+Saaty, Thomas L. 2003. <span>“Decision-Making with the AHP: Why Is the Principal Eigenvector Necessary.”</span> <em>European Journal of Operational Research</em> 145 (1): 85–91. <a href="https://doi.org/10.1016/s0377-2217(02)00227-8">https://doi.org/10.1016/s0377-2217(02)00227-8</a>.
 </div>
 </div>
 </section>
@@ -332,7 +513,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
   <div class="nav-page nav-page-next">
       <a href="./fuzzy_logic.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Fuzzy Logic</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Fuzzy Logic</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

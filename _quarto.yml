@@ -3,22 +3,34 @@ project:
   output-dir: docs
 
 book:
-  title: " Proyecto Generadoras"
+  title: "Análisis Multicriterio"
   subtitle: "Centro de Inteligencia Territorial - UAI"
   # affiliation: "Universidad Adolfo Ibáñez - Chile"
-  author: "Denis Berroeta González (denis.berroeta@uai.cl)"
+  author: 
+    - name: Denis Berroeta González 
+      url: https://cit.uai.cl/denis-berroeta/
+      affiliation: Centro de Inteligencia Territorial
+      affiliation-url: https://cit.uai.cl
+      email: denis.berroeta@uai.cl
   date: "2023-01-30"
   page-footer:
     left: "Copyright 2023, Denis Berroeta"
   chapters:
     - index.qmd
     - intro.qmd
+    - participacion.qmd
     - multicriterio.qmd
     - estado_arte.qmd
+    - a_estudio.qmd
     - part: metodos.qmd
       chapters: 
         - AHP.qmd
         - fuzzy_logic.qmd 
+    - diseno.qmd
+    - part: experimentacion.qmd
+      chapters: 
+        - ahp_general.qmd
+        - ahp_gis.qmd
     - references.qmd
 
 bibliography: references.bib
@@ -32,5 +44,7 @@ format:
     tab-cap-location: "bottom"
     fig-align: "center"
     mailto: "denis.berroeta@uai.cl"
+    crossref:
+        chapters: true
 
 

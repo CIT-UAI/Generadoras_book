@@ -1,5 +1,3 @@
 # Preface {.unnumbered}
 
-This is a Quarto book.
-
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+El presetne libro digital tiene como objetivo principal ir registrando y documentando el proceso general de un análisis multicriterio espacial para identificar zonas idóneas para la construcción de un determinado proyeto de generación de energía eléctrica. Lo anterior, se enmarca en un proyecto de "Estándares para un desarrollo más sustentable" solictado por [Generadoras Chile](http://generadoras.cl) y Diseñado y ejecutado por el [Centro de Inteligencia Territorial](https://cit.uai.cl) de la Universidad Afolfo Ibáñez

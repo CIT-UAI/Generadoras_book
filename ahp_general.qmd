@@ -1,0 +1,33 @@
+---
+subtitle: Analytical Hierarchy Process (AHP) Uso General
+editor_options: 
+  chunk_output_type: console
+---
+
+# AHP Uso General
+
+
+La presente sección tiene como objetivo mostrar el uso de AHP en un caso de decisión multicriterio de uso general, considerando todas sus etapas en el leguaje de programación en R.
+
+
+## Matriz de Comparación
+
+
+## Valor propio dominante ($\lambda_{max}$)
+
+
+## Vector propio ($w$) 
+
+
+## Análisis de Consistencia
+
+
+## Ponderación de Alternativas
+
+
+## Decisión Final
+
+
+
+
+
