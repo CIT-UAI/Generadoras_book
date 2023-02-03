@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Proyecto Generadoras - 3&nbsp; Estado del Arte</title>
+<title>Análisis Multicriterio - 4&nbsp; Estado del Arte</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -15,6 +15,25 @@ span.underline{text-decoration: underline;}
 div.column{display: inline-block; vertical-align: top; width: 50%;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -25,7 +44,7 @@ ul.task-list{list-style: none;}
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./metodos.html" rel="next">
+<link href="./a_estudio.html" rel="next">
 <link href="./multicriterio.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -56,6 +75,9 @@ ul.task-list{list-style: none;}
   }
 }</script>
 
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
 
 <link rel="stylesheet" href="style.css">
 </head>
@@ -66,7 +88,7 @@ ul.task-list{list-style: none;}
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Estado del Arte</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Estado del Arte</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -79,7 +101,7 @@ ul.task-list{list-style: none;}
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Proyecto Generadoras</a> 
+      <a href="./">Análisis Multicriterio</a> 
     </div>
       </div>
       <div class="mt-2 flex-shrink-0 align-items-center">
@@ -96,17 +118,27 @@ ul.task-list{list-style: none;}
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a>
+  <a href="./intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introducción</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./multicriterio.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Análisis Multicriterio</span></a>
+  <a href="./participacion.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Participación</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./estado_arte.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Estado del Arte</span></a>
+  <a href="./multicriterio.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Análisis Multicriterio</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./estado_arte.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Estado del Arte</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./a_estudio.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Área de Estudio</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -119,12 +151,37 @@ ul.task-list{list-style: none;}
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./AHP.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">AHP</span></a>
+  <a href="./AHP.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">AHP</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./fuzzy_logic.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Fuzzy Logic</span></a>
+  <a href="./fuzzy_logic.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Fuzzy Logic</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./diseno.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Diseño de Solución</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./experimentacion.html" class="sidebar-item-text sidebar-link">Experimentación</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ahp_general.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">AHP Uso General</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ahp_gis.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">AHP - GIS</span></a>
   </div>
 </li>
       </ul>
@@ -146,7 +203,7 @@ ul.task-list{list-style: none;}
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Estado del Arte</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Estado del Arte</span></h1>
 </div>
 
 
@@ -160,8 +217,240 @@ ul.task-list{list-style: none;}
 
 </header>
 
+<div class="cell">
+
+</div>
+<p>La ubicación para proyectos de generación eléctrica es crucial. La planificación de estos proyectos es compleja debido a las muchas variables que hay que tener en cuenta. Deben evaluarse los impactos ambientales y los requisitos técnicos de la zona. El objetivo es encontrar una zona con la máxima rentabilidad económica y los impactos ambientales mínimos. La planificación se puede mejorar mediante la evaluación espacial con la ayuda de <em>Sistemas de Infcormación Geográfica (SIG)</em> y métodos <em>Métodos de Decisión Multi-Criterio</em> (MDMC).</p>
+<p>Los SIG y los MDMC son herramientas que se complementan. Los SIG ofrecen la posibilidad de adquirir, almacenar, visualizar y analizar la información georreferenciada. Basándose en dicha información, los MDMC proveen las técnicas y los procedimientos para estructurar un problema de decisión y evaluar las alternativas posibles (Malczewski, 1999). Dado el uso de los SIG, la calidad de los resultados depende de la calidad de los datos de entrada utilizados, en cuanto a resolución o escala, procedencia, distribución espacial, concordancia temporal y consistencia lógica.</p>
+<p>En la literatura, la integración de los SIG con los MDMC ha sido empleada en diferentes estudios para determinar la ubicación de proyectos de energías renovables. Podemos mencionar como ejemplos recientes los trabajos de Tegou, Polatidis y Haralambopoulos (2010); Aydin, Kentel y Duzgun (2010); Uyan (2013); Atici, Simsek, Ulucan y Tosun (2015); Latinopoulos y Kechagia (2015); Siyal et al.&nbsp;(2015); Sánchez-Lozano, García-Cascales y Lamata (2016); Höfer, Sunak, Siddique y Madlener (2016), y Noorollahi, Yousefi y Mohammadi (2016). Estos estudios presentan diferentes metodologías de acuerdo con el tipo de energía o la zona de estudio.</p>
+<p>En general, los resultados obtenidos corresponden a mapas de la distribución de zonas factibles para instalar turbinas de viento. Las zonas potenciales son elegidas conforme a criterios de restricción y evaluación y su importancia. La selección de estos criterios debe ser analizada cuidadosamente para cada área de estudio y los resultados obtenidos dependen directamente de los criterios seleccionados. Todo estudio de selección y evaluación de áreas con potencial eólico debe tener en cuenta, además de los impactos ambientales, aspectos técnicos y económicos (Tegou et al., 2010).</p>
+<p>En la <a href="#tbl-vars">Table&nbsp;<span>4.1</span></a> realizada por <span class="citation" data-cites="guerrero_hoyos_energieolica_2020">Guerrero Hoyos, Vélez Macías, and Morales Quintero (<a href="references.html#ref-guerrero_hoyos_energieolica_2020" role="doc-biblioref">2020</a>)</span>, se observan los criterios de restricción y evaluación elegidos por diferentes autores en trabajos donde se integran los SIG con los MDMC para seleccionar sitios apropiados en donde ubicar proyectos de energías renovables, además se muestran las metodologías utilizadas en los estudios. Como se puede observar en la tabla 1, en la literatura no existe un consenso en torno a la denición de los criterios o su clasifiiación en importancia. La mayoría de los estudios revisados presentan una deciencia común en la asignación de pesos, que representan la importancia relativa de cada criterio, y es que los pesos son asignados de acuerdo con la experiencia de los autores. La asignación de los pesos, al igual que la selección de los criterios de restricción o valores límite, debería hacerse teniendo en cuenta la opinión de expertos.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-vars" class="anchored">
+
+<table class="table table-striped" style="font-size: 15px; width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table 4.1:  Tabla de criterios de restricción o de evaluación utilizados por diferentes autores para identicar zonas viables para instalar parques eólicos. </caption>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Variables </th>
+   <th style="text-align:left;"> Tegou.2010 </th>
+   <th style="text-align:left;"> Hoffer.2016 </th>
+   <th style="text-align:left;"> Atici.2015 </th>
+   <th style="text-align:left;"> Mentis.2015 </th>
+   <th style="text-align:left;"> Latinopoulos.2015 </th>
+   <th style="text-align:left;"> Noorollahi.2016 </th>
+   <th style="text-align:left;"> Siyal.2015 </th>
+   <th style="text-align:left;"> Sanchez.Lozano.2016 </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Distancia a áreas residenciales (urbanas, rurales) </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Distancias a Autopistas, carreteras, caminos </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Distancias a ferrovías </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Distancias a Aeropuertos </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Ríos, Lagos, líneas costeras (cuerpos de agua) </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Distancia a áreas protegidas (naturales o militares) </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Distancias a áreas de Interés Nacional (culturales, arqueológicas, religiosas, recreacionales) </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Fallas </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Distancia a líneas de transmisión eléctrica </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Velocidad del Viento (potencial éolico) </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Elevación </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Pendiente (%) </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Usos de la Tierra </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Demanda de Electricidad </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Factor de Capacidad </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Distancia a sitios de minería </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Distancia a estaciones de TV o Radio </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> x </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> x </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p>De los estudios indicadors <a href="#tbl-vars">Table&nbsp;<span>4.1</span></a> la metodología multicriterio mas utilizada en es el <em>Proceso Análisis Jerárquico</em> (AHP, por sus siglas en inglés) fue el MDMC más utilizado en los trabajos revisados. El AHP es un método diseñado para resolver problemas complejos que implican múltiples criterios u objetivos (Tegou et al., 2010). En la aplicación de este método, quien toma la decisión debe comparar la importancia de un criterio con respecto a otro. Con esto se obtiene una jerarquización de las alternativas posibles. Para aplicar el AHP se requiere:</p>
+<ol type="a">
+<li>definir el objetivo del problema, así como los criterios y las alternativas; además, se requiere estructurar el problema de decisión como una jerarquía;</li>
+<li>crear una matriz de comparación por pares, en donde se compara la importancia de un criterio frente a otro;</li>
+<li>calcular el vector de prioridades que indica la importancia relativa de los diferentes criterios, y</li>
+<li>validar la consistencia de los resultados (R. W. Saaty, 1987; T. L. Saaty, 1980). La comparación por pares es la base fundamental del AHP.</li>
+</ol>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-guerrero_hoyos_energieolica_2020" class="csl-entry" role="doc-biblioentry">
+Guerrero Hoyos, Benito Gustavo, Fabio De Jesús Vélez Macías, and Diana Elizabeth Morales Quintero. 2020. <span>“<span>Energía eólica y territorio: sistemas de información geográfica y métodos de decisión multicriterio en La Guajira (Colombia)</span>.”</span> <em>Ambiente y Desarrollo</em> 23 (44). <a href="https://doi.org/10.11144/Javeriana.ayd23-44.eets">https://doi.org/10.11144/Javeriana.ayd23-44.eets</a>.
+</div>
+</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -264,12 +553,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./multicriterio.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Análisis Multicriterio</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Análisis Multicriterio</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./metodos.html" class="pagination-link">
-        <span class="nav-page-text">Métodos</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./a_estudio.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Área de Estudio</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
