@@ -23,7 +23,9 @@ escala <-  read.csv("data/tablas/escalas_Saaty.csv", sep = ";", encoding = "lati
 
 ## Introducción
 
-Creado por @Saaty1980, AHP es un método de comparación por pares que se utiliza en los criterios con respecto al objetivo, el cual es tomar la mejor decisión tomando en consideración diferentes criterios, por cada una de las alternativas, en el caso territorial serían las diferentes áreas (@fig-criterios-diagr).
+El Proceso de Análisis Jerárquico  es una técnica estructurada para tratar con problemas complejos de decisión. Esta metodología permite la construcción de un problema a partir de objetivos, criterios y alternativas jerarquizados. El AHP fue desarrollado por @Saaty1980 y selecciona alternativas en función de una serie de criterios o variables normalmente jerarquizados. La aplicación del AHP puede ser utilizada para la selección de proyectos, la evaluación de riesgos, la toma de decisiones financieras, entre otros.
+
+AHP es un método de comparación por pares que se utiliza en los criterios con respecto al objetivo, el cual es tomar la mejor decisión tomando en consideración diferentes criterios, por cada una de las alternativas, en el caso territorial serían las diferentes áreas (@fig-criterios-diagr).
 
 ![Diagrama de objetivos con criterios y alternativas espaciales](images/diagrama_criterios.png){#fig-criterios-diagr fig-align="center" width="800"}
 

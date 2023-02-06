@@ -121,6 +121,123 @@ lambda_max
 
 ## Análisis de Consistencia
 
+Una parte importante es verificar la consistencia de la matriz de comparaciones pareadas. La matriz $A$ es consistente si $aij.ajk = aik$ para $i,j,k = 1,2,...,n$ (@sec-robustez). Para validar la consistencia razonable de los juicios en la matriz de comparación por pares se calcula el índice de consistencia (IC) (@eq-IC) y la razón de consistencia (RC) (@eq-RC).
+
+La razón de consistencia (RC) se calcula a partir de un índice de consistencia aleatorio (IA), que varía de acuerdo con el tamaño de la matriz A (@tbl-ia). La matriz se considera consistente si $RC < IA$; en caso contrario, se considera inconsistente y se aplica la corrección de consistencia planteada por @saaty2003.
+
+
+$$IC = \frac{\lambda_{max}-n}{n-1}$$ {#eq-IC}
+
+**Cálculo del índice de consistencia $IC$**
+
+
+```{r}
+
+# conocer la dimensión de la matriz cuadrada
+dim_m <- function(matriz){
+    if(any(diag(matriz)!=1)) stop("Diagonal de la Matriz debe ser 1")
+    n <-  dim(matriz)[1]
+    return(n)
+}
+
+# indice de consistencia
+ic_fnc <-  function(l_max, n){
+    ic <-  (l_max-n)/(n-1)
+    return(ic)
+}
+```
+
+```{r}
+n <- dim_m(m)
+n
+
+
+IC <-  ic_fnc(l_max = lambda_max, n = n)
+IC
+```
+
+
+
+
+**Cálculo del índice de consistencia aleatoria $IA$**
+
+
+Para cancular la consistencia aleatoria $IA$ es necesario contar con un parámetro dado por la dimensión $n$ de la matriz de comparaciones, como se observa a continuación (@tbl-ia):
+
+
+```{r echo=FALSE}
+#| label: tbl-ia
+#| tbl-cap: Índice de consistencia aleatorio (IA)
+
+IA <- readRDS("data/rds/IA.rds")
+
+
+IA %>% 
+    mutate(n =as.character(n)) %>% 
+    t() %>% 
+    kable(row.names = FALSE, 
+          align = "c", caption = NULL, 
+          format = "html") %>% 
+    kable_styling(
+        bootstrap_options = 
+            c("striped", "hover", "condensed"),
+        position = "center", full_width = FALSE) 
+
+
+```
+
+Función para encontrar el parámetro de consistencia aleatoria $IA$ de acuerdo a la dimimensión de la matriz de comparaciones.
+
+```{r}
+# consistencia aleatoria
+ia_fnc <-  function(ia_object, n_dim){
+    ia <-  filter(ia_object, n == n_dim) %>% 
+        pull(ia)
+    return(ia)
+}
+
+```
+
+```{r}
+IA_params <- readRDS("data/rds/IA.rds")
+IA_params
+```
+
+
+```{r}
+IA <- ia_fnc(ia_object = IA_params, n_dim = n)
+IA
+```
+
+
+**Cálculo del Razón de Consistencia $RC$**
+
+$$RC = \frac{IC}{IA}$$ {#eq-RC}
+
+```{r}
+# Razón de consistencia
+
+rc_fnc <- function(IC, IA){
+    rc <- IC/IA
+    if(rc > IA){
+        print(paste0("Error: La razón de consistencia (",rc, ") es mayor que ", IA))
+        stop("La Matriz de Comparación es Incosistente")
+    }else{
+        print(paste0("La Matriz de comparación es Consistente"))
+    }
+    return(rc)
+}
+```
+
+```{r}
+RC <- rc_fnc(IC = IC, IA = IA)
+RC
+```
+
+
+La matriz se considera consistente ya que `RC` (`r RC`) es menor que `IA` (`r IA`) de acuerdo a lo planteado por @saaty2003.
+
+
 
 ## Vector propio ($w$)
 
@@ -143,12 +260,7 @@ w
 
 
 ```{r}
-# conocer la dimensión de la matriz cuadrada
-dim_m <- function(matriz){
-    if(any(diag(matriz)!=1)) stop("Diagonal de la Matriz debe ser 1")
-    n <-  dim(matriz)[1]
-    return(n)
-}
+
 
 # Función para calcular el vector propio utilizando el método de potencias
 w_potencias <- function(A, tol = 1e-6, maxiter=100) {
@@ -205,34 +317,6 @@ wA <- eigenvectors(mA, normalize = T)
 wA
 ```
 
-**B. Cercarnía a Proveedores**:
-
-```{r}
-mB <- matrix(c(1, 1/5, 3, 
-              5, 1, 7, 
-              1/3, 1/7,1),
-            nrow = 3, ncol = 3, byrow = T)
-
-names_alternativas <- c("I", "II", "III") 
-colnames(mB) <- rownames(mB) <-  names_alternativas
-```
-
-```{r echo=F}
-mB %>% 
-    round(2) %>% 
-    kbl() %>%
-    # kable_material_dark()
-    kable_styling(bootstrap_options = "striped", 
-                full_width = F, position = "center",
-                font_size = 15)
-```
-
-
-
-```{r}
-wB <- eigenvectors(mB, normalize = T)
-wB
-```
 
 
 **B. Cercarnía a Proveedores**:
@@ -296,7 +380,7 @@ wC
 ```
 
 
-**D. Costo de Terreno**:
+**D. Vías de Acceso**:
 
 ```{r}
 mD <- matrix(c(1, 5, 1/4, 
@@ -371,6 +455,15 @@ resultados %>%
 
 De acuerdo a la tabla anterior se puede resolver que la alternativa idónea es la alternativa $II$ que tiene `r round(max(resultados[,1]),3)` de valoración.
 
+
+## Diagrama de flujo de trabajo
+
+![Diagrama de flujo de trabajo usando la librería targets](images/diagrama_flujo_gral.png){#fig-diagr_gral fig-align="center" width="450"}
+
+
 ## Referencias de Sección
 
 - Valores de ejemplo obtenidos de: [Aplicando AHP para decisiones complejas](http://www.emb.cl/negociosglobales/articulo.mvc?xid=3277&tip=11&xit=aplicando-ahp-para-decisiones-complejas)
+
+
+- [Manual de uso de "targets"](https://books.ropensci.org/targets/)
