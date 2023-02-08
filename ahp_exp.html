@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Análisis Multicriterio - 5&nbsp; Área de Estudio</title>
+<title>Análisis Multicriterio - 7&nbsp; AHP</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -15,6 +15,25 @@ span.underline{text-decoration: underline;}
 div.column{display: inline-block; vertical-align: top; width: 50%;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -25,8 +44,8 @@ ul.task-list{list-style: none;}
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./data.html" rel="next">
-<link href="./metodos.html" rel="prev">
+<link href="./eval_espacial.html" rel="next">
+<link href="./data.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -85,7 +104,7 @@ ul.task-list{list-style: none;}
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Área de Estudio</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">AHP</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -143,7 +162,7 @@ ul.task-list{list-style: none;}
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./a_estudio.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Área de Estudio</span></a>
+  <a href="./a_estudio.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Área de Estudio</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -153,7 +172,7 @@ ul.task-list{list-style: none;}
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ahp_exp.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">AHP</span></a>
+  <a href="./ahp_exp.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">AHP</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -212,9 +231,11 @@ ul.task-list{list-style: none;}
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#región-de-antofagasta" id="toc-región-de-antofagasta" class="nav-link active" data-scroll-target="#región-de-antofagasta"> <span class="header-section-number">5.1</span> Región de Antofagasta</a></li>
-  <li><a href="#comunas" id="toc-comunas" class="nav-link" data-scroll-target="#comunas"> <span class="header-section-number">5.2</span> Comunas</a></li>
-  <li><a href="#espacio-grillado" id="toc-espacio-grillado" class="nav-link" data-scroll-target="#espacio-grillado"> <span class="header-section-number">5.3</span> Espacio grillado</a></li>
+  <li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción"> <span class="header-section-number">8</span> Introducción</a>
+  <ul class="collapse">
+  <li><a href="#matriz-de-comparación-de-criterios" id="toc-matriz-de-comparación-de-criterios" class="nav-link" data-scroll-target="#matriz-de-comparación-de-criterios"> <span class="header-section-number">8.1</span> Matriz de Comparación de Criterios</a></li>
+  <li><a href="#análisis-de-consistencia" id="toc-análisis-de-consistencia" class="nav-link" data-scroll-target="#análisis-de-consistencia"> <span class="header-section-number">8.2</span> Análisis de Consistencia</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -223,7 +244,7 @@ ul.task-list{list-style: none;}
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Área de Estudio</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">AHP</span></h1>
 </div>
 
 
@@ -240,84 +261,62 @@ ul.task-list{list-style: none;}
 <div class="cell">
 
 </div>
-<section id="región-de-antofagasta" class="level2 page-columns page-full" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="región-de-antofagasta"><span class="header-section-number">5.1</span> Región de Antofagasta</h2>
-<p>Considerando que el análisis multicriterio tiene como objetivo es identificar zonas idóneas para la construcción de plantas de generación energía eléctrica, donde el espacio de territorial de búsqueda corresponde a la Región de Antofagasta.</p>
-<p>La Región de Antofagasta es una de la 16 regiones en que se divide Chile. Su capital es la homónima Antofagasta. Ubicada en el extremo norte del país (norte grande), limita al norte con la Región de Tarapacá, al este con el departamento de Potosí en Bolivia y con las provincias de Jujuy, Salta y Catamarca pertenecientes a Argentina, al sur con la Región de Atacama y al oeste con el océano Pacífico.</p>
-<p>Cuenta con una superficie de 126.049 <span class="math inline">km^2</span> y una población según el <a href="http://www.ine.cl">Instituto Nacional de Estadísticas</a> (INE) de 607.534 habitantes en 2017. La región está compuesta por las provincias de Antofagasta, El Loa y Tocopilla. La región cuenta con el PIB per cápita más elevado del país, superando los <em>USD</em> 25.000.</p>
+<section id="introducción" class="level1 page-columns page-full" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Introducción</h1>
+<p>El Proceso de Análisis Jerárquico es una técnica estructurada para tratar con problemas complejos de decisión. Esta metodología permite la construcción de un problema a partir de objetivos, criterios y alternativas jerarquizados. El AHP fue desarrollado por <span class="citation" data-cites="Saaty1980">T. L. Saaty (<a href="references.html#ref-Saaty1980" role="doc-biblioref">1980</a>)</span> y selecciona alternativas en función de una serie de criterios o variables normalmente jerarquizados. La aplicación del AHP puede ser utilizada para la selección de proyectos, la evaluación de riesgos, la toma de decisiones financieras, entre otros.</p>
+<p>Como referencia se puede considerar esta imagen de <span class="citation" data-cites="abdelouhed_gis_2022">Abdelouhed et al. (<a href="references.html#ref-abdelouhed_gis_2022" role="doc-biblioref">2022</a>)</span></p>
 <div class="quarto-figure quarto-figure-center page-columns page-full">
 <figure class="figure page-columns page-full">
-<p><img src="images/roi.png" class="img-fluid figure-img" width="400"></p>
-<p></p><figcaption class="figure-caption margin-caption">Mapa de la Región de Antofagasta</figcaption><p></p>
+<p><img src="images/image-1204431624.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption margin-caption">AHP de <span class="citation" data-cites="abdelouhed_gis_2022">Abdelouhed et al. (<a href="references.html#ref-abdelouhed_gis_2022" role="doc-biblioref">2022</a>)</span></figcaption><p></p>
 </figure>
 </div>
-</section>
-<section id="comunas" class="level2 page-columns page-full" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="comunas"><span class="header-section-number">5.2</span> Comunas</h2>
-<p>La región de Antofagasta tiene 3 provincias y 9 comunas, como se observa a continuación:</p>
-<div id="fig-comMap" class="quarto-figure quarto-figure-center anchored page-columns page-full">
-<figure class="figure page-columns page-full">
-<p><img src="images/comunas_wiki.png" class="img-fluid figure-img" width="500"></p>
-<p></p><figcaption class="figure-caption margin-caption">Figure 5.1: Comunas de la Región de Antofagasta</figcaption><p></p>
-</figure>
-</div>
+<section id="matriz-de-comparación-de-criterios" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="matriz-de-comparación-de-criterios"><span class="header-section-number">8.1</span> Matriz de Comparación de Criterios</h2>
+<p>AHP es un método de comparación por pares que se utiliza en los criterios con respecto al objetivo, el cual es tomar la mejor decisión tomando en consideración diferentes criterios, por cada una de las alternativas, en el caso territorial serían las diferentes áreas</p>
+<p>Estas comparaciones por pares se llevan a cabo para todos los factores relevantes dentro de un análisis considerando la siguiente escala. (<a href="#tbl-esc">Table&nbsp;<span>8.1</span></a>)</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="tbl-areaCom" class="anchored">
+<div id="tbl-esc" class="anchored">
 
-<table class="table table-striped" style="font-size: 14px; width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table 5.1:  Comuna de la Región de Antofagasta </caption>
+<table class="table table-striped" style="font-size: 15px; width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table 8.1:  Escala fundamental, de acuerdo con Saaty. </caption>
  <thead>
   <tr>
-   <th style="text-align:left;"> Provincia </th>
-   <th style="text-align:left;"> Comuna </th>
-   <th style="text-align:right;"> Area_hc </th>
+   <th style="text-align:left;"> Intensidad </th>
+   <th style="text-align:left;"> Deninición </th>
+   <th style="text-align:left;"> Explicación </th>
   </tr>
  </thead>
 <tbody>
   <tr>
-   <td style="text-align:left;"> ANTOFAGASTA </td>
-   <td style="text-align:left;"> TALTAL </td>
-   <td style="text-align:right;"> 2040306.3 </td>
+   <td style="text-align:left;"> 1 </td>
+   <td style="text-align:left;"> Igual importancia </td>
+   <td style="text-align:left;"> Dos criterios o elementos contribuyen de igual forma al cumplimiento del objetivo </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> ANTOFAGASTA </td>
-   <td style="text-align:left;"> ANTOFAGASTA </td>
-   <td style="text-align:right;"> 3069117.0 </td>
+   <td style="text-align:left;"> 3 </td>
+   <td style="text-align:left;"> Importancia moderada de un criterio sonbre el otro </td>
+   <td style="text-align:left;"> La experiencia y el juicio favorecen levemente una actividad sobre la otra </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> ANTOFAGASTA </td>
-   <td style="text-align:left;"> MEJILLONES </td>
-   <td style="text-align:right;"> 356884.4 </td>
+   <td style="text-align:left;"> 5 </td>
+   <td style="text-align:left;"> Importancia esencial o fuerte </td>
+   <td style="text-align:left;"> La experiencia y el juicio favorecen fuertemente una actividad sobre la otra </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> ANTOFAGASTA </td>
-   <td style="text-align:left;"> SIERRA GORDA </td>
-   <td style="text-align:right;"> 1288042.4 </td>
+   <td style="text-align:left;"> 7 </td>
+   <td style="text-align:left;"> Importancia muy fuerte o demostrada </td>
+   <td style="text-align:left;"> Una actividad es mucho más favorecida que la otra y su predominancia se demostró en la práctica predominancia se demostró en la práctica </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> EL LOA </td>
-   <td style="text-align:left;"> CALAMA </td>
-   <td style="text-align:right;"> 1558824.9 </td>
+   <td style="text-align:left;"> 9 </td>
+   <td style="text-align:left;"> Importancia extrema o absoluta </td>
+   <td style="text-align:left;"> La evidencia que favorece una actividad sobre la otra es absoluta y totalmente clara </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> EL LOA </td>
-   <td style="text-align:left;"> OLLAGÜE </td>
-   <td style="text-align:right;"> 291847.7 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> EL LOA </td>
-   <td style="text-align:left;"> SAN PEDRO DE ATACAMA </td>
-   <td style="text-align:right;"> 2354323.4 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> TOCOPILLA </td>
-   <td style="text-align:left;"> MARÍA ELENA </td>
-   <td style="text-align:right;"> 1243177.7 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> TOCOPILLA </td>
-   <td style="text-align:left;"> TOCOPILLA </td>
-   <td style="text-align:right;"> 403068.5 </td>
+   <td style="text-align:left;"> 2, 4, 6, 8 </td>
+   <td style="text-align:left;"> Valores Intermedios </td>
+   <td style="text-align:left;"> Cuando es necesario llegar a un compromiso entre dos sentencias adyacentes </td>
   </tr>
 </tbody>
 </table>
@@ -325,19 +324,85 @@ ul.task-list{list-style: none;}
 </div>
 </div>
 </div>
+<p>De acuerdo con <span class="citation" data-cites="Saaty1980">T. L. Saaty (<a href="references.html#ref-Saaty1980" role="doc-biblioref">1980</a>)</span>, para <span class="math inline">n</span> criterios es posible construir una matriz <span class="math inline">A=[a_{ij}]</span>, con <span class="math inline">i,j =1,2,...,n</span>. El valor de cada <span class="math inline">a_{ij}</span> corresponde a la importancia relativa del criterio <span class="math inline">C_i</span> (fila i) sobre el criterio <span class="math inline">C_j</span> (columna <span class="math inline">j</span>), según la escala fundamental propuesta por Saati (<a href="#tbl-esc">Table&nbsp;<span>8.1</span></a>). Cuando <span class="math inline">i=j</span>, el valor de <span class="math inline">a_{ij}</span> será igual a 1 ya que estamos comparando un criterio con el mismo.</p>
+<p><span class="math display">
+A= \begin{bmatrix}
+1 &amp; a_{1,2} &amp; a_{1,3} &amp; \dots &amp; a_{1,n} \\
+a_{2,1} &amp; 1 &amp; a_{2,3} &amp; \dots &amp; a_{2,n} \\
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{n,1} &amp; a_{n,2} &amp; a_{n,3} &amp; \dots &amp; 1
+\end{bmatrix}
+</span></p>
+<p><strong>Matriz Real …….</strong></p>
+<p>Luego de construir la matriz de comparación por pares, se procede a calcular el vector de prioridades. Este vector indica la influencia de un criterio sobre el objetivo global, en estos casos la ubicación óptima de una planta de generarción de energía eléctrica. Existen múltiples formas de calcular este vector, una de ellas es usando el método del vector propio principal <span class="math inline">w</span> tal que:</p>
+<p><span class="math display">A \times W = \lambda_{max} \times w</span></p>
+<p>Donde <span class="math inline">\lambda_{max}</span> es el máximo valor propio de la matriz <span class="math inline">A</span></p>
+<p>Para calcular los vectores propios en el AHP, se normaliza la matriz de comparación pairwise y luego se encuentra su valor propio dominante y el correspondiente vector propio. El valor propio dominante representa el grado en que las alternativas se han priorizado y el vector propio representa los pesos asignados a cada alternativa en términos de su prioridad.</p>
+<p>Luego, se calcula el valor propio dominante y el correspondiente vector propio usando técnicas matemáticas, como el método de potencias. El valor propio dominante (<span class="math inline">\lambda_{max}</span>) se interpreta como el grado en que las alternativas se han priorizado, y el vector propio (<span class="math inline">w</span>) se interpreta como los pesos asignados a cada alternativa en términos de su prioridad.</p>
+<p><strong>Calculo de</strong> <span class="math inline">w</span> real …….</p>
 </section>
-<section id="espacio-grillado" class="level2 page-columns page-full" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="espacio-grillado"><span class="header-section-number">5.3</span> Espacio grillado</h2>
-<p>Para el proceso de análisis multicriterio espacial se debe contar con una espacio geométrico base para todas variables que permita evaluar a decidir la zona idónea de lo que se evalúa de acuerdo a los objetivos, para el caso del proyecto la instalación de una planta de generación de energía eléctrica ya sea eólica o fotovoltaica.</p>
-<p>Por lo anterior, considerando la extensión espacial de la Región de Antofagasta, se creó una geometría regular tipo grilla de 1000x1000 metros (<a href="#fig-grilla">Figure&nbsp;<span>5.2</span></a>), que permite identificar las zonas de forma diferenciable y que permita realizar las operaciones computacionales complejas de forma eficiente.</p>
-<div id="fig-grilla" class="quarto-figure quarto-figure-center anchored page-columns page-full">
-<figure class="figure page-columns page-full">
-<p><img src="images/grid.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption margin-caption">Figure 5.2: Espacio grillado regular de 1000x1000 metros</figcaption><p></p>
-</figure>
+<section id="análisis-de-consistencia" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="análisis-de-consistencia"><span class="header-section-number">8.2</span> Análisis de Consistencia</h2>
+<p>Para validar la consistencia razonable de los juicios en la matriz de comparación por pares se calcula el índice de consistencia como validación. La matriz <span class="math inline">A</span> es consistente si <span class="math inline">aij.ajk = aik</span> para <span class="math inline">i,j,k = 1,2,...,n</span> (<a href="ahp_def.html#sec-robustez"><span>Section&nbsp;A.3</span></a>). Para validar la consistencia razonable de los juicios en la matriz de comparación por pares se calcula el índice de consistencia (IC) (<a href="ahp_general.html#eq-IC">Equation&nbsp;<span>B.1</span></a>) y la razón de consistencia (RC) (<a href="ahp_general.html#eq-RC">Equation&nbsp;<span>B.2</span></a>).</p>
+<p>La razón de consistencia (RC) se calcula a partir de un índice de consistencia aleatorio (IA), que varía de acuerdo con el tamaño de la matriz A (<a href="ahp_general.html#tbl-ia">Table&nbsp;<span>B.2</span></a>). La matriz se considera consistente si <span class="math inline">RC &lt; IA</span>; en caso contrario, se considera inconsistente y se aplica la corrección de consistencia planteada por <span class="citation" data-cites="saaty2003">Thomas L. Saaty (<a href="references.html#ref-saaty2003" role="doc-biblioref">2003</a>)</span></p>
+<p><span id="eq-IC"><span class="math display">IC = \frac{\lambda_{max}-n}{n-1} \tag{8.1}</span></span></p>
+<p><span id="eq-RC"><span class="math display">RC = \frac{IC}{IA} \tag{8.2}</span></span></p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-ia" class="anchored">
+
+<table class="table table-striped table-hover table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table 8.2:  Índice de consistencia aleatorio (IA) </caption>
+<tbody>
+  <tr>
+   <td style="text-align:center;"> 1 </td>
+   <td style="text-align:center;"> 2 </td>
+   <td style="text-align:center;"> 3 </td>
+   <td style="text-align:center;"> 4 </td>
+   <td style="text-align:center;"> 5 </td>
+   <td style="text-align:center;"> 6 </td>
+   <td style="text-align:center;"> 7 </td>
+   <td style="text-align:center;"> 8 </td>
+   <td style="text-align:center;"> 9 </td>
+   <td style="text-align:center;"> 10 </td>
+   <td style="text-align:center;"> 11 </td>
+   <td style="text-align:center;"> 12 </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> 0.00 </td>
+   <td style="text-align:center;"> 0.00 </td>
+   <td style="text-align:center;"> 0.52 </td>
+   <td style="text-align:center;"> 0.89 </td>
+   <td style="text-align:center;"> 1.11 </td>
+   <td style="text-align:center;"> 1.25 </td>
+   <td style="text-align:center;"> 1.35 </td>
+   <td style="text-align:center;"> 1.40 </td>
+   <td style="text-align:center;"> 1.45 </td>
+   <td style="text-align:center;"> 1.49 </td>
+   <td style="text-align:center;"> 1.52 </td>
+   <td style="text-align:center;"> 1.54 </td>
+  </tr>
+</tbody>
+</table>
+
 </div>
+</div>
+</div>
+<p><strong>Cálculo de IC Real …….</strong></p>
+<p><strong>Cálculo de RC Real …….</strong></p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-abdelouhed_gis_2022" class="csl-entry" role="doc-biblioentry">
+Abdelouhed, Farah, Algouti Ahmed, Algouti Abdellah, Baiddane Yassine, and Ifkirne Mohammed. 2022. <span>“<span>GIS</span> and Remote Sensing Coupled with Analytical Hierarchy Process (<span>AHP</span>) for the Selection of Appropriate Sites for Landfills: A Case Study in the Province of <span>Ouarzazate</span>, <span>Morocco</span>.”</span> <em>Journal of Engineering and Applied Science</em> 69 (1): 19. <a href="https://doi.org/10.1186/s44147-021-00063-3">https://doi.org/10.1186/s44147-021-00063-3</a>.
+</div>
+<div id="ref-Saaty1980" class="csl-entry" role="doc-biblioentry">
+Saaty, T. L. 1980. <span>“The Analytic Hierarchy Process.”</span>
+</div>
+<div id="ref-saaty2003" class="csl-entry" role="doc-biblioentry">
+Saaty, Thomas L. 2003. <span>“Decision-Making with the AHP: Why Is the Principal Eigenvector Necessary.”</span> <em>European Journal of Operational Research</em> 145 (1): 85–91. <a href="https://doi.org/10.1016/s0377-2217(02)00227-8">https://doi.org/10.1016/s0377-2217(02)00227-8</a>.
+</div>
+</div>
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -440,13 +505,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./metodos.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Materiales y Métodos</span>
+      <a href="./data.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Data Geoespacial</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./data.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Data Geoespacial</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./eval_espacial.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Evaluación Espacial</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
