@@ -1,8 +1,11 @@
-# Métodos {#sec-methods .numbered}
+# Materiales y Métodos {#sec-methods .numbered}
 
 Basàndose en el estado del arte ...
 
+A continuación se presenta un esquema preliminar de aplicación de un sistema de análisis multicriterio territorial (@fig-diagram).
 
+
+![Diagrama general del análisis multicriterio territorial](images/diagrama_DMC.png){fig-align="center" width="800" #fig-diagram}
 
 
 ## Resumen

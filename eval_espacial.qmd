@@ -1,0 +1,9 @@
+# Evaluación Espacial
+
+## Introducción
+
+
+## Reclasificación y Homogenización de la Data
+
+
+## Superposición Ponderada por Criterio APH

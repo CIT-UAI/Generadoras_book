@@ -16,7 +16,7 @@ suppressPackageStartupMessages(library(mapview))
 ```
 
 
-# AHP Uso General
+# AHP Ejemplo Uso General
 
 La presente sección tiene como objetivo mostrar el uso de AHP en un caso de decisión multicriterio de uso general, considerando todas sus etapas en el leguaje de programación en R.
 

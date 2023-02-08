@@ -18,20 +18,22 @@ book:
   chapters:
     - index.qmd
     - intro.qmd
-    - participacion.qmd
-    - multicriterio.qmd
+    - proyecto.qmd
     - estado_arte.qmd
-    - a_estudio.qmd
+    - participacion.qmd
     - part: metodos.qmd
       chapters: 
-        - AHP.qmd
-        - fuzzy_logic.qmd 
-    - diseno.qmd
-    - part: experimentacion.qmd
-      chapters: 
-        - ahp_general.qmd
-        - ahp_gis.qmd
+        - a_estudio.qmd
+        - data.qmd
+        - ahp_exp.qmd
+        - eval_espacial.qmd
+    - resultados.qmd
+    - conclusiones.qmd
     - references.qmd
+  appendices:
+    - ahp_def.qmd
+    - ahp_general.qmd
+    - fuzzy_logic.qmd 
 
 bibliography: references.bib
 

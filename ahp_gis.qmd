@@ -1,7 +1,0 @@
----
-subtitle: Analytical Hierarchy Process (AHP) Espacial
-editor_options: 
-  chunk_output_type: console
----
-
-# AHP - GIS

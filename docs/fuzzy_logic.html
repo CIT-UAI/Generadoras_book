@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Análisis Multicriterio - 7&nbsp; Fuzzy Logic</title>
+<title>Análisis Multicriterio - Appendix C — FAHP Fuzzy Logic</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,8 +25,7 @@ ul.task-list{list-style: none;}
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./diseno.html" rel="next">
-<link href="./AHP.html" rel="prev">
+<link href="./ahp_general.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -66,7 +65,7 @@ ul.task-list{list-style: none;}
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Fuzzy Logic</span></h1>
+      <h1 class="quarto-secondary-nav-title">Appendix C — FAHP Fuzzy Logic</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -101,27 +100,22 @@ ul.task-list{list-style: none;}
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./participacion.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Participación</span></a>
+  <a href="./proyecto.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Proyecto Generadoras</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./multicriterio.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Análisis Multicriterio</span></a>
+  <a href="./estado_arte.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Estado del Arte</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./estado_arte.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Estado del Arte</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./a_estudio.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Área de Estudio</span></a>
+  <a href="./participacion.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Participación</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./metodos.html" class="sidebar-item-text sidebar-link">Métodos</a>
+            <a href="./metodos.html" class="sidebar-item-text sidebar-link">Materiales y Métodos</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -129,24 +123,29 @@ ul.task-list{list-style: none;}
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./AHP.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">AHP</span></a>
+  <a href="./a_estudio.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Área de Estudio</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./fuzzy_logic.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Fuzzy Logic</span></a>
+  <a href="./data.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Data Geoespacial</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./diseno.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Diseño de Solución</span></a>
+  <a href="./resultados.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Resultados y Discusión</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">Referencias Bibliográficas</a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./experimentacion.html" class="sidebar-item-text sidebar-link">Experimentación</a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Appendices</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -154,21 +153,21 @@ ul.task-list{list-style: none;}
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ahp_general.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">AHP Uso General</span></a>
+  <a href="./ahp_def.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">AHP Definiciones</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ahp_gis.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">AHP - GIS</span></a>
+  <a href="./ahp_general.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">AHP Ejemplo Uso General</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./fuzzy_logic.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">FAHP Fuzzy Logic</span></a>
   </div>
 </li>
       </ul>
   </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
-  </div>
-</li>
     </ul>
     </div>
 </nav>
@@ -178,7 +177,7 @@ ul.task-list{list-style: none;}
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#referencias" id="toc-referencias" class="nav-link active" data-scroll-target="#referencias"> <span class="header-section-number">7.1</span> Referencias</a></li>
+  <li><a href="#referencias" id="toc-referencias" class="nav-link active" data-scroll-target="#referencias"> <span class="header-section-number">C.1</span> Referencias</a></li>
   </ul>
 </nav>
     </div>
@@ -187,7 +186,7 @@ ul.task-list{list-style: none;}
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Fuzzy Logic</span></h1>
+<h1 class="title d-none d-lg-block">Appendix C — FAHP Fuzzy Logic</h1>
 </div>
 
 
@@ -202,11 +201,11 @@ ul.task-list{list-style: none;}
 </header>
 
 <p>Los responsables de la toma de decisiones se enfrentan a situaciones numerosas y cada vez más complejas, y a menudo se muestran inseguros a la hora de asignar puntuaciones de evaluación como valor ponderación. Por ello, el diseño de un MCDA que incorpore la teoría de conjuntos difusos puede tener en cuenta esta incertidumbre. Un AHP difuso (FAHP) es la incorporación de matices de lógica difusa a la evaluación de criterios AHP.</p>
-<p>Existen varios tipos de números difusos y la nomenclatura de cada uno de ellos está asociada a su formato: números sinusoidales, en forma de campana, poligonales, triangulares, trapezoidales, etc. como se observan en la siguiente <a href="#fig-ffuzzy">Figure&nbsp;<span>7.1</span></a></p>
+<p>Existen varios tipos de números difusos y la nomenclatura de cada uno de ellos está asociada a su formato: números sinusoidales, en forma de campana, poligonales, triangulares, trapezoidales, etc. como se observan en la siguiente <a href="#fig-ffuzzy">Figure&nbsp;<span>C.1</span></a></p>
 <div id="fig-ffuzzy" class="quarto-figure quarto-figure-center anchored page-columns page-full">
 <figure class="figure page-columns page-full">
 <p><img src="images/format_fuzzy.png" class="img-fluid figure-img" width="500"></p>
-<p></p><figcaption class="figure-caption margin-caption">Figure 7.1: Tipos de formatos de Fuzzy</figcaption><p></p>
+<p></p><figcaption class="figure-caption margin-caption">Figure C.1: Tipos de formatos de Fuzzy</figcaption><p></p>
 </figure>
 </div>
 <p>Podemos hacer difusas dos partes del proceso SIG-MCDA:</p>
@@ -224,8 +223,8 @@ ul.task-list{list-style: none;}
 <p><img src="images/areas_selection.jpeg" class="img-fluid figure-img" width="600"></p>
 </figure>
 </div>
-<section id="referencias" class="level2" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="referencias"><span class="header-section-number">7.1</span> Referencias</h2>
+<section id="referencias" class="level2" data-number="C.1">
+<h2 data-number="C.1" class="anchored" data-anchor-id="referencias"><span class="header-section-number">C.1</span> Referencias</h2>
 <p><a href="https://storymaps.arcgis.com/stories/b60b7399f6944bca86d1be6616c178cf">Multi-Criteria Decision Analysis and GIS - Siobhan Ryan and Ellis Nimick</a></p>
 
 
@@ -331,14 +330,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./AHP.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">AHP</span></span>
+      <a href="./ahp_general.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">AHP Ejemplo Uso General</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./diseno.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Diseño de Solución</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

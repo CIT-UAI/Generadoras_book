@@ -52,12 +52,8 @@ variables %>%
 ```
 
 
+<br>
 
 
-De los estudios indicadors @tbl-vars la metodología multicriterio mas utilizada en es el _Proceso Análisis Jerárquico_ (AHP, por sus siglas en inglés) fue el MDMC más utilizado en los trabajos revisados. El AHP es un método diseñado para resolver problemas complejos que implican múltiples criterios u objetivos (Tegou et al., 2010). En la aplicación de este método, quien toma la decisión debe comparar la importancia de un criterio con respecto a otro. Con esto se obtiene una jerarquización de las alternativas posibles. Para aplicar el AHP se requiere: 
 
-a) definir el objetivo del problema, así como los criterios y las alternativas; además, se requiere estructurar el problema de decisión como una jerarquía; 
-b) crear una matriz de comparación por pares, en donde se compara la importancia de un criterio frente a otro; 
-c) calcular el vector de prioridades que indica la importancia relativa de los diferentes criterios, y 
-d) validar la consistencia de los resultados (R. W. Saaty, 1987; T. L. Saaty, 1980). La comparación por pares es la base fundamental del AHP.
-
+De los estudios indicadors @tbl-vars la metodología multicriterio mas utilizada en es el _Proceso Análisis Jerárquico_ (AHP, por sus siglas en inglés) fue el MDMC más utilizado en los trabajos revisados. El AHP es un método diseñado para resolver problemas complejos que implican múltiples criterios u objetivos (Tegou et al., 2010). En la aplicación de este método, quien toma la decisión debe comparar la importancia de un criterio con respecto a otro. Con esto se obtiene una jerarquización de las alternativas posibles. 

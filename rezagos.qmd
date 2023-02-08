@@ -1,0 +1,41 @@
+---
+title: "rezagos"
+---
+
+
+## Criterios
+
+### Criterios Binarios
+
+
+![Criterios Binarios](images/binary.png){fig-align="center" width="500" #fig-binary}
+
+Los criterios del tipo binario se clasifican como buenos (1) o malos (0) Se determina multiplicando el mapa de tres preferencias binarias individuales, por lo que los valores $0 \times 0 \times 0$ son iguales que $0 \times  1 \times 1$ (AND).
+
+La adición puede mostrar áreas en una escala que se ajustan a algunos de los criterios (O)
+
+
+
+### Criterios Ponderados
+
+definir los criterios binarios en el método de análisis jerarquico
+
+
+![Criterios Ponderados](images/weighted.jpeg){fig-align="center" width="500" #fig-weighted}
+
+Los criterios no son en blanco y negro, y pueden estar en un gradiente. Cada entrada puede ponderarse según su importancia o su porcentaje de influencia. La ponderación es un porcentaje relativo, y la suma de los porcentajes de influencia debe ser igual al 100%.
+
+![Ejemplo de cálculo análisis multcriterio estándar](images/multicriterio.png){fig-align="center" width="800" #fig-multicriterio}
+
+![Ejemplo Análisis de Decisiones Multicriterio (MCDA) para la  compra](images/mcda.png){fig-align="center" width="500" #fig-mcda}
+
+
+
+
+## 
+
+
+a) definir el objetivo del problema, así como los criterios y las alternativas; además, se requiere estructurar el problema de decisión como una jerarquía; 
+b) crear una matriz de comparación por pares, en donde se compara la importancia de un criterio frente a otro; 
+c) calcular el vector de prioridades que indica la importancia relativa de los diferentes criterios, y 
+d) validar la consistencia de los resultados (R. W. Saaty, 1987; T. L. Saaty, 1980). La comparación por pares es la base fundamental del AHP.
