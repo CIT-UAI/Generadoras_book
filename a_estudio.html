@@ -56,11 +56,30 @@ ul.task-list{list-style: none;}
   }
 }</script>
 
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 
 <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar floating slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -174,10 +193,18 @@ ul.task-list{list-style: none;}
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#región-de-antofagasta" id="toc-región-de-antofagasta" class="nav-link active" data-scroll-target="#región-de-antofagasta"> <span class="header-section-number">5.1</span> Región de Antofagasta</a></li>
+  <li><a href="#comunas" id="toc-comunas" class="nav-link" data-scroll-target="#comunas"> <span class="header-section-number">5.2</span> Comunas</a></li>
+  <li><a href="#espacio-grillado" id="toc-espacio-grillado" class="nav-link" data-scroll-target="#espacio-grillado"> <span class="header-section-number">5.3</span> Espacio grillado</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -195,9 +222,108 @@ ul.task-list{list-style: none;}
 
 </header>
 
-<p>Región de Antofagasta</p>
+<div class="cell">
+
+</div>
+<section id="región-de-antofagasta" class="level2 page-columns page-full" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="región-de-antofagasta"><span class="header-section-number">5.1</span> Región de Antofagasta</h2>
+<p>Considerando que el análisis multicriterio tiene como objetivo es identificar zonas idóneas para la construcción de plantas de generación energía eléctrica, donde el espacio de territorial de búsqueda corresponde a la Región de Antofagasta.</p>
+<p>La Región de Antofagasta es una de la 16 regiones en que se divide Chile. Su capital es la homónima Antofagasta. Ubicada en el extremo norte del país (norte grande), limita al norte con la Región de Tarapacá, al este con el departamento de Potosí en Bolivia y con las provincias de Jujuy, Salta y Catamarca pertenecientes a Argentina, al sur con la Región de Atacama y al oeste con el océano Pacífico.</p>
+<p>Cuenta con una superficie de 126.049 <span class="math inline">km^2</span> y una población según el <a href="http://www.ine.cl">Instituto Nacional de Estadísticas</a> (INE) de 607.534 habitantes en 2017. La región está compuesta por las provincias de Antofagasta, El Loa y Tocopilla. La región cuenta con el PIB per cápita más elevado del país, superando los <em>USD</em> 25.000.</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="images/roi.png" class="img-fluid figure-img" width="400"></p>
+<p></p><figcaption class="figure-caption margin-caption">Mapa de la Región de Antofagasta</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="comunas" class="level2 page-columns page-full" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="comunas"><span class="header-section-number">5.2</span> Comunas</h2>
+<p>La región de Antofagasta tiene 3 provincias y 9 comunas, como se observa a continuación:</p>
+<div id="fig-comMap" class="quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="images/comunas_wiki.png" class="img-fluid figure-img" width="500"></p>
+<p></p><figcaption class="figure-caption margin-caption">Figure 5.1: Comunas de la Región de Antofagasta</figcaption><p></p>
+</figure>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-areaCom" class="anchored">
+
+<table class="table table-striped" style="font-size: 15px; width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table 5.1:  Comuna de la Región de Antofagasta </caption>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Provincia </th>
+   <th style="text-align:left;"> Comuna </th>
+   <th style="text-align:right;"> Area_hc </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> ANTOFAGASTA </td>
+   <td style="text-align:left;"> TALTAL </td>
+   <td style="text-align:right;"> 2040306.3 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> ANTOFAGASTA </td>
+   <td style="text-align:left;"> ANTOFAGASTA </td>
+   <td style="text-align:right;"> 3069117.0 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> ANTOFAGASTA </td>
+   <td style="text-align:left;"> MEJILLONES </td>
+   <td style="text-align:right;"> 356884.4 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> ANTOFAGASTA </td>
+   <td style="text-align:left;"> SIERRA GORDA </td>
+   <td style="text-align:right;"> 1288042.4 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> EL LOA </td>
+   <td style="text-align:left;"> CALAMA </td>
+   <td style="text-align:right;"> 1558824.9 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> EL LOA </td>
+   <td style="text-align:left;"> OLLAGÜE </td>
+   <td style="text-align:right;"> 291847.7 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> EL LOA </td>
+   <td style="text-align:left;"> SAN PEDRO DE ATACAMA </td>
+   <td style="text-align:right;"> 2354323.4 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> TOCOPILLA </td>
+   <td style="text-align:left;"> MARÍA ELENA </td>
+   <td style="text-align:right;"> 1243177.7 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> TOCOPILLA </td>
+   <td style="text-align:left;"> TOCOPILLA </td>
+   <td style="text-align:right;"> 403068.5 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="espacio-grillado" class="level2 page-columns page-full" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="espacio-grillado"><span class="header-section-number">5.3</span> Espacio grillado</h2>
+<p>Para el proceso de análisis multicriterio espacial se debe contar con una espacio geométrico base para todas variables que permita evaluar a decidir la zona idónea de lo que se evalúa de acuerdo a los objetivos, para el caso del proyecto la instalación de una planta de generación de energía eléctrica ya sea eólica o fotovoltaica.</p>
+<p>Por lo anterior, considerando la extensión espacial de la Región de Antofagasta, se creó una geometría regular tipo grilla de 1000x1000 metros (<a href="#fig-grilla">Figure&nbsp;<span>5.2</span></a>), que permite identificar las zonas de forma diferenciable y que permita realizar las operaciones computacionales complejas de forma eficiente.</p>
+<div id="fig-grilla" class="quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="images/grid.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption margin-caption">Figure 5.2: Espacio grillado regular de 1000x1000 metros</figcaption><p></p>
+</figure>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
