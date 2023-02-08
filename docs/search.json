@@ -32,21 +32,21 @@
     "href": "participacion.html",
     "title": "2  Participación",
     "section": "",
-    "text": "Ciclo 1 de Diseño: Este punto considera establecer el diseño del proyecto mediante la participación con expertos de los distintos ámbitos que abarca el proyecto."
+    "text": "Fecha: 29 Noviembre\nModalidad: Online\nObjetivos:\nParticipantes: (cantidades por categoria)\nResultados: (solo un párrafo, no necesariamente será definitivo)\nLink:: TALLER EXPERTOS"
   },
   {
     "objectID": "participacion.html#participación-con-empresas",
     "href": "participacion.html#participación-con-empresas",
     "title": "2  Participación",
-    "section": "2.2 Participación con Empresas",
-    "text": "2.2 Participación con Empresas\n\n\n\nCiclo 2 de Diseño: Este punto considera establecer el diseño del proyecto mediante la participación con empresas que tengan impactos en el territorio."
+    "section": "2.3 Participación con Empresas",
+    "text": "2.3 Participación con Empresas\n\n\n\nCiclo 2 de Diseño: Este punto considera establecer el diseño del proyecto mediante la participación con empresas que tengan impactos en el territorio.\n\n\n\nFecha:\nModalidad: Online\nObjetivos:\nParticipantes: (cantidades por categoria)\nResultados: (solo un párrafo, no necesariamente será definitivo)\nLink: TALLER EMPRESAS"
   },
   {
     "objectID": "participacion.html#parcipación-actores-claves-y-la-comunidad",
     "href": "participacion.html#parcipación-actores-claves-y-la-comunidad",
     "title": "2  Participación",
-    "section": "2.3 Parcipación Actores Claves y la Comunidad",
-    "text": "2.3 Parcipación Actores Claves y la Comunidad\n\n\n\nCiclo 3 de Diseño: Este punto considera establecer el diseño del proyecto mediante la participación con empresas que tengan impactos en el territorio."
+    "section": "2.4 Parcipación Actores Claves y la Comunidad",
+    "text": "2.4 Parcipación Actores Claves y la Comunidad\n\n\n\nCiclo 3 de Diseño: Este punto considera establecer el diseño del proyecto mediante la participación con empresas que tengan impactos en el territorio.\n\n\n\nFecha:\nModalidad: Online\nObjetivos:\nParticipantes: (cantidades por categoria)\nResultados: (solo un párrafo, no necesariamente será definitivo)\nLink: TALLER ACTORES LOCALES"
   },
   {
     "objectID": "multicriterio.html",
@@ -95,7 +95,7 @@
     "href": "a_estudio.html",
     "title": "5  Área de Estudio",
     "section": "",
-    "text": "Región de Antofagasta"
+    "text": "Considerando que el análisis multicriterio tiene como objetivo es identificar zonas idóneas para la construcción de plantas de generación energía eléctrica, donde el espacio de territorial de búsqueda corresponde a la Región de Antofagasta."
   },
   {
     "objectID": "metodos.html",
@@ -123,7 +123,7 @@
     "href": "AHP.html#algoritmo-saaty1980",
     "title": "6  AHP",
     "section": "6.2 Algoritmo (T. L. Saaty 1980)",
-    "text": "6.2 Algoritmo (T. L. Saaty 1980)\nDe acuerdo con T. L. Saaty (1980), para n criterios es posible construir una matriz A=[a_{ij}], con i,j =1,2,...,n. El valor de cada a_{ij} corresponde a la importancia relativa del criterio C_i (fila i) sobre el criterio C_j (columna j), según la escala fundamental propuesta por Saati (Table 6.1). Cuando i=j, el valor de a_{ij} será igual a 1 ya que estamos comparando un criterio con el mismo.\n\nA= \\begin{bmatrix}\n1 & a_{1,2} & a_{1,3} & \\dots & a_{1,n} \\\\\na_{2,1} & 1 & a_{2,3} & \\dots & a_{2,n} \\\\\n\\vdots & \\vdots & \\vdots & \\ddots & \\vdots \\\\\na_{n,1} & a_{n,2} & a_{n,3} & \\dots & 1\n\\end{bmatrix}\n\nLuego de construir la matriz de comparación por pares, se procede a calcular el vector de prioridades. Este vector indica la influencia de un criterio sobre el objetivo global, en estos casos la ubicación óptima de una planta de generarción de energía eléctrica. Existen múltiples formas de calcular este vector, una de ellas es usando el método del vector propio principal w tal que:\nA \\times W = \\lambda_{max} \\times w\nDonde \\lambda_{max} es el máximo valor propio de la matriz A\nPara calcular los vectores propios en el AHP, se normaliza la matriz de comparación pairwise y luego se encuentra su valor propio dominante y el correspondiente vector propio. El valor propio dominante representa el grado en que las alternativas se han priorizado y el vector propio representa los pesos asignados a cada alternativa en términos de su prioridad.\nLuego, se calcula el valor propio dominante y el correspondiente vector propio usando técnicas matemáticas, como el método de potencias. El valor propio dominante (\\lambda_{max}) se interpreta como el grado en que las alternativas se han priorizado, y el vector propio (w) se interpreta como los pesos asignados a cada alternativa en términos de su prioridad.\nFinalmente se verifica la consistencia de la matriz de comparaciones pareadas. La matriz A es consistente si aij.ajk = aik para i,j,k = 1,2,...,n (Section 6.3). Para validar la consistencia razonable de los juicios en la matriz de comparación por pares se calcula el índice de consistencia (IC) (Equation 6.1) y la razón de consistencia (RC) (Equation 6.2).\nLa razón de consistencia (RC) se calcula a partir de un índice de consistencia aleatorio (IA), que varía de acuerdo con el tamaño de la matriz A (Table 6.2). La matriz se considera consistente si RC < IA; en caso contrario, se considera inconsistente y se aplica la corrección de consistencia planteada por Thomas L. Saaty (2003)\nIC = \\frac{\\lambda_{max}-n}{n-1} \\tag{6.1}\nRC = \\frac{IC}{IA} \\tag{6.2}\n\n\n\n\nTable 6.2:  Índice de consistencia aleatorio (IA) \n\n  \n    1 \n    2 \n    3 \n    4 \n    5 \n    6 \n    7 \n    8 \n    9 \n    10 \n    11 \n    12 \n  \n  \n    0.00 \n    0.00 \n    0.52 \n    0.89 \n    1.11 \n    1.25 \n    1.35 \n    1.40 \n    1.45 \n    1.49 \n    1.52 \n    1.54"
+    "text": "6.2 Algoritmo (T. L. Saaty 1980)\nDe acuerdo con T. L. Saaty (1980), para n criterios es posible construir una matriz A=[a_{ij}], con i,j =1,2,...,n. El valor de cada a_{ij} corresponde a la importancia relativa del criterio C_i (fila i) sobre el criterio C_j (columna j), según la escala fundamental propuesta por Saati (Table 6.1). Cuando i=j, el valor de a_{ij} será igual a 1 ya que estamos comparando un criterio con el mismo.\n\nA= \\begin{bmatrix}\n1 & a_{1,2} & a_{1,3} & \\dots & a_{1,n} \\\\\na_{2,1} & 1 & a_{2,3} & \\dots & a_{2,n} \\\\\n\\vdots & \\vdots & \\vdots & \\ddots & \\vdots \\\\\na_{n,1} & a_{n,2} & a_{n,3} & \\dots & 1\n\\end{bmatrix}\n\nLuego de construir la matriz de comparación por pares, se procede a calcular el vector de prioridades. Este vector indica la influencia de un criterio sobre el objetivo global, en estos casos la ubicación óptima de una planta de generarción de energía eléctrica. Existen múltiples formas de calcular este vector, una de ellas es usando el método del vector propio principal w tal que:\nA \\times W = \\lambda_{max} \\times w\nDonde \\lambda_{max} es el máximo valor propio de la matriz A\nPara calcular los vectores propios en el AHP, se normaliza la matriz de comparación pairwise y luego se encuentra su valor propio dominante y el correspondiente vector propio. El valor propio dominante representa el grado en que las alternativas se han priorizado y el vector propio representa los pesos asignados a cada alternativa en términos de su prioridad.\nLuego, se calcula el valor propio dominante y el correspondiente vector propio usando técnicas matemáticas, como el método de potencias. El valor propio dominante (\\lambda_{max}) se interpreta como el grado en que las alternativas se han priorizado, y el vector propio (w) se interpreta como los pesos asignados a cada alternativa en términos de su prioridad.\nFinalmente se verifica la consistencia de la matriz de comparaciones pareadas. La matriz A es consistente si aij.ajk = aik para i,j,k = 1,2,...,n (Section 6.3). Para validar la consistencia razonable de los juicios en la matriz de comparación por pares se calcula el índice de consistencia (IC) (Equation 9.1) y la razón de consistencia (RC) (Equation 9.2).\nLa razón de consistencia (RC) se calcula a partir de un índice de consistencia aleatorio (IA), que varía de acuerdo con el tamaño de la matriz A (Table 9.2). La matriz se considera consistente si RC < IA; en caso contrario, se considera inconsistente y se aplica la corrección de consistencia planteada por Thomas L. Saaty (2003)\nIC = \\frac{\\lambda_{max}-n}{n-1} \\tag{6.1}\nRC = \\frac{IC}{IA} \\tag{6.2}\n\n\n\n\nTable 6.2:  Índice de consistencia aleatorio (IA) \n\n  \n    1 \n    2 \n    3 \n    4 \n    5 \n    6 \n    7 \n    8 \n    9 \n    10 \n    11 \n    12 \n  \n  \n    0.00 \n    0.00 \n    0.52 \n    0.89 \n    1.11 \n    1.25 \n    1.35 \n    1.40 \n    1.45 \n    1.49 \n    1.52 \n    1.54"
   },
   {
     "objectID": "AHP.html#sec-robustez",
@@ -224,6 +224,13 @@
     "text": "9.6 Decisión Final\n\nw_aternativas <- matrix(c(wA, wB, wC, wD),\n                        nrow = 3, ncol = 4, byrow = F)\n\nnames_criterios <- c(\"A\", \"B\", \"C\", \"D\") \nnames_alternativas <- c(\"I\", \"II\", \"III\") \ncolnames(w_aternativas) <- names_criterios \nrownames(w_aternativas)<-  names_alternativas\n\n\n\n\n\n \n  \n      \n    A \n    B \n    C \n    D \n  \n \n\n  \n    I \n    0.3301350 \n    0.1883941 \n    0.1883941 \n    0.2370417 \n  \n  \n    II \n    0.3914183 \n    0.7306447 \n    0.7306447 \n    0.0643430 \n  \n  \n    III \n    0.2784467 \n    0.0809612 \n    0.0809612 \n    0.6986153 \n  \n\n\n\n\n\nProducto punto de los pesos del criterio w y pesos por cada alternativa en cada criterio w_alternativas\n\nresultados <- w_aternativas %*% w\n\ncolnames(resultados) <- \"Decisión\"\n\n\n\n\n\n \n  \n      \n    Decisión \n  \n \n\n  \n    I \n    0.2060765 \n  \n  \n    II \n    0.5882208 \n  \n  \n    III \n    0.2057028 \n  \n\n\n\n\n\nDe acuerdo a la tabla anterior se puede resolver que la alternativa idónea es la alternativa II que tiene 0.588 de valoración."
   },
   {
+    "objectID": "ahp_general.html#diagrama-de-flujo-de-trabajo",
+    "href": "ahp_general.html#diagrama-de-flujo-de-trabajo",
+    "title": "9  AHP Uso General",
+    "section": "9.7 Diagrama de flujo de trabajo",
+    "text": "9.7 Diagrama de flujo de trabajo\n\n\n\nFigure 9.2: Diagrama de flujo de trabajo usando la librería targets"
+  },
+  {
     "objectID": "ahp_general.html#referencias-de-sección",
     "href": "ahp_general.html#referencias-de-sección",
     "title": "9  AHP Uso General",
@@ -238,10 +245,31 @@
     "text": "Guerrero Hoyos, Benito Gustavo, Fabio De Jesús Vélez Macías, and Diana\nElizabeth Morales Quintero. 2020. “Energía eólica y\nterritorio: sistemas de información geográfica y métodos de decisión\nmulticriterio en La Guajira (Colombia).” Ambiente y\nDesarrollo 23 (44). https://doi.org/10.11144/Javeriana.ayd23-44.eets.\n\n\nSaaty, T. L. 1980. “The Analytic Hierarchy Process.”\n\n\nSaaty, Thomas L. 2003. “Decision-Making with the AHP: Why Is the\nPrincipal Eigenvector Necessary.” European Journal of\nOperational Research 145 (1): 85–91. https://doi.org/10.1016/s0377-2217(02)00227-8."
   },
   {
-    "objectID": "ahp_general.html#diagrama-de-flujo-de-trabajo",
-    "href": "ahp_general.html#diagrama-de-flujo-de-trabajo",
-    "title": "9  AHP Uso General",
-    "section": "9.7 Diagrama de flujo de trabajo",
-    "text": "9.7 Diagrama de flujo de trabajo\n\n\n\nFigure 9.2: Diagrama de flujo de trabajo usando la librería targets"
+    "objectID": "participacion.html#participación-expertos",
+    "href": "participacion.html#participación-expertos",
+    "title": "2  Participación",
+    "section": "2.2 Participación Expertos",
+    "text": "2.2 Participación Expertos\n\n\n\nCiclo 1 de Diseño: Este punto considera establecer el diseño del proyecto mediante la participación con expertos de los distintos ámbitos que abarca el proyecto.\n\n\n\nFecha:\nModalidad: Online\nObjetivos:\nParticipantes: (cantidades por categoria)\nResultados: (solo un párrafo, no necesariamente será definitivo)\nLink: TALLER 2"
+  },
+  {
+    "objectID": "a_estudio.html#comunas",
+    "href": "a_estudio.html#comunas",
+    "title": "5  Área de Estudio",
+    "section": "5.2 Comunas",
+    "text": "5.2 Comunas\nLa región de Antofagasta tiene 3 provincias y 9 comunas, como se observa a continuación:\n\n\n\nFigure 5.1: Comunas de la Región de Antofagasta\n\n\n\n\n\n\nTable 5.1:  Comuna de la Región de Antofagasta \n \n  \n    Provincia \n    Comuna \n    Area_hc \n  \n \n\n  \n    ANTOFAGASTA \n    TALTAL \n    2040306.3 \n  \n  \n    ANTOFAGASTA \n    ANTOFAGASTA \n    3069117.0 \n  \n  \n    ANTOFAGASTA \n    MEJILLONES \n    356884.4 \n  \n  \n    ANTOFAGASTA \n    SIERRA GORDA \n    1288042.4 \n  \n  \n    EL LOA \n    CALAMA \n    1558824.9 \n  \n  \n    EL LOA \n    OLLAGÜE \n    291847.7 \n  \n  \n    EL LOA \n    SAN PEDRO DE ATACAMA \n    2354323.4 \n  \n  \n    TOCOPILLA \n    MARÍA ELENA \n    1243177.7 \n  \n  \n    TOCOPILLA \n    TOCOPILLA \n    403068.5"
+  },
+  {
+    "objectID": "a_estudio.html#espacio-grillado",
+    "href": "a_estudio.html#espacio-grillado",
+    "title": "5  Área de Estudio",
+    "section": "5.3 Espacio grillado",
+    "text": "5.3 Espacio grillado\nPara el proceso de análisis multicriterio espacial se debe contar con una espacio geométrico base para todas variables que permita evaluar a decidir la zona idónea de lo que se evalúa de acuerdo a los objetivos, para el caso del proyecto la instalación de una planta de generación de energía eléctrica ya sea eólica o fotovoltaica.\nPor lo anterior, considerando la extensión espacial de la Región de Antofagasta, se creó una geometría regular tipo grilla de 1000x1000 metros (Figure 5.2), que permite identificar las zonas de forma diferenciable y que permita realizar las operaciones computacionales complejas de forma eficiente.\n\n\n\nFigure 5.2: Espacio grillado regular de 1000x1000 metros"
+  },
+  {
+    "objectID": "a_estudio.html#región-de-antofagasta",
+    "href": "a_estudio.html#región-de-antofagasta",
+    "title": "5  Área de Estudio",
+    "section": "5.1 Región de Antofagasta",
+    "text": "5.1 Región de Antofagasta\nConsiderando que el análisis multicriterio tiene como objetivo es identificar zonas idóneas para la construcción de plantas de generación energía eléctrica, donde el espacio de territorial de búsqueda corresponde a la Región de Antofagasta.\nLa Región de Antofagasta es una de la 16 regiones en que se divide Chile. Su capital es la homónima Antofagasta. Ubicada en el extremo norte del país (norte grande), limita al norte con la Región de Tarapacá, al este con el departamento de Potosí en Bolivia y con las provincias de Jujuy, Salta y Catamarca pertenecientes a Argentina, al sur con la Región de Atacama y al oeste con el océano Pacífico.\nCuenta con una superficie de 126.049 km^2 y una población según el Instituto Nacional de Estadísticas (INE) de 607.534 habitantes en 2017. La región está compuesta por las provincias de Antofagasta, El Loa y Tocopilla. La región cuenta con el PIB per cápita más elevado del país, superando los USD 25.000.\n\n\n\nMapa de la Región de Antofagasta"
   }
 ]

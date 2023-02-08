@@ -1,5 +1,70 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
 # Área de Estudio
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
 
-Región de Antofagasta
+suppressPackageStartupMessages(library(sf))
+suppressPackageStartupMessages(library(dplyr))
+suppressPackageStartupMessages(library(knitr))
+suppressPackageStartupMessages(library(kableExtra))
+# suppressPackageStartupMessages(library(mapview))
 
+```
+
+```{r}
+comunas <- readRDS("data/rds/R02_COMUNAS.rds")
+
+comunas_tbl <- comunas %>% 
+    mutate(Area = round(as.numeric(st_area(.)))/10000) %>% 
+    st_drop_geometry() %>% 
+    select(Provincia = NOM_PROVIN, Comuna = NOM_COMUNA, Area_hc = Area) %>% 
+    arrange(Provincia)
+```
+
+## Región de Antofagasta
+
+Considerando que el análisis multicriterio tiene como objetivo es identificar zonas idóneas para la construcción de plantas de generación energía eléctrica, donde el espacio de territorial de búsqueda corresponde a la Región de Antofagasta.
+
+La Región de Antofagasta es una de la 16 regiones en que se divide Chile. Su capital es la homónima Antofagasta. Ubicada en el extremo norte del país (norte grande), limita al norte con la Región de Tarapacá, al este con el departamento de Potosí en Bolivia y con las provincias de Jujuy, Salta y Catamarca pertenecientes a Argentina, al sur con la Región de Atacama y al oeste con el océano Pacífico.
+
+Cuenta con una superficie de 126.049 $km^2$ y una población según el [Instituto Nacional de Estadísticas](http://www.ine.cl) (INE) de 607.534 habitantes en 2017. La región está compuesta por las provincias de Antofagasta, El Loa y Tocopilla. La región cuenta con el PIB per cápita más elevado del país, superando los *USD* 25.000.
+
+![Mapa de la Región de Antofagasta](images/roi.png){fig-align="center" width="400"}
+
+## Comunas
+
+La región de Antofagasta tiene 3 provincias y 9 comunas, como se observa a continuación:
+
+
+![Comunas de la Región de Antofagasta](images/comunas_wiki.png){#fig-comMap fig-align="center" width="500"}
+
+
+```{r}
+#| label: tbl-areaCom
+#| tbl-cap: Comuna de la Región de Antofagasta
+#| 
+comunas_tbl %>% 
+    kbl() %>%
+    # kable_material_dark()
+    kable_styling(bootstrap_options = "striped", 
+                full_width = F, position = "center",
+                font_size = 15)
+```
+
+
+
+## Espacio grillado
+
+Para el proceso de análisis multicriterio espacial se debe contar con una espacio geométrico base para todas variables que permita evaluar a decidir la zona idónea de lo que se evalúa de acuerdo a los objetivos, para el caso del proyecto la instalación de una planta de generación de energía eléctrica ya sea eólica o fotovoltaica.
+
+
+Por lo anterior, considerando la extensión espacial de la Región de Antofagasta, se creó una geometría regular tipo grilla de 1000x1000 metros (@fig-grilla), que permite identificar las zonas de forma diferenciable y que permita realizar las operaciones computacionales complejas de forma eficiente.
+
+
+![Espacio grillado regular de 1000x1000 metros](images/grid.png){#fig-grilla fig-align="center"}
