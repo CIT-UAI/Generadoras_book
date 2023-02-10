@@ -231,11 +231,9 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción"> <span class="header-section-number">8</span> Introducción</a>
-  <ul class="collapse">
-  <li><a href="#matriz-de-comparación-de-criterios" id="toc-matriz-de-comparación-de-criterios" class="nav-link" data-scroll-target="#matriz-de-comparación-de-criterios"> <span class="header-section-number">8.1</span> Matriz de Comparación de Criterios</a></li>
-  <li><a href="#análisis-de-consistencia" id="toc-análisis-de-consistencia" class="nav-link" data-scroll-target="#análisis-de-consistencia"> <span class="header-section-number">8.2</span> Análisis de Consistencia</a></li>
-  </ul></li>
+  <li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción"> <span class="header-section-number">7.1</span> Introducción</a></li>
+  <li><a href="#matriz-de-comparación-de-criterios" id="toc-matriz-de-comparación-de-criterios" class="nav-link" data-scroll-target="#matriz-de-comparación-de-criterios"> <span class="header-section-number">7.2</span> Matriz de Comparación de Criterios</a></li>
+  <li><a href="#análisis-de-consistencia" id="toc-análisis-de-consistencia" class="nav-link" data-scroll-target="#análisis-de-consistencia"> <span class="header-section-number">7.3</span> Análisis de Consistencia</a></li>
   </ul>
 </nav>
     </div>
@@ -261,8 +259,8 @@ div.csl-indent {
 <div class="cell">
 
 </div>
-<section id="introducción" class="level1 page-columns page-full" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> Introducción</h1>
+<section id="introducción" class="level2 page-columns page-full" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="introducción"><span class="header-section-number">7.1</span> Introducción</h2>
 <p>El Proceso de Análisis Jerárquico es una técnica estructurada para tratar con problemas complejos de decisión. Esta metodología permite la construcción de un problema a partir de objetivos, criterios y alternativas jerarquizados. El AHP fue desarrollado por <span class="citation" data-cites="Saaty1980">T. L. Saaty (<a href="references.html#ref-Saaty1980" role="doc-biblioref">1980</a>)</span> y selecciona alternativas en función de una serie de criterios o variables normalmente jerarquizados. La aplicación del AHP puede ser utilizada para la selección de proyectos, la evaluación de riesgos, la toma de decisiones financieras, entre otros.</p>
 <p>Como referencia se puede considerar esta imagen de <span class="citation" data-cites="abdelouhed_gis_2022">Abdelouhed et al. (<a href="references.html#ref-abdelouhed_gis_2022" role="doc-biblioref">2022</a>)</span></p>
 <div class="quarto-figure quarto-figure-center page-columns page-full">
@@ -271,15 +269,16 @@ div.csl-indent {
 <p></p><figcaption class="figure-caption margin-caption">AHP de <span class="citation" data-cites="abdelouhed_gis_2022">Abdelouhed et al. (<a href="references.html#ref-abdelouhed_gis_2022" role="doc-biblioref">2022</a>)</span></figcaption><p></p>
 </figure>
 </div>
-<section id="matriz-de-comparación-de-criterios" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="matriz-de-comparación-de-criterios"><span class="header-section-number">8.1</span> Matriz de Comparación de Criterios</h2>
+</section>
+<section id="matriz-de-comparación-de-criterios" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="matriz-de-comparación-de-criterios"><span class="header-section-number">7.2</span> Matriz de Comparación de Criterios</h2>
 <p>AHP es un método de comparación por pares que se utiliza en los criterios con respecto al objetivo, el cual es tomar la mejor decisión tomando en consideración diferentes criterios, por cada una de las alternativas, en el caso territorial serían las diferentes áreas</p>
-<p>Estas comparaciones por pares se llevan a cabo para todos los factores relevantes dentro de un análisis considerando la siguiente escala. (<a href="#tbl-esc">Table&nbsp;<span>8.1</span></a>)</p>
+<p>Estas comparaciones por pares se llevan a cabo para todos los factores relevantes dentro de un análisis considerando la siguiente escala. (<a href="#tbl-esc">Table&nbsp;<span>7.1</span></a>)</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="tbl-esc" class="anchored">
 
-<table class="table table-striped" style="font-size: 15px; width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table 8.1:  Escala fundamental, de acuerdo con Saaty. </caption>
+<table class="table table-striped" style="font-size: 15px; width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table 7.1:  Escala fundamental, de acuerdo con Saaty. </caption>
  <thead>
   <tr>
    <th style="text-align:left;"> Intensidad </th>
@@ -324,7 +323,7 @@ div.csl-indent {
 </div>
 </div>
 </div>
-<p>De acuerdo con <span class="citation" data-cites="Saaty1980">T. L. Saaty (<a href="references.html#ref-Saaty1980" role="doc-biblioref">1980</a>)</span>, para <span class="math inline">n</span> criterios es posible construir una matriz <span class="math inline">A=[a_{ij}]</span>, con <span class="math inline">i,j =1,2,...,n</span>. El valor de cada <span class="math inline">a_{ij}</span> corresponde a la importancia relativa del criterio <span class="math inline">C_i</span> (fila i) sobre el criterio <span class="math inline">C_j</span> (columna <span class="math inline">j</span>), según la escala fundamental propuesta por Saati (<a href="#tbl-esc">Table&nbsp;<span>8.1</span></a>). Cuando <span class="math inline">i=j</span>, el valor de <span class="math inline">a_{ij}</span> será igual a 1 ya que estamos comparando un criterio con el mismo.</p>
+<p>De acuerdo con <span class="citation" data-cites="Saaty1980">T. L. Saaty (<a href="references.html#ref-Saaty1980" role="doc-biblioref">1980</a>)</span>, para <span class="math inline">n</span> criterios es posible construir una matriz <span class="math inline">A=[a_{ij}]</span>, con <span class="math inline">i,j =1,2,...,n</span>. El valor de cada <span class="math inline">a_{ij}</span> corresponde a la importancia relativa del criterio <span class="math inline">C_i</span> (fila i) sobre el criterio <span class="math inline">C_j</span> (columna <span class="math inline">j</span>), según la escala fundamental propuesta por Saati (<a href="#tbl-esc">Table&nbsp;<span>7.1</span></a>). Cuando <span class="math inline">i=j</span>, el valor de <span class="math inline">a_{ij}</span> será igual a 1 ya que estamos comparando un criterio con el mismo.</p>
 <p><span class="math display">
 A= \begin{bmatrix}
 1 &amp; a_{1,2} &amp; a_{1,3} &amp; \dots &amp; a_{1,n} \\
@@ -341,17 +340,17 @@ a_{n,1} &amp; a_{n,2} &amp; a_{n,3} &amp; \dots &amp; 1
 <p>Luego, se calcula el valor propio dominante y el correspondiente vector propio usando técnicas matemáticas, como el método de potencias. El valor propio dominante (<span class="math inline">\lambda_{max}</span>) se interpreta como el grado en que las alternativas se han priorizado, y el vector propio (<span class="math inline">w</span>) se interpreta como los pesos asignados a cada alternativa en términos de su prioridad.</p>
 <p><strong>Calculo de</strong> <span class="math inline">w</span> real …….</p>
 </section>
-<section id="análisis-de-consistencia" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="análisis-de-consistencia"><span class="header-section-number">8.2</span> Análisis de Consistencia</h2>
+<section id="análisis-de-consistencia" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="análisis-de-consistencia"><span class="header-section-number">7.3</span> Análisis de Consistencia</h2>
 <p>Para validar la consistencia razonable de los juicios en la matriz de comparación por pares se calcula el índice de consistencia como validación. La matriz <span class="math inline">A</span> es consistente si <span class="math inline">aij.ajk = aik</span> para <span class="math inline">i,j,k = 1,2,...,n</span> (<a href="ahp_def.html#sec-robustez"><span>Section&nbsp;A.3</span></a>). Para validar la consistencia razonable de los juicios en la matriz de comparación por pares se calcula el índice de consistencia (IC) (<a href="ahp_general.html#eq-IC">Equation&nbsp;<span>B.1</span></a>) y la razón de consistencia (RC) (<a href="ahp_general.html#eq-RC">Equation&nbsp;<span>B.2</span></a>).</p>
 <p>La razón de consistencia (RC) se calcula a partir de un índice de consistencia aleatorio (IA), que varía de acuerdo con el tamaño de la matriz A (<a href="ahp_general.html#tbl-ia">Table&nbsp;<span>B.2</span></a>). La matriz se considera consistente si <span class="math inline">RC &lt; IA</span>; en caso contrario, se considera inconsistente y se aplica la corrección de consistencia planteada por <span class="citation" data-cites="saaty2003">Thomas L. Saaty (<a href="references.html#ref-saaty2003" role="doc-biblioref">2003</a>)</span></p>
-<p><span id="eq-IC"><span class="math display">IC = \frac{\lambda_{max}-n}{n-1} \tag{8.1}</span></span></p>
-<p><span id="eq-RC"><span class="math display">RC = \frac{IC}{IA} \tag{8.2}</span></span></p>
+<p><span id="eq-IC"><span class="math display">IC = \frac{\lambda_{max}-n}{n-1} \tag{7.1}</span></span></p>
+<p><span id="eq-RC"><span class="math display">RC = \frac{IC}{IA} \tag{7.2}</span></span></p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="tbl-ia" class="anchored">
 
-<table class="table table-striped table-hover table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table 8.2:  Índice de consistencia aleatorio (IA) </caption>
+<table class="table table-striped table-hover table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table 7.2:  Índice de consistencia aleatorio (IA) </caption>
 <tbody>
   <tr>
    <td style="text-align:center;"> 1 </td>
@@ -402,7 +401,6 @@ Saaty, T. L. 1980. <span>“The Analytic Hierarchy Process.”</span>
 Saaty, Thomas L. 2003. <span>“Decision-Making with the AHP: Why Is the Principal Eigenvector Necessary.”</span> <em>European Journal of Operational Research</em> 145 (1): 85–91. <a href="https://doi.org/10.1016/s0377-2217(02)00227-8">https://doi.org/10.1016/s0377-2217(02)00227-8</a>.
 </div>
 </div>
-</section>
 </section>
 
 </main> <!-- /main -->

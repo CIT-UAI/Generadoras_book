@@ -1,11 +1,20 @@
 # Data Geoespacial
 
 
-## Grupos Principales
+## Temáticas
 
 
 ###  Ambiental
+
+
 ###  Social
+
+<!-- [descipción](https://www.arcgis.com/apps/dashboards/3d7ed6d578d545fc8d57da5b1751fdd6) -->
+<!-- [webmap](https://www.arcgis.com/apps/mapviewer/index.html?webmap=bfbde9b4133a414dac113bfb761f6c2f) -->
+
+<!-- [patrimonio](https://www.arcgis.com/apps/dashboards/3d7ed6d578d545fc8d57da5b1751fdd6) -->
+
+
 ###  Infraestructura
 ###  Normativo
 

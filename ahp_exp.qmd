@@ -15,7 +15,7 @@ suppressPackageStartupMessages(library(mapview))
 escala <-  read.csv("data/tablas/escalas_Saaty.csv", sep = ";", encoding = "latin-1", header = T)
 ```
 
-# Introducción
+## Introducción
 
 El Proceso de Análisis Jerárquico es una técnica estructurada para tratar con problemas complejos de decisión. Esta metodología permite la construcción de un problema a partir de objetivos, criterios y alternativas jerarquizados. El AHP fue desarrollado por @Saaty1980 y selecciona alternativas en función de una serie de criterios o variables normalmente jerarquizados. La aplicación del AHP puede ser utilizada para la selección de proyectos, la evaluación de riesgos, la toma de decisiones financieras, entre otros.
 
