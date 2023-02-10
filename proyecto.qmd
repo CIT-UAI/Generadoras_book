@@ -1,6 +1,6 @@
 # Proyecto Generadoras
 
-A mode general se dará un contexto de los objetivos y etapas del proyecto que general el presente estudio que lleva por título *"Desarrollo de estándares para un desarrollo más sostenible"* solicitado por Generadoras Chile. Este proyecto cuenta con dos etapas generales, y es en la primera de ellas se enmarca el desarrollo del presente documento de **análisis multicriterio territorial**, a continuación describen las etapas generales.
+A mode general se dará un contexto de los objetivos y etapas del proyecto que genera el presente estudio que lleva por título *"Desarrollo de estándares para un desarrollo más sostenible"* solicitado por Generadoras Chile. Este proyecto cuenta con dos etapas generales, y es en la primera de ellas se enmarca el desarrollo del presente documento de **análisis multicriterio territorial**, a continuación describen las etapas generales.
 
 -   Etapa 1: Desarrollo de estándares para la localización de proyectos de generación eléctrica
 
