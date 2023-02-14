@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.38">
+<meta name="generator" content="quarto-1.2.335">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,10 +11,15 @@
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 </style>
 
 
@@ -91,7 +96,7 @@ ul.task-list{list-style: none;}
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">Preface</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Prefacio</a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -189,18 +194,19 @@ ul.task-list{list-style: none;}
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#temáticas" id="toc-temáticas" class="nav-link active" data-scroll-target="#temáticas"> <span class="header-section-number">6.1</span> Temáticas</a>
+  <li><a href="#definción-de-variables-temáticas" id="toc-definción-de-variables-temáticas" class="nav-link active" data-scroll-target="#definción-de-variables-temáticas"><span class="toc-section-number">6.1</span>  Definción de Variables Temáticas</a>
   <ul class="collapse">
-  <li><a href="#ambiental" id="toc-ambiental" class="nav-link" data-scroll-target="#ambiental"> <span class="header-section-number">6.1.1</span> Ambiental</a></li>
-  <li><a href="#social" id="toc-social" class="nav-link" data-scroll-target="#social"> <span class="header-section-number">6.1.2</span> Social</a></li>
-  <li><a href="#infraestructura" id="toc-infraestructura" class="nav-link" data-scroll-target="#infraestructura"> <span class="header-section-number">6.1.3</span> Infraestructura</a></li>
-  <li><a href="#normativo" id="toc-normativo" class="nav-link" data-scroll-target="#normativo"> <span class="header-section-number">6.1.4</span> Normativo</a></li>
+  <li><a href="#ambiental" id="toc-ambiental" class="nav-link" data-scroll-target="#ambiental"><span class="toc-section-number">6.1.1</span>  Ambiental</a></li>
+  <li><a href="#social" id="toc-social" class="nav-link" data-scroll-target="#social"><span class="toc-section-number">6.1.2</span>  Social</a></li>
+  <li><a href="#infraestructura" id="toc-infraestructura" class="nav-link" data-scroll-target="#infraestructura"><span class="toc-section-number">6.1.3</span>  Infraestructura</a></li>
+  <li><a href="#normativo" id="toc-normativo" class="nav-link" data-scroll-target="#normativo"><span class="toc-section-number">6.1.4</span>  Normativo</a></li>
   </ul></li>
-  <li><a href="#estandarización" id="toc-estandarización" class="nav-link" data-scroll-target="#estandarización"> <span class="header-section-number">6.2</span> Estandarización</a></li>
+  <li><a href="#cálculo-de-distancia-en-raster" id="toc-cálculo-de-distancia-en-raster" class="nav-link" data-scroll-target="#cálculo-de-distancia-en-raster"><span class="toc-section-number">6.2</span>  Cálculo de Distancia en Raster</a></li>
+  <li><a href="#reclasificación" id="toc-reclasificación" class="nav-link" data-scroll-target="#reclasificación"><span class="toc-section-number">6.3</span>  Reclasificación</a></li>
   </ul>
 </nav>
     </div>
@@ -217,19 +223,25 @@ ul.task-list{list-style: none;}
 <div class="quarto-title-meta">
 
     
+  
     
   </div>
   
 
 </header>
 
-<section id="temáticas" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="temáticas"><span class="header-section-number">6.1</span> Temáticas</h2>
+<section id="definción-de-variables-temáticas" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="definción-de-variables-temáticas"><span class="header-section-number">6.1</span> Definción de Variables Temáticas</h2>
 <section id="ambiental" class="level3" data-number="6.1.1">
 <h3 data-number="6.1.1" class="anchored" data-anchor-id="ambiental"><span class="header-section-number">6.1.1</span> Ambiental</h3>
 </section>
 <section id="social" class="level3" data-number="6.1.2">
 <h3 data-number="6.1.2" class="anchored" data-anchor-id="social"><span class="header-section-number">6.1.2</span> Social</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/c_indigenas.png" class="img-fluid figure-img" width="400"></p>
+</figure>
+</div>
 <!-- [descipción](https://www.arcgis.com/apps/dashboards/3d7ed6d578d545fc8d57da5b1751fdd6) -->
 <!-- [webmap](https://www.arcgis.com/apps/mapviewer/index.html?webmap=bfbde9b4133a414dac113bfb761f6c2f) -->
 <!-- [patrimonio](https://www.arcgis.com/apps/dashboards/3d7ed6d578d545fc8d57da5b1751fdd6) -->
@@ -239,10 +251,42 @@ ul.task-list{list-style: none;}
 </section>
 <section id="normativo" class="level3" data-number="6.1.4">
 <h3 data-number="6.1.4" class="anchored" data-anchor-id="normativo"><span class="header-section-number">6.1.4</span> Normativo</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/riesgos.png" class="img-fluid figure-img" width="400"></p>
+</figure>
+</div>
 </section>
 </section>
-<section id="estandarización" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="estandarización"><span class="header-section-number">6.2</span> Estandarización</h2>
+<section id="cálculo-de-distancia-en-raster" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="cálculo-de-distancia-en-raster"><span class="header-section-number">6.2</span> Cálculo de Distancia en Raster</h2>
+<p>En esta etapa se buscar tomar un raster regional vacío estandar para efectos del piloto se tomó como base el raster del DEM que tiene una resolución espacial de 30x30 metros. Posteriormente, considerando las variables espaciales definidas anteriormente y por cada una de ellas se calcula la distancia eclediana desde la geometría a cada uno de los pixeles del raster base.</p>
+<div id="fig-rDist" class="quarto-layout-panel">
+<figure class="figure">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
+<div id="fig-rdis-indigenas" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/c_indigenas_r.png" class="img-fluid figure-img" data-ref-parent="fig-rDist" width="400"></p>
+<p></p><figcaption class="figure-caption">(a) Distancia a comunidades indigenas</figcaption><p></p>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
+<div id="fig-rdist-riesgos" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/riesgos_r.png" class="img-fluid figure-img" data-ref-parent="fig-rDist" width="400"></p>
+<p></p><figcaption class="figure-caption">(b) Distancia a riesgos generales</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p></p><figcaption class="figure-caption">Figure&nbsp;6.1: Proceso de Cálculo de distancia hacia variables espaciales desde cada pixel de la laregión</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="reclasificación" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="reclasificación"><span class="header-section-number">6.3</span> Reclasificación</h2>
 
 
 </section>
@@ -289,7 +333,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -317,31 +378,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>

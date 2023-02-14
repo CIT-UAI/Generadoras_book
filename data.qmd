@@ -1,25 +1,37 @@
+---
+fig-cap-location: "bottom"
+---
+
 # Data Geoespacial
 
+## Definción de Variables Temáticas
 
-## Temáticas
+### Ambiental
 
+### Social
 
-###  Ambiental
+![](images/c_indigenas.png){fig-align="center" width="400"}
 
-
-###  Social
-
-<!-- [descipción](https://www.arcgis.com/apps/dashboards/3d7ed6d578d545fc8d57da5b1751fdd6) -->
-<!-- [webmap](https://www.arcgis.com/apps/mapviewer/index.html?webmap=bfbde9b4133a414dac113bfb761f6c2f) -->
+<!-- [descipción](https://www.arcgis.com/apps/dashboards/3d7ed6d578d545fc8d57da5b1751fdd6) --> <!-- [webmap](https://www.arcgis.com/apps/mapviewer/index.html?webmap=bfbde9b4133a414dac113bfb761f6c2f) -->
 
 <!-- [patrimonio](https://www.arcgis.com/apps/dashboards/3d7ed6d578d545fc8d57da5b1751fdd6) -->
 
+### Infraestructura
 
-###  Infraestructura
-###  Normativo
+### Normativo
 
+![](images/riesgos.png){fig-align="center" width="400"}
 
-## Estandarización
+## Cálculo de Distancia en Raster
 
+En esta etapa se buscar tomar un raster regional vacío estandar para efectos del piloto se tomó como base el raster del DEM que tiene una resolución espacial de 30x30 metros. Posteriormente, considerando las variables espaciales definidas anteriormente y por cada una de ellas se calcula la distancia eclediana desde la geometría a cada uno de los pixeles del raster base.
 
+::: {#fig-rDist layout-ncol="2"}
+![Distancia a comunidades indigenas](images/c_indigenas_r.png){#fig-rdis-indigenas fig-align="center" width="400"}
 
+![Distancia a riesgos generales](images/riesgos_r.png){#fig-rdist-riesgos fig-align="center" width="400"}
+
+Proceso de Cálculo de distancia hacia variables espaciales desde cada pixel de la laregión
+:::
+
+## Reclasificación

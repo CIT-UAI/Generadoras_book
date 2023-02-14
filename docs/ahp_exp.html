@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.38">
+<meta name="generator" content="quarto-1.2.335">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,10 +11,15 @@
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
@@ -129,7 +134,7 @@ div.csl-indent {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">Preface</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Prefacio</a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -227,13 +232,13 @@ div.csl-indent {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción"> <span class="header-section-number">7.1</span> Introducción</a></li>
-  <li><a href="#matriz-de-comparación-de-criterios" id="toc-matriz-de-comparación-de-criterios" class="nav-link" data-scroll-target="#matriz-de-comparación-de-criterios"> <span class="header-section-number">7.2</span> Matriz de Comparación de Criterios</a></li>
-  <li><a href="#análisis-de-consistencia" id="toc-análisis-de-consistencia" class="nav-link" data-scroll-target="#análisis-de-consistencia"> <span class="header-section-number">7.3</span> Análisis de Consistencia</a></li>
+  <li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción"><span class="toc-section-number">7.1</span>  Introducción</a></li>
+  <li><a href="#matriz-de-comparación-de-criterios" id="toc-matriz-de-comparación-de-criterios" class="nav-link" data-scroll-target="#matriz-de-comparación-de-criterios"><span class="toc-section-number">7.2</span>  Matriz de Comparación de Criterios</a></li>
+  <li><a href="#análisis-de-consistencia" id="toc-análisis-de-consistencia" class="nav-link" data-scroll-target="#análisis-de-consistencia"><span class="toc-section-number">7.3</span>  Análisis de Consistencia</a></li>
   </ul>
 </nav>
     </div>
@@ -250,6 +255,7 @@ div.csl-indent {
 <div class="quarto-title-meta">
 
     
+  
     
   </div>
   
@@ -278,7 +284,7 @@ div.csl-indent {
 <div class="cell-output-display">
 <div id="tbl-esc" class="anchored">
 
-<table class="table table-striped" style="font-size: 15px; width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table 7.1:  Escala fundamental, de acuerdo con Saaty. </caption>
+<table class="table table-striped" style="font-size: 15px; width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table&nbsp;7.1:  Escala fundamental, de acuerdo con Saaty. </caption>
  <thead>
   <tr>
    <th style="text-align:left;"> Intensidad </th>
@@ -342,15 +348,15 @@ a_{n,1} &amp; a_{n,2} &amp; a_{n,3} &amp; \dots &amp; 1
 </section>
 <section id="análisis-de-consistencia" class="level2" data-number="7.3">
 <h2 data-number="7.3" class="anchored" data-anchor-id="análisis-de-consistencia"><span class="header-section-number">7.3</span> Análisis de Consistencia</h2>
-<p>Para validar la consistencia razonable de los juicios en la matriz de comparación por pares se calcula el índice de consistencia como validación. La matriz <span class="math inline">A</span> es consistente si <span class="math inline">aij.ajk = aik</span> para <span class="math inline">i,j,k = 1,2,...,n</span> (<a href="ahp_def.html#sec-robustez"><span>Section&nbsp;A.3</span></a>). Para validar la consistencia razonable de los juicios en la matriz de comparación por pares se calcula el índice de consistencia (IC) (<a href="ahp_general.html#eq-IC">Equation&nbsp;<span>B.1</span></a>) y la razón de consistencia (RC) (<a href="ahp_general.html#eq-RC">Equation&nbsp;<span>B.2</span></a>).</p>
-<p>La razón de consistencia (RC) se calcula a partir de un índice de consistencia aleatorio (IA), que varía de acuerdo con el tamaño de la matriz A (<a href="ahp_general.html#tbl-ia">Table&nbsp;<span>B.2</span></a>). La matriz se considera consistente si <span class="math inline">RC &lt; IA</span>; en caso contrario, se considera inconsistente y se aplica la corrección de consistencia planteada por <span class="citation" data-cites="saaty2003">Thomas L. Saaty (<a href="references.html#ref-saaty2003" role="doc-biblioref">2003</a>)</span></p>
+<p>Para validar la consistencia razonable de los juicios en la matriz de comparación por pares se calcula el índice de consistencia como validación. La matriz <span class="math inline">A</span> es consistente si <span class="math inline">aij.ajk = aik</span> para <span class="math inline">i,j,k = 1,2,...,n</span> (<span class="quarto-unresolved-ref">?sec-robustez</span>). Para validar la consistencia razonable de los juicios en la matriz de comparación por pares se calcula el índice de consistencia (IC) (<a href="#eq-IC">Equation&nbsp;<span>7.1</span></a>) y la razón de consistencia (RC) (<a href="#eq-RC">Equation&nbsp;<span>7.2</span></a>).</p>
+<p>La razón de consistencia (RC) se calcula a partir de un índice de consistencia aleatorio (IA), que varía de acuerdo con el tamaño de la matriz A (<a href="#tbl-ia">Table&nbsp;<span>7.2</span></a>). La matriz se considera consistente si <span class="math inline">RC &lt; IA</span>; en caso contrario, se considera inconsistente y se aplica la corrección de consistencia planteada por <span class="citation" data-cites="saaty2003">Thomas L. Saaty (<a href="references.html#ref-saaty2003" role="doc-biblioref">2003</a>)</span></p>
 <p><span id="eq-IC"><span class="math display">IC = \frac{\lambda_{max}-n}{n-1} \tag{7.1}</span></span></p>
 <p><span id="eq-RC"><span class="math display">RC = \frac{IC}{IA} \tag{7.2}</span></span></p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="tbl-ia" class="anchored">
 
-<table class="table table-striped table-hover table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table 7.2:  Índice de consistencia aleatorio (IA) </caption>
+<table class="table table-striped table-hover table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table&nbsp;7.2:  Índice de consistencia aleatorio (IA) </caption>
 <tbody>
   <tr>
    <td style="text-align:center;"> 1 </td>
@@ -445,7 +451,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -473,31 +496,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>
