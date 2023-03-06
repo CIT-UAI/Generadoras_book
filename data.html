@@ -61,6 +61,22 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 
 <link rel="stylesheet" href="style.css">
 </head>
@@ -198,13 +214,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#definción-de-variables-temáticas" id="toc-definción-de-variables-temáticas" class="nav-link active" data-scroll-target="#definción-de-variables-temáticas"><span class="toc-section-number">6.1</span>  Definción de Variables Temáticas</a>
-  <ul class="collapse">
-  <li><a href="#ambiental" id="toc-ambiental" class="nav-link" data-scroll-target="#ambiental"><span class="toc-section-number">6.1.1</span>  Ambiental</a></li>
-  <li><a href="#social" id="toc-social" class="nav-link" data-scroll-target="#social"><span class="toc-section-number">6.1.2</span>  Social</a></li>
-  <li><a href="#infraestructura" id="toc-infraestructura" class="nav-link" data-scroll-target="#infraestructura"><span class="toc-section-number">6.1.3</span>  Infraestructura</a></li>
-  <li><a href="#normativo" id="toc-normativo" class="nav-link" data-scroll-target="#normativo"><span class="toc-section-number">6.1.4</span>  Normativo</a></li>
-  </ul></li>
+  <li><a href="#geometrías-base" id="toc-geometrías-base" class="nav-link active" data-scroll-target="#geometrías-base"><span class="toc-section-number">6.1</span>  Geometrías Base</a></li>
   <li><a href="#cálculo-de-distancia-en-raster" id="toc-cálculo-de-distancia-en-raster" class="nav-link" data-scroll-target="#cálculo-de-distancia-en-raster"><span class="toc-section-number">6.2</span>  Cálculo de Distancia en Raster</a></li>
   <li><a href="#reclasificación" id="toc-reclasificación" class="nav-link" data-scroll-target="#reclasificación"><span class="toc-section-number">6.3</span>  Reclasificación</a></li>
   </ul>
@@ -230,44 +240,49 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="definción-de-variables-temáticas" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="definción-de-variables-temáticas"><span class="header-section-number">6.1</span> Definción de Variables Temáticas</h2>
-<section id="ambiental" class="level3" data-number="6.1.1">
-<h3 data-number="6.1.1" class="anchored" data-anchor-id="ambiental"><span class="header-section-number">6.1.1</span> Ambiental</h3>
-</section>
-<section id="social" class="level3" data-number="6.1.2">
-<h3 data-number="6.1.2" class="anchored" data-anchor-id="social"><span class="header-section-number">6.1.2</span> Social</h3>
-<div class="quarto-figure quarto-figure-center">
+<section id="geometrías-base" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="geometrías-base"><span class="header-section-number">6.1</span> Geometrías Base</h2>
+<p>La información espacial correspondientes definidas como variables utilizadas en la matriz de comparación de la etapa anterior, se encuentran en formato que pueden ser puntos o polígonos, que representan diferentes temáticas como por ejemplo Ambiental, Social, Infraestructura, Normativo, etc. A continuación se observan dos ejemplos de de información espacial de puntos y polígonos</p>
+<div id="fig-elephants" class="quarto-layout-panel">
 <figure class="figure">
-<p><img src="images/c_indigenas.png" class="img-fluid figure-img" width="400"></p>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
+<div id="fig-indegenasRaw" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/c_indigenas.png" class="img-fluid figure-img" data-ref-parent="fig-elephants" width="500"></p>
+<p></p><figcaption class="figure-caption">(a) Comunidades Indigenes Antofagasta</figcaption><p></p>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
+<div id="fig-riesgosRaw" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/riesgos.png" class="img-fluid figure-img" data-ref-parent="fig-elephants" width="500"></p>
+<p></p><figcaption class="figure-caption">(b) Riesgos unificados en Antofagasta</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p></p><figcaption class="figure-caption">Figure&nbsp;6.1: Información espacial base tipo puntos y polígonos</figcaption><p></p>
 </figure>
 </div>
 <!-- [descipción](https://www.arcgis.com/apps/dashboards/3d7ed6d578d545fc8d57da5b1751fdd6) -->
 <!-- [webmap](https://www.arcgis.com/apps/mapviewer/index.html?webmap=bfbde9b4133a414dac113bfb761f6c2f) -->
 <!-- [patrimonio](https://www.arcgis.com/apps/dashboards/3d7ed6d578d545fc8d57da5b1751fdd6) -->
 </section>
-<section id="infraestructura" class="level3" data-number="6.1.3">
-<h3 data-number="6.1.3" class="anchored" data-anchor-id="infraestructura"><span class="header-section-number">6.1.3</span> Infraestructura</h3>
-</section>
-<section id="normativo" class="level3" data-number="6.1.4">
-<h3 data-number="6.1.4" class="anchored" data-anchor-id="normativo"><span class="header-section-number">6.1.4</span> Normativo</h3>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/riesgos.png" class="img-fluid figure-img" width="400"></p>
-</figure>
-</div>
-</section>
-</section>
 <section id="cálculo-de-distancia-en-raster" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="cálculo-de-distancia-en-raster"><span class="header-section-number">6.2</span> Cálculo de Distancia en Raster</h2>
-<p>En esta etapa se buscar tomar un raster regional vacío estandar para efectos del piloto se tomó como base el raster del DEM que tiene una resolución espacial de 30x30 metros. Posteriormente, considerando las variables espaciales definidas anteriormente y por cada una de ellas se calcula la distancia eclediana desde la geometría a cada uno de los pixeles del raster base.</p>
+<p>En esta etapa se procede a generar una grilla regular de una resolucuón espacial de 30x30 metros, y por cada tipo de geotría espacial se calcula la distancia de pada pixel a punto o polígono más cercanos.</p>
+<p>El tipo de calculo para determinar la distancia es la eclidiana coorrespondiente a la ecuación <a href="#eq-DEuclidiana">Equation&nbsp;<span>6.1</span></a>:</p>
+<p><span id="eq-DEuclidiana"><span class="math display">d(P_1, P_2) = \sqrt{(x_2-x_1)^2+(y_2-y_1)^2} \tag{6.1}</span></span></p>
+<p>Como resultado de lo anterior se obtiene un raster de distancia como se observa en la figura <a href="#fig-rDist">Figure&nbsp;<span>6.2</span></a></p>
 <div id="fig-rDist" class="quarto-layout-panel">
 <figure class="figure">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
 <div id="fig-rdis-indigenas" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="images/c_indigenas_r.png" class="img-fluid figure-img" data-ref-parent="fig-rDist" width="400"></p>
+<p><img src="images/c_indigenas.png" class="img-fluid figure-img" data-ref-parent="fig-rDist" width="400"></p>
 <p></p><figcaption class="figure-caption">(a) Distancia a comunidades indigenas</figcaption><p></p>
 </figure>
 </div>
@@ -275,18 +290,41 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
 <div id="fig-rdist-riesgos" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="images/riesgos_r.png" class="img-fluid figure-img" data-ref-parent="fig-rDist" width="400"></p>
-<p></p><figcaption class="figure-caption">(b) Distancia a riesgos generales</figcaption><p></p>
+<p><img src="images/indigenas_dist.png" class="img-fluid figure-img" data-ref-parent="fig-rDist" width="400"></p>
+<p></p><figcaption class="figure-caption">(b) Distancia a Comunidades indígenas</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
-<p></p><figcaption class="figure-caption">Figure&nbsp;6.1: Proceso de Cálculo de distancia hacia variables espaciales desde cada pixel de la laregión</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;6.2: Proceso de Cálculo de distancia hacia variables espaciales desde cada pixel de la región</figcaption><p></p>
 </figure>
 </div>
 </section>
 <section id="reclasificación" class="level2" data-number="6.3">
 <h2 data-number="6.3" class="anchored" data-anchor-id="reclasificación"><span class="header-section-number">6.3</span> Reclasificación</h2>
+<div id="fig-rClass" class="quarto-layout-panel">
+<figure class="figure">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
+<div id="fig-rCont" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/dem_continuo.png" class="img-fluid figure-img" data-ref-parent="fig-rClass" width="400"></p>
+<p></p><figcaption class="figure-caption">(a) Modelo de Digital de Elevación Continuo</figcaption><p></p>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
+<div id="fig-rDisc" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/dem_discreto.png" class="img-fluid figure-img" data-ref-parent="fig-rClass" width="400"></p>
+<p></p><figcaption class="figure-caption">(b) Modelo de Digital de Elevación Discreto</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p></p><figcaption class="figure-caption">Figure&nbsp;6.3: Proceso de Discretización de variables continuas, de acuerdo a criterios definidos por los actores relevantes en la región de Antofagasta</figcaption><p></p>
+</figure>
+</div>
 
 
 </section>

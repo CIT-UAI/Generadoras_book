@@ -119,32 +119,25 @@
     "text": "5.2 Comunas\nLa región de Antofagasta tiene 3 provincias y 9 comunas, como se observa a continuación:\n\n\n\nFigure 5.1: Comunas de la Región de Antofagasta\n\n\n\n\n\n\nTable 5.1:  Comuna de la Región de Antofagasta \n \n  \n    Provincia \n    Comuna \n    Area_hc \n  \n \n\n  \n    ANTOFAGASTA \n    TALTAL \n    2040306.3 \n  \n  \n    ANTOFAGASTA \n    ANTOFAGASTA \n    3069117.0 \n  \n  \n    ANTOFAGASTA \n    MEJILLONES \n    356884.4 \n  \n  \n    ANTOFAGASTA \n    SIERRA GORDA \n    1288042.4 \n  \n  \n    EL LOA \n    CALAMA \n    1558824.9 \n  \n  \n    EL LOA \n    OLLAGÜE \n    291847.7 \n  \n  \n    EL LOA \n    SAN PEDRO DE ATACAMA \n    2354323.4 \n  \n  \n    TOCOPILLA \n    MARÍA ELENA \n    1243177.7 \n  \n  \n    TOCOPILLA \n    TOCOPILLA \n    403068.5"
   },
   {
-    "objectID": "a_estudio.html#espacio-grillado",
-    "href": "a_estudio.html#espacio-grillado",
-    "title": "5  Área de Estudio",
-    "section": "5.3 Espacio grillado",
-    "text": "5.3 Espacio grillado\nPara el proceso de análisis multicriterio espacial se debe contar con una espacio geométrico base para todas variables que permita evaluar a decidir la zona idónea de lo que se evalúa de acuerdo a los objetivos, para el caso del proyecto la instalación de una planta de generación de energía eléctrica ya sea eólica o fotovoltaica.\nPor lo anterior, considerando la extensión espacial de la Región de Antofagasta, se creó una geometría regular tipo grilla de 1000x1000 metros (Figure 5.2), que permite identificar las zonas de forma diferenciable y que permita realizar las operaciones computacionales complejas de forma eficiente.\n\n\n\nFigure 5.2: Espacio grillado regular de 1000x1000 metros"
-  },
-  {
-    "objectID": "data.html#definción-de-variables-temáticas",
-    "href": "data.html#definción-de-variables-temáticas",
+    "objectID": "data.html#geometrías-base",
+    "href": "data.html#geometrías-base",
     "title": "6  Data Geoespacial",
-    "section": "6.1 Definción de Variables Temáticas",
-    "text": "6.1 Definción de Variables Temáticas\n\n6.1.1 Ambiental\n\n\n6.1.2 Social\n\n\n\n\n\n\n\n\n\n\n6.1.3 Infraestructura\n\n\n6.1.4 Normativo"
+    "section": "6.1 Geometrías Base",
+    "text": "6.1 Geometrías Base\nLa información espacial correspondientes definidas como variables utilizadas en la matriz de comparación de la etapa anterior, se encuentran en formato que pueden ser puntos o polígonos, que representan diferentes temáticas como por ejemplo Ambiental, Social, Infraestructura, Normativo, etc. A continuación se observan dos ejemplos de de información espacial de puntos y polígonos\n\n\n\n\n\n\n\n(a) Comunidades Indigenes Antofagasta\n\n\n\n\n\n\n\n(b) Riesgos unificados en Antofagasta\n\n\n\n\nFigure 6.1: Información espacial base tipo puntos y polígonos"
   },
   {
     "objectID": "data.html#cálculo-de-distancia-en-raster",
     "href": "data.html#cálculo-de-distancia-en-raster",
     "title": "6  Data Geoespacial",
     "section": "6.2 Cálculo de Distancia en Raster",
-    "text": "6.2 Cálculo de Distancia en Raster\nEn esta etapa se buscar tomar un raster regional vacío estandar para efectos del piloto se tomó como base el raster del DEM que tiene una resolución espacial de 30x30 metros. Posteriormente, considerando las variables espaciales definidas anteriormente y por cada una de ellas se calcula la distancia eclediana desde la geometría a cada uno de los pixeles del raster base.\n\n\n\n\n\n\n\n(a) Distancia a comunidades indigenas\n\n\n\n\n\n\n\n(b) Distancia a riesgos generales\n\n\n\n\nFigure 6.1: Proceso de Cálculo de distancia hacia variables espaciales desde cada pixel de la laregión"
+    "text": "6.2 Cálculo de Distancia en Raster\nEn esta etapa se procede a generar una grilla regular de una resolucuón espacial de 30x30 metros, y por cada tipo de geotría espacial se calcula la distancia de pada pixel a punto o polígono más cercanos.\nEl tipo de calculo para determinar la distancia es la eclidiana coorrespondiente a la ecuación Equation 6.1:\nd(P_1, P_2) = \\sqrt{(x_2-x_1)^2+(y_2-y_1)^2} \\tag{6.1}\nComo resultado de lo anterior se obtiene un raster de distancia como se observa en la figura Figure 6.2\n\n\n\n\n\n\n\n(a) Distancia a comunidades indigenas\n\n\n\n\n\n\n\n(b) Distancia a Comunidades indígenas\n\n\n\n\nFigure 6.2: Proceso de Cálculo de distancia hacia variables espaciales desde cada pixel de la región"
   },
   {
     "objectID": "data.html#reclasificación",
     "href": "data.html#reclasificación",
     "title": "6  Data Geoespacial",
     "section": "6.3 Reclasificación",
-    "text": "6.3 Reclasificación"
+    "text": "6.3 Reclasificación\n\n\n\n\n\n\n\n(a) Modelo de Digital de Elevación Continuo\n\n\n\n\n\n\n\n(b) Modelo de Digital de Elevación Discreto\n\n\n\n\nFigure 6.3: Proceso de Discretización de variables continuas, de acuerdo a criterios definidos por los actores relevantes en la región de Antofagasta"
   },
   {
     "objectID": "ahp_exp.html#introducción",
