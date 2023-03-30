@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Análisis Multicriterio - 7&nbsp; AHP</title>
+<title>Análisis Multicriterio - 7&nbsp; Proc. de Análisis Jerárquico</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -109,7 +109,7 @@ div.csl-indent {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">AHP</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Proc. de Análisis Jerárquico</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -177,7 +177,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ahp_exp.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">AHP</span></a>
+  <a href="./ahp_exp.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Proc. de Análisis Jerárquico</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -236,9 +236,10 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción"><span class="toc-section-number">7.1</span>  Introducción</a></li>
+  <li><a href="#introducción-a-proceso-de-análisis-jerárquico" id="toc-introducción-a-proceso-de-análisis-jerárquico" class="nav-link active" data-scroll-target="#introducción-a-proceso-de-análisis-jerárquico"><span class="toc-section-number">7.1</span>  Introducción a Proceso de Análisis Jerárquico</a></li>
   <li><a href="#matriz-de-comparación-de-criterios" id="toc-matriz-de-comparación-de-criterios" class="nav-link" data-scroll-target="#matriz-de-comparación-de-criterios"><span class="toc-section-number">7.2</span>  Matriz de Comparación de Criterios</a></li>
   <li><a href="#análisis-de-consistencia" id="toc-análisis-de-consistencia" class="nav-link" data-scroll-target="#análisis-de-consistencia"><span class="toc-section-number">7.3</span>  Análisis de Consistencia</a></li>
+  <li><a href="#cálculo-de-ponderadores-w" id="toc-cálculo-de-ponderadores-w" class="nav-link" data-scroll-target="#cálculo-de-ponderadores-w"><span class="toc-section-number">7.4</span>  Cálculo de Ponderadores <span class="math inline">w</span></a></li>
   </ul>
 </nav>
     </div>
@@ -247,7 +248,8 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">AHP</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Proc. de Análisis Jerárquico</span></h1>
+<p class="subtitle lead">Explicación con caso de generación eléctrica Solar Fotovoltáica</p>
 </div>
 
 
@@ -265,26 +267,108 @@ div.csl-indent {
 <div class="cell">
 
 </div>
-<section id="introducción" class="level2 page-columns page-full" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="introducción"><span class="header-section-number">7.1</span> Introducción</h2>
+<section id="introducción-a-proceso-de-análisis-jerárquico" class="level2 page-columns page-full" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="introducción-a-proceso-de-análisis-jerárquico"><span class="header-section-number">7.1</span> Introducción a Proceso de Análisis Jerárquico</h2>
 <p>El Proceso de Análisis Jerárquico es una técnica estructurada para tratar con problemas complejos de decisión. Esta metodología permite la construcción de un problema a partir de objetivos, criterios y alternativas jerarquizados. El AHP fue desarrollado por <span class="citation" data-cites="Saaty1980">T. L. Saaty (<a href="references.html#ref-Saaty1980" role="doc-biblioref">1980</a>)</span> y selecciona alternativas en función de una serie de criterios o variables normalmente jerarquizados. La aplicación del AHP puede ser utilizada para la selección de proyectos, la evaluación de riesgos, la toma de decisiones financieras, entre otros.</p>
-<p>Como referencia se puede considerar esta imagen de <span class="citation" data-cites="abdelouhed_gis_2022">Abdelouhed et al. (<a href="references.html#ref-abdelouhed_gis_2022" role="doc-biblioref">2022</a>)</span></p>
+<p>Como referencia se puede considerar esta imagen de <span class="citation" data-cites="abdelouhed_gis_2022">Abdelouhed et al. (<a href="references.html#ref-abdelouhed_gis_2022" role="doc-biblioref">2022</a>)</span> para entender la dinámicas entre itéms, variables, criterios y resultados:</p>
 <div class="quarto-figure quarto-figure-center page-columns page-full">
 <figure class="figure page-columns page-full">
 <p><img src="images/image-1204431624.png" class="img-fluid figure-img"></p>
 <p></p><figcaption class="figure-caption margin-caption">AHP de <span class="citation" data-cites="abdelouhed_gis_2022">Abdelouhed et al. (<a href="references.html#ref-abdelouhed_gis_2022" role="doc-biblioref">2022</a>)</span></figcaption><p></p>
 </figure>
 </div>
+<p><br> Para facilitar el entendimiento el proceso de cálculo del AHP se utilizá como ejemplo los pasos realizados para analizar las plantas de generación de energía Solar Fotovoltáica para región de estudio.</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="images/paneles.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption margin-caption">Planta de generación de energía Solar Fotovoltáica</figcaption><p></p>
+</figure>
+</div>
+<p>Las variables (<a href="#tbl-var">Table&nbsp;<span>7.1</span></a>) espaciales utilizadas para realizar el procesos de análisis jerárquico corresponden a las siguiente:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-var" class="anchored">
+
+<table class="table table-striped table-hover table-condensed" style="font-size: 13px; width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table&nbsp;7.1:  Tabla de variables utilizadas en AHP para el caso de generación solar fotovoltáica </caption>
+ <thead>
+  <tr>
+   <th style="text-align:center;"> Código </th>
+   <th style="text-align:center;"> Variables </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:center;"> A </td>
+   <td style="text-align:center;"> Asentamientos y territorios indigenas </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> B </td>
+   <td style="text-align:center;"> Poblamiento </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> C </td>
+   <td style="text-align:center;"> Radiacion solar </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> D </td>
+   <td style="text-align:center;"> Zonas saturadas y latentes </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> E </td>
+   <td style="text-align:center;"> Areas protegidas </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> F </td>
+   <td style="text-align:center;"> Pendiente </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> G </td>
+   <td style="text-align:center;"> Uso agricola de suelo </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> H </td>
+   <td style="text-align:center;"> Uso forestal del suelo </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> I </td>
+   <td style="text-align:center;"> Uso Bosque mixto o nativo </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> J </td>
+   <td style="text-align:center;"> Sitios arqueologicos y paleontologicos </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> K </td>
+   <td style="text-align:center;"> Bienes nacionales protegidos </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> L </td>
+   <td style="text-align:center;"> Lineas de transmision existente </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> M </td>
+   <td style="text-align:center;"> Infraestructura existente </td>
+  </tr>
+  <tr>
+   <td style="text-align:center;"> N </td>
+   <td style="text-align:center;"> Zonas de interes turistico </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
 </section>
 <section id="matriz-de-comparación-de-criterios" class="level2" data-number="7.2">
 <h2 data-number="7.2" class="anchored" data-anchor-id="matriz-de-comparación-de-criterios"><span class="header-section-number">7.2</span> Matriz de Comparación de Criterios</h2>
 <p>AHP es un método de comparación por pares que se utiliza en los criterios con respecto al objetivo, el cual es tomar la mejor decisión tomando en consideración diferentes criterios, por cada una de las alternativas, en el caso territorial serían las diferentes áreas</p>
-<p>Estas comparaciones por pares se llevan a cabo para todos los factores relevantes dentro de un análisis considerando la siguiente escala. (<a href="#tbl-esc">Table&nbsp;<span>7.1</span></a>)</p>
+<p>Estas comparaciones por pares se llevan a cabo para todos los factores relevantes dentro de un análisis considerando la siguiente escala. (<a href="#tbl-esc">Table&nbsp;<span>7.2</span></a>)</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="tbl-esc" class="anchored">
 
-<table class="table table-striped" style="font-size: 15px; width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table&nbsp;7.1:  Escala fundamental, de acuerdo con Saaty. </caption>
+<table class="table table-striped" style="font-size: 15px; width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table&nbsp;7.2:  Escala fundamental, de acuerdo con Saaty. </caption>
  <thead>
   <tr>
    <th style="text-align:left;"> Intensidad </th>
@@ -329,7 +413,7 @@ div.csl-indent {
 </div>
 </div>
 </div>
-<p>De acuerdo con <span class="citation" data-cites="Saaty1980">T. L. Saaty (<a href="references.html#ref-Saaty1980" role="doc-biblioref">1980</a>)</span>, para <span class="math inline">n</span> criterios es posible construir una matriz <span class="math inline">A=[a_{ij}]</span>, con <span class="math inline">i,j =1,2,...,n</span>. El valor de cada <span class="math inline">a_{ij}</span> corresponde a la importancia relativa del criterio <span class="math inline">C_i</span> (fila i) sobre el criterio <span class="math inline">C_j</span> (columna <span class="math inline">j</span>), según la escala fundamental propuesta por Saati (<a href="#tbl-esc">Table&nbsp;<span>7.1</span></a>). Cuando <span class="math inline">i=j</span>, el valor de <span class="math inline">a_{ij}</span> será igual a 1 ya que estamos comparando un criterio con el mismo.</p>
+<p>De acuerdo con <span class="citation" data-cites="Saaty1980">T. L. Saaty (<a href="references.html#ref-Saaty1980" role="doc-biblioref">1980</a>)</span>, para <span class="math inline">n</span> criterios es posible construir una matriz <span class="math inline">A=[a_{ij}]</span>, con <span class="math inline">i,j =1,2,...,n</span>. El valor de cada <span class="math inline">a_{ij}</span> corresponde a la importancia relativa del criterio <span class="math inline">C_i</span> (fila i) sobre el criterio <span class="math inline">C_j</span> (columna <span class="math inline">j</span>), según la escala fundamental propuesta por Saaty (<a href="#tbl-esc">Table&nbsp;<span>7.2</span></a>). Cuando <span class="math inline">i=j</span>, el valor de <span class="math inline">a_{ij}</span> será igual a 1 ya que estamos comparando un criterio con el mismo.</p>
 <p><span class="math display">
 A= \begin{bmatrix}
 1 &amp; a_{1,2} &amp; a_{1,3} &amp; \dots &amp; a_{1,n} \\
@@ -338,25 +422,292 @@ a_{2,1} &amp; 1 &amp; a_{2,3} &amp; \dots &amp; a_{2,n} \\
 a_{n,1} &amp; a_{n,2} &amp; a_{n,3} &amp; \dots &amp; 1
 \end{bmatrix}
 </span></p>
-<p><strong>Matriz Real …….</strong></p>
-<p>Luego de construir la matriz de comparación por pares, se procede a calcular el vector de prioridades. Este vector indica la influencia de un criterio sobre el objetivo global, en estos casos la ubicación óptima de una planta de generarción de energía eléctrica. Existen múltiples formas de calcular este vector, una de ellas es usando el método del vector propio principal <span class="math inline">w</span> tal que:</p>
-<p><span class="math display">A \times W = \lambda_{max} \times w</span></p>
-<p>Donde <span class="math inline">\lambda_{max}</span> es el máximo valor propio de la matriz <span class="math inline">A</span></p>
-<p>Para calcular los vectores propios en el AHP, se normaliza la matriz de comparación pairwise y luego se encuentra su valor propio dominante y el correspondiente vector propio. El valor propio dominante representa el grado en que las alternativas se han priorizado y el vector propio representa los pesos asignados a cada alternativa en términos de su prioridad.</p>
-<p>Luego, se calcula el valor propio dominante y el correspondiente vector propio usando técnicas matemáticas, como el método de potencias. El valor propio dominante (<span class="math inline">\lambda_{max}</span>) se interpreta como el grado en que las alternativas se han priorizado, y el vector propio (<span class="math inline">w</span>) se interpreta como los pesos asignados a cada alternativa en términos de su prioridad.</p>
-<p><strong>Calculo de</strong> <span class="math inline">w</span> real …….</p>
+<p><br></p>
+<p>Como producto del análisis de los resultados obtenidos de lo talleres del apartado anterior, se realizó la jerarquización de cada una de las variables con respecto a las demás, construyendo una matriz <span class="math inline">A</span> de comparación (<a href="#tbl-A">Table&nbsp;<span>7.3</span></a>), esto para las variables de generación de energía eléctrica solar fotovoltaíca.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-A" class="anchored">
+
+<table class="table table-striped" style="font-size: 15px; width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table&nbsp;7.3:  Matriz A para el caso de generación solar fotovoltáica </caption>
+ <thead>
+  <tr>
+   <th style="text-align:left;">   </th>
+   <th style="text-align:right;"> A </th>
+   <th style="text-align:right;"> B </th>
+   <th style="text-align:right;"> C </th>
+   <th style="text-align:right;"> D </th>
+   <th style="text-align:right;"> E </th>
+   <th style="text-align:right;"> F </th>
+   <th style="text-align:right;"> G </th>
+   <th style="text-align:right;"> H </th>
+   <th style="text-align:right;"> I </th>
+   <th style="text-align:right;"> J </th>
+   <th style="text-align:right;"> K </th>
+   <th style="text-align:right;"> L </th>
+   <th style="text-align:right;"> M </th>
+   <th style="text-align:right;"> N </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> A </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 5.0 </td>
+   <td style="text-align:right;"> 5 </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 5.0 </td>
+   <td style="text-align:right;"> 5 </td>
+   <td style="text-align:right;"> 7 </td>
+   <td style="text-align:right;"> 3.0 </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 3.0 </td>
+   <td style="text-align:right;"> 5.0 </td>
+   <td style="text-align:right;"> 5.0 </td>
+   <td style="text-align:right;"> 3.0 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> B </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 5.0 </td>
+   <td style="text-align:right;"> 5 </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 5.0 </td>
+   <td style="text-align:right;"> 5 </td>
+   <td style="text-align:right;"> 7 </td>
+   <td style="text-align:right;"> 3.0 </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 3.0 </td>
+   <td style="text-align:right;"> 5.0 </td>
+   <td style="text-align:right;"> 5.0 </td>
+   <td style="text-align:right;"> 3.0 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> C </td>
+   <td style="text-align:right;"> 0.2 </td>
+   <td style="text-align:right;"> 0.2 </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 0.2 </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 0.3 </td>
+   <td style="text-align:right;"> 0.2 </td>
+   <td style="text-align:right;"> 0.3 </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 0.3 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> D </td>
+   <td style="text-align:right;"> 0.2 </td>
+   <td style="text-align:right;"> 0.2 </td>
+   <td style="text-align:right;"> 0.3 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0.2 </td>
+   <td style="text-align:right;"> 0.3 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0.3 </td>
+   <td style="text-align:right;"> 0.2 </td>
+   <td style="text-align:right;"> 0.3 </td>
+   <td style="text-align:right;"> 0.3 </td>
+   <td style="text-align:right;"> 0.3 </td>
+   <td style="text-align:right;"> 0.3 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> E </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 5.0 </td>
+   <td style="text-align:right;"> 5 </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 5.0 </td>
+   <td style="text-align:right;"> 5 </td>
+   <td style="text-align:right;"> 7 </td>
+   <td style="text-align:right;"> 3.0 </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 3.0 </td>
+   <td style="text-align:right;"> 5.0 </td>
+   <td style="text-align:right;"> 5.0 </td>
+   <td style="text-align:right;"> 3.0 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> F </td>
+   <td style="text-align:right;"> 0.2 </td>
+   <td style="text-align:right;"> 0.2 </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 0.2 </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 0.3 </td>
+   <td style="text-align:right;"> 0.2 </td>
+   <td style="text-align:right;"> 0.3 </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 0.3 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> G </td>
+   <td style="text-align:right;"> 0.2 </td>
+   <td style="text-align:right;"> 0.2 </td>
+   <td style="text-align:right;"> 0.3 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0.2 </td>
+   <td style="text-align:right;"> 0.3 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0.3 </td>
+   <td style="text-align:right;"> 0.2 </td>
+   <td style="text-align:right;"> 0.3 </td>
+   <td style="text-align:right;"> 0.3 </td>
+   <td style="text-align:right;"> 0.3 </td>
+   <td style="text-align:right;"> 0.3 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> H </td>
+   <td style="text-align:right;"> 0.1 </td>
+   <td style="text-align:right;"> 0.1 </td>
+   <td style="text-align:right;"> 0.3 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0.1 </td>
+   <td style="text-align:right;"> 0.3 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 1 </td>
+   <td style="text-align:right;"> 0.2 </td>
+   <td style="text-align:right;"> 0.1 </td>
+   <td style="text-align:right;"> 0.2 </td>
+   <td style="text-align:right;"> 0.3 </td>
+   <td style="text-align:right;"> 0.3 </td>
+   <td style="text-align:right;"> 0.2 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> I </td>
+   <td style="text-align:right;"> 0.3 </td>
+   <td style="text-align:right;"> 0.3 </td>
+   <td style="text-align:right;"> 3.0 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 0.3 </td>
+   <td style="text-align:right;"> 3.0 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 5 </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 0.3 </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 3.0 </td>
+   <td style="text-align:right;"> 3.0 </td>
+   <td style="text-align:right;"> 1.0 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> J </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 5.0 </td>
+   <td style="text-align:right;"> 5 </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 5.0 </td>
+   <td style="text-align:right;"> 5 </td>
+   <td style="text-align:right;"> 7 </td>
+   <td style="text-align:right;"> 3.0 </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 3.0 </td>
+   <td style="text-align:right;"> 5.0 </td>
+   <td style="text-align:right;"> 5.0 </td>
+   <td style="text-align:right;"> 3.0 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> K </td>
+   <td style="text-align:right;"> 0.3 </td>
+   <td style="text-align:right;"> 0.3 </td>
+   <td style="text-align:right;"> 3.0 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 0.3 </td>
+   <td style="text-align:right;"> 3.0 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 5 </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 0.3 </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 3.0 </td>
+   <td style="text-align:right;"> 3.0 </td>
+   <td style="text-align:right;"> 1.0 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> L </td>
+   <td style="text-align:right;"> 0.2 </td>
+   <td style="text-align:right;"> 0.2 </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 0.2 </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 0.3 </td>
+   <td style="text-align:right;"> 0.2 </td>
+   <td style="text-align:right;"> 0.3 </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 0.3 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> M </td>
+   <td style="text-align:right;"> 0.2 </td>
+   <td style="text-align:right;"> 0.2 </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 0.2 </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 0.3 </td>
+   <td style="text-align:right;"> 0.2 </td>
+   <td style="text-align:right;"> 0.3 </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 0.3 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> N </td>
+   <td style="text-align:right;"> 0.3 </td>
+   <td style="text-align:right;"> 0.3 </td>
+   <td style="text-align:right;"> 3.0 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 0.3 </td>
+   <td style="text-align:right;"> 3.0 </td>
+   <td style="text-align:right;"> 3 </td>
+   <td style="text-align:right;"> 5 </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 0.3 </td>
+   <td style="text-align:right;"> 1.0 </td>
+   <td style="text-align:right;"> 3.0 </td>
+   <td style="text-align:right;"> 3.0 </td>
+   <td style="text-align:right;"> 1.0 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
 </section>
 <section id="análisis-de-consistencia" class="level2" data-number="7.3">
 <h2 data-number="7.3" class="anchored" data-anchor-id="análisis-de-consistencia"><span class="header-section-number">7.3</span> Análisis de Consistencia</h2>
-<p>Para validar la consistencia razonable de los juicios en la matriz de comparación por pares se calcula el índice de consistencia como validación. La matriz <span class="math inline">A</span> es consistente si <span class="math inline">aij.ajk = aik</span> para <span class="math inline">i,j,k = 1,2,...,n</span> (<a href="ahp_def.html#sec-robustez"><span>Section&nbsp;A.3</span></a>). Para validar la consistencia razonable de los juicios en la matriz de comparación por pares se calcula el índice de consistencia (IC) (<a href="ahp_general.html#eq-IC">Equation&nbsp;<span>B.1</span></a>) y la razón de consistencia (RC) (<a href="ahp_general.html#eq-RC">Equation&nbsp;<span>B.2</span></a>).</p>
-<p>La razón de consistencia (RC) se calcula a partir de un índice de consistencia aleatorio (IA), que varía de acuerdo con el tamaño de la matriz A (<a href="ahp_general.html#tbl-ia">Table&nbsp;<span>B.2</span></a>). La matriz se considera consistente si <span class="math inline">RC &lt; IA</span>; en caso contrario, se considera inconsistente y se aplica la corrección de consistencia planteada por <span class="citation" data-cites="saaty2003">Thomas L. Saaty (<a href="references.html#ref-saaty2003" role="doc-biblioref">2003</a>)</span></p>
+<p>Para validar la consistencia razonable de los juicios en la matriz de comparación se calcula el índice de consistencia como medio de validación. La matriz <span class="math inline">A</span> es consistente si <span class="math inline">aij.ajk = aik</span> para <span class="math inline">i,j,k = 1,2,...,n</span> (<a href="ahp_def.html#sec-robustez"><span>Section&nbsp;A.3</span></a>).</p>
+<p>Para validar la consistencia de la matriz de comparación se calcula el índice de consistencia (IC) (<a href="ahp_general.html#eq-IC">Equation&nbsp;<span>B.1</span></a>). A partir de autovalor máximo <span class="math inline">\lambda_{max}</span> calculado de la matriz <span class="math inline">A</span> para luego calcular IC de acuerdo a la siguiente ecuación (<a href="ahp_general.html#eq-RC">Equation&nbsp;<span>B.2</span></a>):</p>
 <p><span id="eq-IC"><span class="math display">IC = \frac{\lambda_{max}-n}{n-1} \tag{7.1}</span></span></p>
-<p><span id="eq-RC"><span class="math display">RC = \frac{IC}{IA} \tag{7.2}</span></span></p>
+<div class="cell">
+
+</div>
+<p>Otro elemento necesario es el índice de consistencia aleatorio (IA), que varía de acuerdo con el tamaño de la matriz A (<a href="ahp_general.html#tbl-ia">Table&nbsp;<span>B.2</span></a>), que para el caso de generación eléctrica solar fotovoltáica son 14 variables y siguendo la tabla <a href="ahp_general.html#tbl-ia">Table&nbsp;<span>B.2</span></a> su valor es de 1.57.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="tbl-ia" class="anchored">
 
-<table class="table table-striped table-hover table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table&nbsp;7.2:  Índice de consistencia aleatorio (IA) </caption>
+<table class="table table-striped table-hover table-condensed" style="font-size: 14px; width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table&nbsp;7.4:  Índice de consistencia aleatorio (IA) </caption>
 <tbody>
   <tr>
    <td style="text-align:center;"> 1 </td>
@@ -371,6 +722,9 @@ a_{n,1} &amp; a_{n,2} &amp; a_{n,3} &amp; \dots &amp; 1
    <td style="text-align:center;"> 10 </td>
    <td style="text-align:center;"> 11 </td>
    <td style="text-align:center;"> 12 </td>
+   <td style="text-align:center;"> 13 </td>
+   <td style="text-align:center;"> 14 </td>
+   <td style="text-align:center;"> 15 </td>
   </tr>
   <tr>
    <td style="text-align:center;"> 0.00 </td>
@@ -385,6 +739,9 @@ a_{n,1} &amp; a_{n,2} &amp; a_{n,3} &amp; \dots &amp; 1
    <td style="text-align:center;"> 1.49 </td>
    <td style="text-align:center;"> 1.52 </td>
    <td style="text-align:center;"> 1.54 </td>
+   <td style="text-align:center;"> 1.56 </td>
+   <td style="text-align:center;"> 1.57 </td>
+   <td style="text-align:center;"> 1.59 </td>
   </tr>
 </tbody>
 </table>
@@ -392,8 +749,142 @@ a_{n,1} &amp; a_{n,2} &amp; a_{n,3} &amp; \dots &amp; 1
 </div>
 </div>
 </div>
-<p><strong>Cálculo de IC Real …….</strong></p>
-<p><strong>Cálculo de RC Real …….</strong></p>
+<p>Finalmente se debe calcular la Razón de Consistencia (RC) a través de la ecuación <a href="ahp_general.html#eq-RC">Equation&nbsp;<span>B.2</span></a>, donde la matriz de jeraquizació de criterios <span class="math inline">A</span> se considera consistente si <span class="math inline">RC &lt; IA</span>; en caso contrario, se considera inconsistente y se puede aplicar la corrección de consistencia planteada por <span class="citation" data-cites="saaty2003">Thomas L. Saaty (<a href="references.html#ref-saaty2003" role="doc-biblioref">2003</a>)</span>.</p>
+<p><span id="eq-RC"><span class="math display">RC = \frac{IC}{IA} \tag{7.2}</span></span></p>
+<p>Para el caso de la Matriz de comparación <span class="math inline">A</span> del caso de estudio utilizado como referencia se considera consistente de acuerdo a los valores consignados en la tabla <a href="#tbl-consistencia">Table&nbsp;<span>7.5</span></a>.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-consistencia" class="anchored">
+
+<table class="table table-striped" style="font-size: 15px; width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table&nbsp;7.5:  Resultados del Análisis de Consistencia </caption>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Nombres </th>
+   <th style="text-align:right;"> Valores </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Autovector Máximo </td>
+   <td style="text-align:right;"> 14.601 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Índice de Consistencia </td>
+   <td style="text-align:right;"> 0.046 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Índice C. Aleatorio </td>
+   <td style="text-align:right;"> 1.570 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Razón de Consistencia </td>
+   <td style="text-align:right;"> 0.029 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="cálculo-de-ponderadores-w" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="cálculo-de-ponderadores-w"><span class="header-section-number">7.4</span> Cálculo de Ponderadores <span class="math inline">w</span></h2>
+<p>Posteriormente de validar la matriz de comparación por pares a través del análisis de consistencia, se procede a calcular el vector de prioridades. Este vector indica la influencia de un criterio sobre el objetivo global, en estos casos la ubicación óptima de una planta de generación de energía eléctrica. Existen múltiples formas de calcular este vector, una de ellas es usando el método del vector propio principal <span class="math inline">w</span> tal que:</p>
+<p><span class="math display">A \times W = \lambda_{max} \times w</span></p>
+<p>Donde <span class="math inline">\lambda_{max}</span> es el máximo valor propio de la matriz <span class="math inline">A</span></p>
+<p>Para calcular los vectores propios en el AHP, se normaliza la matriz de comparación pairwise y luego se encuentra su valor propio dominante y el correspondiente vector propio. El valor propio dominante representa el grado en que las alternativas se han priorizado y el vector propio representa los pesos asignados a cada alternativa en términos de su prioridad.</p>
+<p>Luego, se calcula el valor propio dominante y el correspondiente vector propio usando técnicas matemáticas, como el método de potencias. El valor propio dominante (<span class="math inline">\lambda_{max}</span>) se interpreta como el grado en que las alternativas se han priorizado, y el vector propio (<span class="math inline">w</span>) se interpreta como los pesos asignados a cada alternativa en términos de su prioridad.</p>
+<p>Como resultado del proceso anterior se un vector <span class="math inline">w</span> (<a href="#tbl-w">Table&nbsp;<span>7.6</span></a>) que reperesenta el grado de prirización de cada una de las variables como respresetna a continuación:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-w" class="anchored">
+
+<table class="table table-striped" style="font-size: 15px; width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table&nbsp;7.6:  Valores w (poderador) para cada variable </caption>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Variable </th>
+   <th style="text-align:left;"> Letra </th>
+   <th style="text-align:right;"> w </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Asentamientos y territorios indigenas </td>
+   <td style="text-align:left;"> A </td>
+   <td style="text-align:right;"> 0.1508809 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Poblamiento </td>
+   <td style="text-align:left;"> B </td>
+   <td style="text-align:right;"> 0.1508809 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Radiacion solar </td>
+   <td style="text-align:left;"> C </td>
+   <td style="text-align:right;"> 0.0335389 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Zonas saturadas y latentes </td>
+   <td style="text-align:left;"> D </td>
+   <td style="text-align:right;"> 0.0198422 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Areas protegidas </td>
+   <td style="text-align:left;"> E </td>
+   <td style="text-align:right;"> 0.1508809 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Pendiente </td>
+   <td style="text-align:left;"> F </td>
+   <td style="text-align:right;"> 0.0335389 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Uso agricola de suelo </td>
+   <td style="text-align:left;"> G </td>
+   <td style="text-align:right;"> 0.0198422 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Uso forestal del suelo </td>
+   <td style="text-align:left;"> H </td>
+   <td style="text-align:right;"> 0.0155894 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Uso Bosque mixto o nativo </td>
+   <td style="text-align:left;"> I </td>
+   <td style="text-align:right;"> 0.0690157 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Sitios arqueologicos y paleontologicos </td>
+   <td style="text-align:left;"> J </td>
+   <td style="text-align:right;"> 0.1508809 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Bienes nacionales protegidos </td>
+   <td style="text-align:left;"> K </td>
+   <td style="text-align:right;"> 0.0690157 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lineas de transmision existente </td>
+   <td style="text-align:left;"> L </td>
+   <td style="text-align:right;"> 0.0335389 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Infraestructura existente </td>
+   <td style="text-align:left;"> M </td>
+   <td style="text-align:right;"> 0.0335389 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Zonas de interes turistico </td>
+   <td style="text-align:left;"> N </td>
+   <td style="text-align:right;"> 0.0690157 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p>Con los resultados de <span class="math inline">w</span> correndiente a los ponderadores (<a href="#tbl-w">Table&nbsp;<span>7.6</span></a>), se puede comenzar el cálculo espacial por cada variable presente interviniente en el proceso de decisión, para determinar la idonedad de construcción deuna planta de generación eléctrica solar fotovoltaíca (ejemplo).</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">

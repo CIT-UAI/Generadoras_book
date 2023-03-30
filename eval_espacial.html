@@ -61,6 +61,22 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 
 <link rel="stylesheet" href="style.css">
 </head>
@@ -139,7 +155,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ahp_exp.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">AHP</span></a>
+  <a href="./ahp_exp.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Proc. de Análisis Jerárquico</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -199,8 +215,9 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción"><span class="toc-section-number">8.1</span>  Introducción</a></li>
-  <li><a href="#reclasificación-y-homogenización-de-la-data" id="toc-reclasificación-y-homogenización-de-la-data" class="nav-link" data-scroll-target="#reclasificación-y-homogenización-de-la-data"><span class="toc-section-number">8.2</span>  Reclasificación y Homogenización de la Data</a></li>
-  <li><a href="#superposición-ponderada-por-criterio-aph" id="toc-superposición-ponderada-por-criterio-aph" class="nav-link" data-scroll-target="#superposición-ponderada-por-criterio-aph"><span class="toc-section-number">8.3</span>  Superposición Ponderada por Criterio APH</a></li>
+  <li><a href="#superposición-ponderada-de-criterios-por-w-aph" id="toc-superposición-ponderada-de-criterios-por-w-aph" class="nav-link" data-scroll-target="#superposición-ponderada-de-criterios-por-w-aph"><span class="toc-section-number">8.2</span>  Superposición Ponderada de Criterios por <span class="math inline">w</span> (APH)</a></li>
+  <li><a href="#restricciones" id="toc-restricciones" class="nav-link" data-scroll-target="#restricciones"><span class="toc-section-number">8.3</span>  Restricciones</a></li>
+  <li><a href="#resultados" id="toc-resultados" class="nav-link" data-scroll-target="#resultados"><span class="toc-section-number">8.4</span>  Resultados</a></li>
   </ul>
 </nav>
     </div>
@@ -226,12 +243,16 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="introducción" class="level2" data-number="8.1">
 <h2 data-number="8.1" class="anchored" data-anchor-id="introducción"><span class="header-section-number">8.1</span> Introducción</h2>
+<p>La etapa de evaluación final, corresponde al proceso de ponderación de las variables discretizadas por los criterios por cada valor de peso de ponderación <span class="math inline">w</span> resultante del Proceso de Análisis Jerárquico, posteriormente estos resultados se reducen a través de una suma obteniendo una representación espacial continua tipo raster, que presenta numéricamente la idoneadad para la construcción de alguna planta de generación de energía eléctrica. Posteriormente se procede a realizar filtros espaciales por restricción de acuerdo zonas declaradas inaceptables para la construcción. A cotinuación se explicarán cada uno de estos paso de foma detallada</p>
 </section>
-<section id="reclasificación-y-homogenización-de-la-data" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="reclasificación-y-homogenización-de-la-data"><span class="header-section-number">8.2</span> Reclasificación y Homogenización de la Data</h2>
+<section id="superposición-ponderada-de-criterios-por-w-aph" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="superposición-ponderada-de-criterios-por-w-aph"><span class="header-section-number">8.2</span> Superposición Ponderada de Criterios por <span class="math inline">w</span> (APH)</h2>
 </section>
-<section id="superposición-ponderada-por-criterio-aph" class="level2" data-number="8.3">
-<h2 data-number="8.3" class="anchored" data-anchor-id="superposición-ponderada-por-criterio-aph"><span class="header-section-number">8.3</span> Superposición Ponderada por Criterio APH</h2>
+<section id="restricciones" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="restricciones"><span class="header-section-number">8.3</span> Restricciones</h2>
+</section>
+<section id="resultados" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="resultados"><span class="header-section-number">8.4</span> Resultados</h2>
 
 
 </section>
@@ -373,7 +394,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./ahp_exp.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">AHP</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Proc. de Análisis Jerárquico</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
