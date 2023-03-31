@@ -61,6 +61,9 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
  var mathElements = document.getElementsByClassName("math");
@@ -81,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar floating slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -217,12 +220,13 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción"><span class="toc-section-number">8.1</span>  Introducción</a></li>
   <li><a href="#superposición-ponderada-de-criterios-por-w-aph" id="toc-superposición-ponderada-de-criterios-por-w-aph" class="nav-link" data-scroll-target="#superposición-ponderada-de-criterios-por-w-aph"><span class="toc-section-number">8.2</span>  Superposición Ponderada de Criterios por <span class="math inline">w</span> (APH)</a></li>
   <li><a href="#restricciones" id="toc-restricciones" class="nav-link" data-scroll-target="#restricciones"><span class="toc-section-number">8.3</span>  Restricciones</a></li>
-  <li><a href="#resultados" id="toc-resultados" class="nav-link" data-scroll-target="#resultados"><span class="toc-section-number">8.4</span>  Resultados</a></li>
+  <li><a href="#caterización-de-los-resultados" id="toc-caterización-de-los-resultados" class="nav-link" data-scroll-target="#caterización-de-los-resultados"><span class="toc-section-number">8.4</span>  Caterización de los resultados</a></li>
+  <li><a href="#resultados" id="toc-resultados" class="nav-link" data-scroll-target="#resultados"><span class="toc-section-number">8.5</span>  Resultados</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -245,14 +249,121 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-number="8.1" class="anchored" data-anchor-id="introducción"><span class="header-section-number">8.1</span> Introducción</h2>
 <p>La etapa de evaluación final, corresponde al proceso de ponderación de las variables discretizadas por los criterios por cada valor de peso de ponderación <span class="math inline">w</span> resultante del Proceso de Análisis Jerárquico, posteriormente estos resultados se reducen a través de una suma obteniendo una representación espacial continua tipo raster, que presenta numéricamente la idoneadad para la construcción de alguna planta de generación de energía eléctrica. Posteriormente se procede a realizar filtros espaciales por restricción de acuerdo zonas declaradas inaceptables para la construcción. A cotinuación se explicarán cada uno de estos paso de foma detallada</p>
 </section>
-<section id="superposición-ponderada-de-criterios-por-w-aph" class="level2" data-number="8.2">
+<section id="superposición-ponderada-de-criterios-por-w-aph" class="level2 page-columns page-full" data-number="8.2">
 <h2 data-number="8.2" class="anchored" data-anchor-id="superposición-ponderada-de-criterios-por-w-aph"><span class="header-section-number">8.2</span> Superposición Ponderada de Criterios por <span class="math inline">w</span> (APH)</h2>
+<p>El proceso de superposición ponderada corresponde a la multiplicación espacial de de cada variable discrerizada resultante de la reclaficación por criterio (<a href="data.html#sec-discret"><span>Section&nbsp;6.3</span></a>) por cada ponderación <span class="math inline">w</span> resultante del proceso de análisis jerárquico (<a href="ahp_exp.html#sec-calw"><span>Section&nbsp;7.4</span></a>) de forma independiente.</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full">
+<figure class="figure page-columns page-full">
+<p><img src="images/image-793702940.png" class="img-fluid figure-img" width="300"></p>
+<p></p><figcaption class="figure-caption margin-caption">Superposición ponderada</figcaption><p></p>
+</figure>
+</div>
+<p>Luego todos estos resultados espaciales (rasters) se suman generando los resultados de idoneidad numéricamente para la generación de energía eléctrica.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/image-1079418637.png" class="img-fluid figure-img" width="300"></p>
+</figure>
+</div>
 </section>
 <section id="restricciones" class="level2" data-number="8.3">
 <h2 data-number="8.3" class="anchored" data-anchor-id="restricciones"><span class="header-section-number">8.3</span> Restricciones</h2>
+<p>Los resultados de supersición ponderada de varibles por ponderaciones, sele debe aplicar dos tipos de restricciones. La primera corresponde a todos los territorios que fueron definidos como criterio de inaceptable (rango 1) en las diversas mesas de participación. La segunda restricción corresponde a territorios específicos que por sus condiciones y características normativas e intalaciones previas, se es posible contruir algina plata de generación de energía, algunos de los territorios que se requieren no considerar como zona idonea son las coberturas espaciales consignadas en la <a href="#tbl-restricciones">Table&nbsp;<span>8.1</span></a> a las que según sea el caso se le aplicó una ampliación de sus superficie por cierta cantidad metros denominado buffer.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-restricciones" class="anchored">
+
+<table class="table table-striped" style="font-size: 15px; width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table&nbsp;8.1:  Restricciones Territoriales para la generación eléctrica fotovoltáica </caption>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Temática </th>
+   <th style="text-align:left;"> Capas </th>
+   <th style="text-align:right;"> Buffer </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> SOCIAL </td>
+   <td style="text-align:left;"> SITIOS CON CONFLICTOS SOCIOAMBIENTALES ANTERIORES </td>
+   <td style="text-align:right;"> 500 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> AMBIENTAL </td>
+   <td style="text-align:left;"> PELIGRO REMOCIÓN EN MASA </td>
+   <td style="text-align:right;"> 500 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> AMBIENTAL </td>
+   <td style="text-align:left;"> PELIGRO DE TSUNAMI </td>
+   <td style="text-align:right;"> 500 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> AMBIENTAL </td>
+   <td style="text-align:left;"> PELIGRO VOLCÁNICO </td>
+   <td style="text-align:right;"> 500 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> AMBIENTAL </td>
+   <td style="text-align:left;"> MASAS LACUSTRES </td>
+   <td style="text-align:right;"> 500 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> AMBIENTAL </td>
+   <td style="text-align:left;"> RIOS Y ESTEROS </td>
+   <td style="text-align:right;"> 500 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> PATRIMONIO </td>
+   <td style="text-align:left;"> FAENAS REG </td>
+   <td style="text-align:right;"> 500 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> NORMATIVA </td>
+   <td style="text-align:left;"> ZONAS DE EXCLUSION AEREA </td>
+   <td style="text-align:right;"> 0 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> NORMATIVA </td>
+   <td style="text-align:left;"> ZONAS RESTRINGIDAS POR EL PRI </td>
+   <td style="text-align:right;"> 0 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> NORMATIVA </td>
+   <td style="text-align:left;"> ZONAS RESTRINGIDAS POR EL PRC </td>
+   <td style="text-align:right;"> 0 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> NORMATIVA </td>
+   <td style="text-align:left;"> LIMITE URBANO </td>
+   <td style="text-align:right;"> 500 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p>Para enternder las restricciones territoriales antes descritas se puede entender como una resta directa de capas como se observa a continuación.</p>
+<p><img src="images/image-1193631342.png" class="img-fluid"></p>
 </section>
-<section id="resultados" class="level2" data-number="8.4">
-<h2 data-number="8.4" class="anchored" data-anchor-id="resultados"><span class="header-section-number">8.4</span> Resultados</h2>
+<section id="caterización-de-los-resultados" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="caterización-de-los-resultados"><span class="header-section-number">8.4</span> Caterización de los resultados</h2>
+<p>Los resultados de supersición ponderada de varibles por ponderaciones ya filtrados por las coberturas de restricción, correspodientes a las zonas idoneas ordenadas numéricamente (valores continuos) se le aplica una clasificación (valores discretos) en 4 niveles para facilitar su interpretación espacial en el territorio. Espos cuantro niveles se definieron con las categorías de “Poco Apropieado”, “Moderadamente Apropiado”, “Apropiado” y “Muy Apropiado”, mientras que todo elterritorio entendido como restricción se clasifico como “Inapropiado”. Para la clasificación de los valores fue realizada dividiendo la distribución en quartiles (<span class="quarto-unresolved-ref">?fig-q4</span>).</p>
+<div id="fig-q4" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/image-150187463.png" class="img-fluid figure-img" width="300"></p>
+</figure>
+</div>
+<p>Espacialmente los resultado se presentan de la siguiente forma</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/image-741593790.png" class="img-fluid figure-img" width="500"></p>
+</figure>
+</div>
+</section>
+<section id="resultados" class="level2" data-number="8.5">
+<h2 data-number="8.5" class="anchored" data-anchor-id="resultados"><span class="header-section-number">8.5</span> Resultados</h2>
+<p>Para presentar los resultados se crearon dashboard de los cuales se puede acceder del siguiente <a href="https://cit-uai.maps.arcgis.com/apps/dashboards/459dbe27a5d047d09fe5fb064459107a">link</a></p>
+<p><img src="images/image-1780391338.png" class="img-fluid"></p>
 
 
 </section>
