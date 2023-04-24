@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Análisis Multicriterio - 6&nbsp; Data Geoespacial</title>
+<title>Análisis Multicriterio - 6&nbsp; Materiales</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -61,6 +61,25 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 
 <link rel="stylesheet" href="style.css">
 </head>
@@ -71,7 +90,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Data Geoespacial</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Materiales</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -134,12 +153,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./data.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Data Geoespacial</span></a>
+  <a href="./data.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Materiales</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ahp_exp.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">AHP</span></a>
+  <a href="./ahp_exp.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Proc. de Análisis Jerárquico</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -187,6 +206,11 @@ ul.task-list li input[type="checkbox"] {
   <a href="./fuzzy_logic.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">FAHP Fuzzy Logic</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./informe_final.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Metetodología</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -198,15 +222,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#definción-de-variables-temáticas" id="toc-definción-de-variables-temáticas" class="nav-link active" data-scroll-target="#definción-de-variables-temáticas"><span class="toc-section-number">6.1</span>  Definción de Variables Temáticas</a>
-  <ul class="collapse">
-  <li><a href="#ambiental" id="toc-ambiental" class="nav-link" data-scroll-target="#ambiental"><span class="toc-section-number">6.1.1</span>  Ambiental</a></li>
-  <li><a href="#social" id="toc-social" class="nav-link" data-scroll-target="#social"><span class="toc-section-number">6.1.2</span>  Social</a></li>
-  <li><a href="#infraestructura" id="toc-infraestructura" class="nav-link" data-scroll-target="#infraestructura"><span class="toc-section-number">6.1.3</span>  Infraestructura</a></li>
-  <li><a href="#normativo" id="toc-normativo" class="nav-link" data-scroll-target="#normativo"><span class="toc-section-number">6.1.4</span>  Normativo</a></li>
-  </ul></li>
+  <li><a href="#variables-espaciales-base" id="toc-variables-espaciales-base" class="nav-link active" data-scroll-target="#variables-espaciales-base"><span class="toc-section-number">6.1</span>  Variables espaciales base</a></li>
   <li><a href="#cálculo-de-distancia-en-raster" id="toc-cálculo-de-distancia-en-raster" class="nav-link" data-scroll-target="#cálculo-de-distancia-en-raster"><span class="toc-section-number">6.2</span>  Cálculo de Distancia en Raster</a></li>
-  <li><a href="#reclasificación" id="toc-reclasificación" class="nav-link" data-scroll-target="#reclasificación"><span class="toc-section-number">6.3</span>  Reclasificación</a></li>
+  <li><a href="#sec-discret" id="toc-sec-discret" class="nav-link" data-scroll-target="#sec-discret"><span class="toc-section-number">6.3</span>  Reclasificación</a></li>
   </ul>
 </nav>
     </div>
@@ -215,7 +233,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Data Geoespacial</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Materiales</span></h1>
 </div>
 
 
@@ -230,44 +248,49 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="definción-de-variables-temáticas" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="definción-de-variables-temáticas"><span class="header-section-number">6.1</span> Definción de Variables Temáticas</h2>
-<section id="ambiental" class="level3" data-number="6.1.1">
-<h3 data-number="6.1.1" class="anchored" data-anchor-id="ambiental"><span class="header-section-number">6.1.1</span> Ambiental</h3>
-</section>
-<section id="social" class="level3" data-number="6.1.2">
-<h3 data-number="6.1.2" class="anchored" data-anchor-id="social"><span class="header-section-number">6.1.2</span> Social</h3>
-<div class="quarto-figure quarto-figure-center">
+<section id="variables-espaciales-base" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="variables-espaciales-base"><span class="header-section-number">6.1</span> Variables espaciales base</h2>
+<p>Las variables que se utilizan en la matriz de comparación de la etapa siguiente de Proceso de Análisis Jerárquico, se definen como información con representación territorial y que se encuentran en formato tipo de puntos o polígonos. Estos hacen relación a diferentes temáticas como Ambiental, Social, Patrimonio, Normativo. A continuación se muestran dos ejemplos de información espacial en puntos y polígonos.</p>
+<div id="fig-geoms" class="quarto-layout-panel">
 <figure class="figure">
-<p><img src="images/c_indigenas.png" class="img-fluid figure-img" width="400"></p>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
+<div id="fig-indegenasRaw" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/c_indigenas.png" class="img-fluid figure-img" data-ref-parent="fig-geoms" width="500"></p>
+<p></p><figcaption class="figure-caption">(a) Comunidades Indigenes Antofagasta</figcaption><p></p>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
+<div id="fig-riesgosRaw" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/riesgos.png" class="img-fluid figure-img" data-ref-parent="fig-geoms" width="500"></p>
+<p></p><figcaption class="figure-caption">(b) Riesgos unificados en Antofagasta</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p></p><figcaption class="figure-caption">Figure&nbsp;6.1: Información espacial base tipo puntos y polígonos</figcaption><p></p>
 </figure>
 </div>
 <!-- [descipción](https://www.arcgis.com/apps/dashboards/3d7ed6d578d545fc8d57da5b1751fdd6) -->
 <!-- [webmap](https://www.arcgis.com/apps/mapviewer/index.html?webmap=bfbde9b4133a414dac113bfb761f6c2f) -->
 <!-- [patrimonio](https://www.arcgis.com/apps/dashboards/3d7ed6d578d545fc8d57da5b1751fdd6) -->
 </section>
-<section id="infraestructura" class="level3" data-number="6.1.3">
-<h3 data-number="6.1.3" class="anchored" data-anchor-id="infraestructura"><span class="header-section-number">6.1.3</span> Infraestructura</h3>
-</section>
-<section id="normativo" class="level3" data-number="6.1.4">
-<h3 data-number="6.1.4" class="anchored" data-anchor-id="normativo"><span class="header-section-number">6.1.4</span> Normativo</h3>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/riesgos.png" class="img-fluid figure-img" width="400"></p>
-</figure>
-</div>
-</section>
-</section>
 <section id="cálculo-de-distancia-en-raster" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="cálculo-de-distancia-en-raster"><span class="header-section-number">6.2</span> Cálculo de Distancia en Raster</h2>
-<p>En esta etapa se buscar tomar un raster regional vacío estandar para efectos del piloto se tomó como base el raster del DEM que tiene una resolución espacial de 30x30 metros. Posteriormente, considerando las variables espaciales definidas anteriormente y por cada una de ellas se calcula la distancia eclediana desde la geometría a cada uno de los pixeles del raster base.</p>
+<p>En esta etapa se procede a generar una grilla regular de una resolucuón espacial de 30x30 metros, y por cada tipo de geotría espacial se calcula la distancia de pada pixel a punto o polígono más cercanos.</p>
+<p>El tipo de calculo para determinar la distancia es la eclidiana coorrespondiente a la ecuación <a href="informe_final.html#eq-DEuclidiana">Equation&nbsp;<span>E.1</span></a>:</p>
+<p><span id="eq-DEuclidiana"><span class="math display">d(P_1, P_2) = \sqrt{(x_2-x_1)^2+(y_2-y_1)^2} \tag{6.1}</span></span></p>
+<p>Como resultado de lo anterior se obtiene un raster de distancia como se observa en la figura <a href="informe_final.html#fig-rDist">Figure&nbsp;<span>E.3</span></a></p>
 <div id="fig-rDist" class="quarto-layout-panel">
 <figure class="figure">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
 <div id="fig-rdis-indigenas" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="images/c_indigenas_r.png" class="img-fluid figure-img" data-ref-parent="fig-rDist" width="400"></p>
+<p><img src="images/c_indigenas.png" class="img-fluid figure-img" data-ref-parent="fig-rDist" width="400"></p>
 <p></p><figcaption class="figure-caption">(a) Distancia a comunidades indigenas</figcaption><p></p>
 </figure>
 </div>
@@ -275,18 +298,289 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
 <div id="fig-rdist-riesgos" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="images/riesgos_r.png" class="img-fluid figure-img" data-ref-parent="fig-rDist" width="400"></p>
-<p></p><figcaption class="figure-caption">(b) Distancia a riesgos generales</figcaption><p></p>
+<p><img src="images/indigenas_dist.png" class="img-fluid figure-img" data-ref-parent="fig-rDist" width="400"></p>
+<p></p><figcaption class="figure-caption">(b) Distancia a Comunidades indígenas</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
-<p></p><figcaption class="figure-caption">Figure&nbsp;6.1: Proceso de Cálculo de distancia hacia variables espaciales desde cada pixel de la laregión</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;6.2: Proceso de Cálculo de distancia hacia variables espaciales desde cada pixel de la región</figcaption><p></p>
 </figure>
 </div>
 </section>
-<section id="reclasificación" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="reclasificación"><span class="header-section-number">6.3</span> Reclasificación</h2>
+<section id="sec-discret" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="sec-discret"><span class="header-section-number">6.3</span> Reclasificación</h2>
+<p>Los resultados del proceso de cálculo de distancia representados por un raster regional cuyos valores corresponde a calculos numéricos continuos, estos se proceden a reclasificar a variables discretas de 1 a 5 de acuerdo a matriz de criterios (<a href="informe_final.html#tbl-criterios">Table&nbsp;<span>E.2</span></a>) acordados en los talleres de participación, análisis bibliográfico y técnico.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-criterios" class="anchored">
+
+<table class="table table-striped" style="font-size: 13px; width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table&nbsp;6.1:  Ejemplo de Criterios de variables de generación de energía solar fotovoltáica. </caption>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Tematica </th>
+   <th style="text-align:left;"> Variable </th>
+   <th style="text-align:left;"> Capas </th>
+   <th style="text-align:left;"> Criterio_1 </th>
+   <th style="text-align:right;"> Criterio_2 </th>
+   <th style="text-align:left;"> Criterio_3 </th>
+   <th style="text-align:right;"> Criterio_4 </th>
+   <th style="text-align:left;"> Criterio_5 </th>
+   <th style="text-align:left;"> Unidad </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> SOCIAL </td>
+   <td style="text-align:left;"> Asentamientos y territorios indigenas </td>
+   <td style="text-align:left;"> Comunidades indígenas </td>
+   <td style="text-align:left;"> 500 </td>
+   <td style="text-align:right;"> 2000 </td>
+   <td style="text-align:left;"> 5000 </td>
+   <td style="text-align:right;"> 10000 </td>
+   <td style="text-align:left;"> MAX </td>
+   <td style="text-align:left;"> m </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> SOCIAL </td>
+   <td style="text-align:left;"> Asentamientos y territorios indigenas </td>
+   <td style="text-align:left;"> Areas_de_desarrollo_indígena </td>
+   <td style="text-align:left;"> 500 </td>
+   <td style="text-align:right;"> 2000 </td>
+   <td style="text-align:left;"> 5000 </td>
+   <td style="text-align:right;"> 10000 </td>
+   <td style="text-align:left;"> MAX </td>
+   <td style="text-align:left;"> m </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> SOCIAL </td>
+   <td style="text-align:left;"> Asentamientos y territorios indigenas </td>
+   <td style="text-align:left;"> Tierras_indígenas </td>
+   <td style="text-align:left;"> 500 </td>
+   <td style="text-align:right;"> 2000 </td>
+   <td style="text-align:left;"> 5000 </td>
+   <td style="text-align:right;"> 10000 </td>
+   <td style="text-align:left;"> MAX </td>
+   <td style="text-align:left;"> m </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> SOCIAL </td>
+   <td style="text-align:left;"> Poblamiento </td>
+   <td style="text-align:left;"> Campamentos </td>
+   <td style="text-align:left;"> 500 </td>
+   <td style="text-align:right;"> 2000 </td>
+   <td style="text-align:left;"> 5000 </td>
+   <td style="text-align:right;"> 10000 </td>
+   <td style="text-align:left;"> MAX </td>
+   <td style="text-align:left;"> m </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> SOCIAL </td>
+   <td style="text-align:left;"> Poblamiento </td>
+   <td style="text-align:left;"> Asentamientos_Humanos </td>
+   <td style="text-align:left;"> 500 </td>
+   <td style="text-align:right;"> 2000 </td>
+   <td style="text-align:left;"> 5000 </td>
+   <td style="text-align:right;"> 10000 </td>
+   <td style="text-align:left;"> MAX </td>
+   <td style="text-align:left;"> m </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> AMBIENTAL </td>
+   <td style="text-align:left;"> Radiacion solar </td>
+   <td style="text-align:left;"> radiacion normal directa </td>
+   <td style="text-align:left;"> 3.8 </td>
+   <td style="text-align:right;"> 4 </td>
+   <td style="text-align:left;"> 4.5 </td>
+   <td style="text-align:right;"> 5 </td>
+   <td style="text-align:left;"> MAX </td>
+   <td style="text-align:left;"> kWh/M2/día </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> AMBIENTAL </td>
+   <td style="text-align:left;"> Zonas saturadas y latentes </td>
+   <td style="text-align:left;"> Zonas_saturadas_y_latentes </td>
+   <td style="text-align:left;"> 1000 </td>
+   <td style="text-align:right;"> 2000 </td>
+   <td style="text-align:left;"> 3000 </td>
+   <td style="text-align:right;"> 4000 </td>
+   <td style="text-align:left;"> MAX </td>
+   <td style="text-align:left;"> m </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> AMBIENTAL </td>
+   <td style="text-align:left;"> Areas protegidas </td>
+   <td style="text-align:left;"> Sitios_RAMSAR </td>
+   <td style="text-align:left;"> 1000 </td>
+   <td style="text-align:right;"> 2000 </td>
+   <td style="text-align:left;"> 3000 </td>
+   <td style="text-align:right;"> 4000 </td>
+   <td style="text-align:left;"> MAX </td>
+   <td style="text-align:left;"> m </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> AMBIENTAL </td>
+   <td style="text-align:left;"> Areas protegidas </td>
+   <td style="text-align:left;"> Flora_y_fauna_vulnerable_y_peligro </td>
+   <td style="text-align:left;"> 1000 </td>
+   <td style="text-align:right;"> 2000 </td>
+   <td style="text-align:left;"> 3000 </td>
+   <td style="text-align:right;"> 4000 </td>
+   <td style="text-align:left;"> MAX </td>
+   <td style="text-align:left;"> m </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> AMBIENTAL </td>
+   <td style="text-align:left;"> Areas protegidas </td>
+   <td style="text-align:left;"> Areas_snaspe </td>
+   <td style="text-align:left;"> 1000 </td>
+   <td style="text-align:right;"> 2000 </td>
+   <td style="text-align:left;"> 3000 </td>
+   <td style="text-align:right;"> 4000 </td>
+   <td style="text-align:left;"> MAX </td>
+   <td style="text-align:left;"> m </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> AMBIENTAL </td>
+   <td style="text-align:left;"> Areas protegidas </td>
+   <td style="text-align:left;"> Acuíferos_protegidos </td>
+   <td style="text-align:left;"> 1000 </td>
+   <td style="text-align:right;"> 2000 </td>
+   <td style="text-align:left;"> 3000 </td>
+   <td style="text-align:right;"> 4000 </td>
+   <td style="text-align:left;"> MAX </td>
+   <td style="text-align:left;"> m </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> AMBIENTAL </td>
+   <td style="text-align:left;"> Pendiente </td>
+   <td style="text-align:left;"> R02_PENDIENTES_GRADOS </td>
+   <td style="text-align:left;"> 2 </td>
+   <td style="text-align:right;"> 5 </td>
+   <td style="text-align:left;"> 10 </td>
+   <td style="text-align:right;"> 12 </td>
+   <td style="text-align:left;"> MAX </td>
+   <td style="text-align:left;"> % </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> PATRIMONIO </td>
+   <td style="text-align:left;"> Uso agricola de suelo </td>
+   <td style="text-align:left;"> Uso_agrícola_de_suelo </td>
+   <td style="text-align:left;"> 500 </td>
+   <td style="text-align:right;"> 1000 </td>
+   <td style="text-align:left;"> 1500 </td>
+   <td style="text-align:right;"> 2000 </td>
+   <td style="text-align:left;"> MAX </td>
+   <td style="text-align:left;"> m </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> PATRIMONIO </td>
+   <td style="text-align:left;"> Uso forestal del suelo </td>
+   <td style="text-align:left;"> Uso_forestal_del_suelo </td>
+   <td style="text-align:left;"> 1000 </td>
+   <td style="text-align:right;"> 1500 </td>
+   <td style="text-align:left;"> 2000 </td>
+   <td style="text-align:right;"> 2500 </td>
+   <td style="text-align:left;"> MAX </td>
+   <td style="text-align:left;"> m </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> PATRIMONIO </td>
+   <td style="text-align:left;"> Uso Bosque mixto o nativo </td>
+   <td style="text-align:left;"> Bosque_Nativo </td>
+   <td style="text-align:left;"> 1500 </td>
+   <td style="text-align:right;"> 2500 </td>
+   <td style="text-align:left;"> 3500 </td>
+   <td style="text-align:right;"> 4500 </td>
+   <td style="text-align:left;"> MAX </td>
+   <td style="text-align:left;"> m </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> PATRIMONIO </td>
+   <td style="text-align:left;"> Sitios arqueologicos y paleontologicos </td>
+   <td style="text-align:left;"> 19_Sitios_arqueológicos </td>
+   <td style="text-align:left;"> 400 </td>
+   <td style="text-align:right;"> 800 </td>
+   <td style="text-align:left;"> 1200 </td>
+   <td style="text-align:right;"> 1600 </td>
+   <td style="text-align:left;"> MAX </td>
+   <td style="text-align:left;"> m </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> PATRIMONIO </td>
+   <td style="text-align:left;"> Bienes nacionales protegidos </td>
+   <td style="text-align:left;"> Bienes_nacionales_protegidos </td>
+   <td style="text-align:left;"> 800 </td>
+   <td style="text-align:right;"> 1000 </td>
+   <td style="text-align:left;"> 2000 </td>
+   <td style="text-align:right;"> 3000 </td>
+   <td style="text-align:left;"> MAX </td>
+   <td style="text-align:left;"> m </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> PATRIMONIO </td>
+   <td style="text-align:left;"> Lineas de transmision existente </td>
+   <td style="text-align:left;"> Líneas_de_transmisión_existentes </td>
+   <td style="text-align:left;"> 2500 </td>
+   <td style="text-align:right;"> 5000 </td>
+   <td style="text-align:left;"> 10000 </td>
+   <td style="text-align:right;"> 20000 </td>
+   <td style="text-align:left;"> MAX </td>
+   <td style="text-align:left;"> m </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> PATRIMONIO </td>
+   <td style="text-align:left;"> Infraestructura existente </td>
+   <td style="text-align:left;"> RED_VIAL_TOBLER </td>
+   <td style="text-align:left;"> 3000 </td>
+   <td style="text-align:right;"> 5000 </td>
+   <td style="text-align:left;"> 10000 </td>
+   <td style="text-align:right;"> 20000 </td>
+   <td style="text-align:left;"> MAX </td>
+   <td style="text-align:left;"> m </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> NORMATIVA </td>
+   <td style="text-align:left;"> Zonas de interes turistico </td>
+   <td style="text-align:left;"> ZOIT </td>
+   <td style="text-align:left;"> 600 </td>
+   <td style="text-align:right;"> 800 </td>
+   <td style="text-align:left;"> 1000 </td>
+   <td style="text-align:right;"> 2000 </td>
+   <td style="text-align:left;"> MAX </td>
+   <td style="text-align:left;"> m </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p><br></p>
+<p>A modo de ejemplo se presenta el proceso de reclasificación de un modelos digital de elevación correspondiente a una variable continua (<a href="informe_final.html#fig-rCont">Figure&nbsp;<span>E.4 (a)</span></a>), la cual es reclasificada en una variable discreta (<a href="informe_final.html#fig-rDisc">Figure&nbsp;<span>E.4 (b)</span></a>).</p>
+<div id="fig-rClass" class="quarto-layout-panel">
+<figure class="figure">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
+<div id="fig-rCont" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/dem_continuo.png" class="img-fluid figure-img" data-ref-parent="fig-rClass" width="400"></p>
+<p></p><figcaption class="figure-caption">(a) Modelo de Digital de Elevación con valores continuos</figcaption><p></p>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
+<div id="fig-rDisc" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/dem_discreto.png" class="img-fluid figure-img" data-ref-parent="fig-rClass" width="400"></p>
+<p></p><figcaption class="figure-caption">(b) Modelo de Digital de Elevación con valores discretos</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p></p><figcaption class="figure-caption">Figure&nbsp;6.3: Proceso de Discretización de variables continuas, de acuerdo a criterios definidos por los actores relevantes en la región de Antofagasta</figcaption><p></p>
+</figure>
+</div>
 
 
 </section>
@@ -433,7 +727,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
   <div class="nav-page nav-page-next">
       <a href="./ahp_exp.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">AHP</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Proc. de Análisis Jerárquico</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

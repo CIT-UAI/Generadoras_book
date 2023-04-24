@@ -40,3 +40,7 @@ h3{
 figcaption.figure-caption{
   font-size: 15px
 }
+
+.table-caption, caption{
+  font-size: 15px;
+}

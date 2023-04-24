@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.38">
+<meta name="generator" content="quarto-1.2.335">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,10 +11,15 @@
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
@@ -172,7 +177,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ahp_exp.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">AHP</span></a>
+  <a href="./ahp_exp.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Proc. de Análisis Jerárquico</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -227,15 +232,15 @@ div.csl-indent {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción"> <span class="header-section-number">A.1</span> Introducción</a></li>
-  <li><a href="#algoritmo-saaty1980" id="toc-algoritmo-saaty1980" class="nav-link" data-scroll-target="#algoritmo-saaty1980"> <span class="header-section-number">A.2</span> Algoritmo <span class="citation" data-cites="Saaty1980">(<span>T. L. Saaty 1980</span>)</span></a></li>
-  <li><a href="#sec-robustez" id="toc-sec-robustez" class="nav-link" data-scroll-target="#sec-robustez"> <span class="header-section-number">A.3</span> Robustez Matemática</a></li>
-  <li><a href="#beneficios-y-ventajas-del-uso-de-ahp" id="toc-beneficios-y-ventajas-del-uso-de-ahp" class="nav-link" data-scroll-target="#beneficios-y-ventajas-del-uso-de-ahp"> <span class="header-section-number">A.4</span> Beneficios y ventajas del uso de AHP</a></li>
-  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias"> <span class="header-section-number">A.5</span> Referencias</a></li>
+  <li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción"><span class="toc-section-number">A.1</span>  Introducción</a></li>
+  <li><a href="#algoritmo-saaty1980" id="toc-algoritmo-saaty1980" class="nav-link" data-scroll-target="#algoritmo-saaty1980"><span class="toc-section-number">A.2</span>  Algoritmo <span class="citation" data-cites="Saaty1980">(T. L. Saaty 1980)</span></a></li>
+  <li><a href="#sec-robustez" id="toc-sec-robustez" class="nav-link" data-scroll-target="#sec-robustez"><span class="toc-section-number">A.3</span>  Robustez Matemática</a></li>
+  <li><a href="#beneficios-y-ventajas-del-uso-de-ahp" id="toc-beneficios-y-ventajas-del-uso-de-ahp" class="nav-link" data-scroll-target="#beneficios-y-ventajas-del-uso-de-ahp"><span class="toc-section-number">A.4</span>  Beneficios y ventajas del uso de AHP</a></li>
+  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias"><span class="toc-section-number">A.5</span>  Referencias</a></li>
   </ul>
 </nav>
     </div>
@@ -253,6 +258,7 @@ div.csl-indent {
 <div class="quarto-title-meta">
 
     
+  
     
   </div>
   
@@ -269,7 +275,7 @@ div.csl-indent {
 <div id="fig-criterios-diagr" class="quarto-figure quarto-figure-center anchored page-columns page-full">
 <figure class="figure page-columns page-full">
 <p><img src="images/diagrama_criterios.png" class="img-fluid figure-img" width="800"></p>
-<p></p><figcaption class="figure-caption margin-caption">Figure A.1: Diagrama de objetivos con criterios y alternativas espaciales</figcaption><p></p>
+<p></p><figcaption class="figure-caption margin-caption">Figure&nbsp;A.1: Diagrama de objetivos con criterios y alternativas espaciales</figcaption><p></p>
 </figure>
 </div>
 <p>Estas comparaciones por pares se llevan a cabo para todos los factores relevantes dentro de un análisis considerando la siguiente escala. (<a href="#tbl-escala">Table&nbsp;<span>A.1</span></a>)</p>
@@ -277,7 +283,7 @@ div.csl-indent {
 <div class="cell-output-display">
 <div id="tbl-escala" class="anchored">
 
-<table class="table table-striped" style="font-size: 15px; width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table A.1:  Escala fundamental, de acuerdo con Saaty. </caption>
+<table class="table table-striped" style="font-size: 15px; width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table&nbsp;A.1:  Escala fundamental, de acuerdo con Saaty. </caption>
  <thead>
   <tr>
    <th style="text-align:left;"> Intensidad </th>
@@ -326,7 +332,7 @@ div.csl-indent {
 <div id="fig-parirs-comp" class="quarto-figure quarto-figure-center anchored page-columns page-full">
 <figure class="figure page-columns page-full">
 <p><img src="images/pairwise-matrix.png" class="img-fluid figure-img" width="600"></p>
-<p></p><figcaption class="figure-caption margin-caption">Figure A.2: Ejemplo de comparación de pares</figcaption><p></p>
+<p></p><figcaption class="figure-caption margin-caption">Figure&nbsp;A.2: Ejemplo de comparación de pares</figcaption><p></p>
 </figure>
 </div>
 <p>Una vez asignados los pesos relativos, se calcula un vector de prioridad, que nos da el valor modificador de relevancia global para cada factor, que se utilizará en los cálculos del SIG.</p>
@@ -355,7 +361,7 @@ a_{n,1} &amp; a_{n,2} &amp; a_{n,3} &amp; \dots &amp; 1
 <div class="cell-output-display">
 <div id="tbl-ia" class="anchored">
 
-<table class="table table-striped table-hover table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table A.2:  Índice de consistencia aleatorio (IA) </caption>
+<table class="table table-striped table-hover table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table&nbsp;A.2:  Índice de consistencia aleatorio (IA) </caption>
 <tbody>
   <tr>
    <td style="text-align:center;"> 1 </td>
@@ -370,6 +376,9 @@ a_{n,1} &amp; a_{n,2} &amp; a_{n,3} &amp; \dots &amp; 1
    <td style="text-align:center;"> 10 </td>
    <td style="text-align:center;"> 11 </td>
    <td style="text-align:center;"> 12 </td>
+   <td style="text-align:center;"> 13 </td>
+   <td style="text-align:center;"> 14 </td>
+   <td style="text-align:center;"> 15 </td>
   </tr>
   <tr>
    <td style="text-align:center;"> 0.00 </td>
@@ -384,6 +393,9 @@ a_{n,1} &amp; a_{n,2} &amp; a_{n,3} &amp; \dots &amp; 1
    <td style="text-align:center;"> 1.49 </td>
    <td style="text-align:center;"> 1.52 </td>
    <td style="text-align:center;"> 1.54 </td>
+   <td style="text-align:center;"> 1.56 </td>
+   <td style="text-align:center;"> 1.57 </td>
+   <td style="text-align:center;"> 1.59 </td>
   </tr>
 </tbody>
 </table>
@@ -398,8 +410,7 @@ a_{n,1} &amp; a_{n,2} &amp; a_{n,3} &amp; \dots &amp; 1
 <li><p><strong>Reciprocidad</strong>: Si <span class="math inline">A_{ij} = X</span>, entonces <span class="math inline">A_{ji} = 1/X</span>, con <span class="math inline">1/9 \leq X\leq 9</span>.</p></li>
 <li><p><strong>Homogeneidad</strong>: Si los elemntos <span class="math inline">i</span> y <span class="math inline">j</span> son considerados igualmente importantes entonces</p></li>
 </ul>
-<p><span class="math display">A_{ij}= A_{ji}= 1</span></p>
-<p>además <span class="math inline">A_{ii} = 1</span> para todo <span class="math inline">i</span>.</p>
+<p><span class="math display">A_{ij}= A_{ji}= 1</span> además <span class="math inline">A_{ii} = 1</span> para todo <span class="math inline">i</span>.</p>
 <ul>
 <li><strong>Consistencia</strong>: Se satisface que <span class="math inline">A_{ik}*A_{kj}= A_{ij}</span> para todo <span class="math inline">1\leq i,j,k\leq q</span></li>
 </ul>
@@ -470,7 +481,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -498,31 +526,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>

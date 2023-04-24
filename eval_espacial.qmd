@@ -1,9 +1,69 @@
 # Evaluación Espacial
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+suppressPackageStartupMessages(library(dplyr))
+suppressPackageStartupMessages(library(knitr))
+suppressPackageStartupMessages(library(kableExtra))
+
+```
+
 ## Introducción
 
+La etapa de evaluación final, corresponde al proceso de ponderación de las variables discretizadas por los criterios por cada valor de peso de ponderación $w$ resultante del Proceso de Análisis Jerárquico, posteriormente estos resultados se reducen a través de una suma obteniendo una representación espacial continua tipo raster, que presenta numéricamente la idoneadad para la construcción de alguna planta de generación de energía eléctrica. Posteriormente se procede a realizar filtros espaciales por restricción de acuerdo zonas declaradas inaceptables para la construcción. A cotinuación se explicarán cada uno de estos paso de foma detallada
 
-## Reclasificación y Homogenización de la Data
+## Superposición Ponderada de Criterios por $w$ (APH)
+
+El proceso de superposición ponderada corresponde a la multiplicación espacial de de cada variable discrerizada resultante de la reclaficación por criterio (@sec-discret) por cada ponderación $w$ resultante del proceso de análisis jerárquico (@sec-calw) de forma independiente.
+
+![Superposición ponderada](images/image-793702940.png){fig-align="center" width="300"}
+
+Luego todos estos resultados espaciales (rasters) se suman generando los resultados de idoneidad numéricamente para la generación de energía eléctrica.
+
+![](images/image-1079418637.png){fig-align="center" width="300"}
+
+## Restricciones
+
+Los resultados de supersición ponderada de varibles por ponderaciones, sele debe aplicar dos tipos de restricciones. La primera corresponde a todos los territorios que fueron definidos como criterio de inaceptable (rango 1) en las diversas mesas de participación. La segunda restricción corresponde a territorios específicos que por sus condiciones y características normativas e intalaciones previas, se es posible contruir algina plata de generación de energía, algunos de los territorios que se requieren no considerar como zona idonea son las coberturas espaciales consignadas en la @tbl-restricciones a las que según sea el caso se le aplicó una ampliación de sus superficie por cierta cantidad metros denominado buffer.
+
+```{r echo=FALSE}
+#| label: tbl-restricciones
+#| tbl-cap: Restricciones Territoriales para la generación eléctrica fotovoltáica
+
+tabla_rest <- openxlsx::read.xlsx("data/tablas/SF_resticciones.xlsx") %>% 
+     dplyr::select(-starts_with("X")) %>% 
+      kbl() %>%
+ # kable_material_dark()
+  kable_styling(bootstrap_options = "striped", 
+                full_width = F, position = "center",
+                font_size = 15)
+
+tabla_rest
+
+```
+
+Para enternder las restricciones territoriales antes descritas se puede entender como una resta directa de capas como se observa a continuación.
+
+![](images/image-1193631342.png)
+
+## Caterización de los resultados
+
+Los resultados de supersición ponderada de varibles por ponderaciones ya filtrados por las coberturas de restricción, correspodientes a las zonas idoneas ordenadas numéricamente (valores continuos) se le aplica una clasificación (valores discretos) en 4 niveles para facilitar su interpretación espacial en el territorio. Espos cuantro niveles se definieron con las categorías de "Poco Apropieado", "Moderadamente Apropiado", "Apropiado" y "Muy Apropiado", mientras que todo elterritorio entendido como restricción se clasifico como "Inapropiado". Para la clasificación de los valores fue realizada dividiendo la distribución en quartiles (@fig-q4).
+
+![](images/image-150187463.png){#fig-q4 fig-align="center" width="300"}
+
+Espacialmente los resultado se presentan de la siguiente forma
 
 
-## Superposición Ponderada por Criterio APH
+![](images/image-741593790.png){fig-align="center" width="500"}
+
+
+## Resultados
+
+Para presentar los resultados se crearon dashboard de los cuales se puede acceder del siguiente [link](https://cit-uai.maps.arcgis.com/apps/dashboards/459dbe27a5d047d09fe5fb064459107a
+)
+
+![](images/image-1780391338.png)
+
+

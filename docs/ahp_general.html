@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.38">
+<meta name="generator" content="quarto-1.2.335">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,10 +11,15 @@
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -53,7 +58,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -66,7 +71,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -235,7 +240,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ahp_exp.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">AHP</span></a>
+  <a href="./ahp_exp.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Proc. de Análisis Jerárquico</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -290,18 +295,18 @@ div.csl-indent {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#matriz-de-comparación" id="toc-matriz-de-comparación" class="nav-link active" data-scroll-target="#matriz-de-comparación"> <span class="header-section-number">B.1</span> Matriz de Comparación</a></li>
-  <li><a href="#valor-propio-dominante-lambda_max" id="toc-valor-propio-dominante-lambda_max" class="nav-link" data-scroll-target="#valor-propio-dominante-lambda_max"> <span class="header-section-number">B.2</span> Valor propio dominante (<span class="math inline">\lambda_{max}</span>)</a></li>
-  <li><a href="#análisis-de-consistencia" id="toc-análisis-de-consistencia" class="nav-link" data-scroll-target="#análisis-de-consistencia"> <span class="header-section-number">B.3</span> Análisis de Consistencia</a></li>
-  <li><a href="#vector-propio-w" id="toc-vector-propio-w" class="nav-link" data-scroll-target="#vector-propio-w"> <span class="header-section-number">B.4</span> Vector propio (<span class="math inline">w</span>)</a></li>
-  <li><a href="#ponderación-de-alternativas" id="toc-ponderación-de-alternativas" class="nav-link" data-scroll-target="#ponderación-de-alternativas"> <span class="header-section-number">B.5</span> Ponderación de Alternativas</a></li>
-  <li><a href="#decisión-final" id="toc-decisión-final" class="nav-link" data-scroll-target="#decisión-final"> <span class="header-section-number">B.6</span> Decisión Final</a></li>
-  <li><a href="#diagrama-de-flujo-de-trabajo" id="toc-diagrama-de-flujo-de-trabajo" class="nav-link" data-scroll-target="#diagrama-de-flujo-de-trabajo"> <span class="header-section-number">B.7</span> Diagrama de flujo de trabajo</a></li>
-  <li><a href="#referencias-de-sección" id="toc-referencias-de-sección" class="nav-link" data-scroll-target="#referencias-de-sección"> <span class="header-section-number">B.8</span> Referencias de Sección</a></li>
+  <li><a href="#matriz-de-comparación" id="toc-matriz-de-comparación" class="nav-link active" data-scroll-target="#matriz-de-comparación"><span class="toc-section-number">B.1</span>  Matriz de Comparación</a></li>
+  <li><a href="#valor-propio-dominante-lambda_max" id="toc-valor-propio-dominante-lambda_max" class="nav-link" data-scroll-target="#valor-propio-dominante-lambda_max"><span class="toc-section-number">B.2</span>  Valor propio dominante (<span class="math inline">\lambda_{max}</span>)</a></li>
+  <li><a href="#análisis-de-consistencia" id="toc-análisis-de-consistencia" class="nav-link" data-scroll-target="#análisis-de-consistencia"><span class="toc-section-number">B.3</span>  Análisis de Consistencia</a></li>
+  <li><a href="#vector-propio-w" id="toc-vector-propio-w" class="nav-link" data-scroll-target="#vector-propio-w"><span class="toc-section-number">B.4</span>  Vector propio (<span class="math inline">w</span>)</a></li>
+  <li><a href="#ponderación-de-alternativas" id="toc-ponderación-de-alternativas" class="nav-link" data-scroll-target="#ponderación-de-alternativas"><span class="toc-section-number">B.5</span>  Ponderación de Alternativas</a></li>
+  <li><a href="#decisión-final" id="toc-decisión-final" class="nav-link" data-scroll-target="#decisión-final"><span class="toc-section-number">B.6</span>  Decisión Final</a></li>
+  <li><a href="#diagrama-de-flujo-de-trabajo" id="toc-diagrama-de-flujo-de-trabajo" class="nav-link" data-scroll-target="#diagrama-de-flujo-de-trabajo"><span class="toc-section-number">B.7</span>  Diagrama de flujo de trabajo</a></li>
+  <li><a href="#referencias-de-sección" id="toc-referencias-de-sección" class="nav-link" data-scroll-target="#referencias-de-sección"><span class="toc-section-number">B.8</span>  Referencias de Sección</a></li>
   </ul>
 </nav>
     </div>
@@ -319,6 +324,7 @@ div.csl-indent {
 <div class="quarto-title-meta">
 
     
+  
     
   </div>
   
@@ -330,7 +336,7 @@ div.csl-indent {
 <div id="fig-diagr_ejemplo" class="quarto-figure quarto-figure-center anchored page-columns page-full">
 <figure class="figure page-columns page-full">
 <p><img src="images/diagrama_ej.gif" class="img-fluid figure-img" width="400"></p>
-<p></p><figcaption class="figure-caption margin-caption">Figure B.1: Diagrama de Análisis Multicriterio que se usará de ejemplo</figcaption><p></p>
+<p></p><figcaption class="figure-caption margin-caption">Figure&nbsp;B.1: Diagrama de Análisis Multicriterio que se usará de ejemplo</figcaption><p></p>
 </figure>
 </div>
 <p>En el siguiente ejemplo, simplificaremos el tipo y la cantidad de variables para ilustrar la aplicación de este método. Imaginemos que se requiere encontrar la mejor ubicación para un Centro de Distribución. Se tienen tres ubicaciones posibles, que designaremos como I, II y III. Un equipo multidisciplinario, luego de una jornada de análisis, seleccionó cuatro criterios para decidir entre ellas:</p>
@@ -348,7 +354,7 @@ div.csl-indent {
 <div class="cell-output-display">
 <div id="tbl-ej-criterios" class="anchored">
 
-<table class="table table-striped" style="font-size: 15px; width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table B.1:  Comparación de criterios bajo escala de Saaty </caption>
+<table class="table table-striped" style="font-size: 15px; width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table&nbsp;B.1:  Comparación de criterios bajo escala de Saaty </caption>
  <thead>
   <tr>
    <th style="text-align:left;">   </th>
@@ -481,7 +487,7 @@ D 3 0.50 0.5 1.00</code></pre>
 <div class="cell-output-display">
 <div id="tbl-ia" class="anchored">
 
-<table class="table table-striped table-hover table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table B.2:  Índice de consistencia aleatorio (IA) </caption>
+<table class="table table-striped table-hover table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;"><caption>Table&nbsp;B.2:  Índice de consistencia aleatorio (IA) </caption>
 <tbody>
   <tr>
    <td style="text-align:center;"> 1 </td>
@@ -496,6 +502,9 @@ D 3 0.50 0.5 1.00</code></pre>
    <td style="text-align:center;"> 10 </td>
    <td style="text-align:center;"> 11 </td>
    <td style="text-align:center;"> 12 </td>
+   <td style="text-align:center;"> 13 </td>
+   <td style="text-align:center;"> 14 </td>
+   <td style="text-align:center;"> 15 </td>
   </tr>
   <tr>
    <td style="text-align:center;"> 0.00 </td>
@@ -510,6 +519,9 @@ D 3 0.50 0.5 1.00</code></pre>
    <td style="text-align:center;"> 1.49 </td>
    <td style="text-align:center;"> 1.52 </td>
    <td style="text-align:center;"> 1.54 </td>
+   <td style="text-align:center;"> 1.56 </td>
+   <td style="text-align:center;"> 1.57 </td>
+   <td style="text-align:center;"> 1.59 </td>
   </tr>
 </tbody>
 </table>
@@ -542,7 +554,10 @@ D 3 0.50 0.5 1.00</code></pre>
 9   9 1.45
 10 10 1.49
 11 11 1.52
-12 12 1.54</code></pre>
+12 12 1.54
+13 13 1.56
+14 14 1.57
+15 15 1.59</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -932,7 +947,7 @@ D 3 0.50 0.5 1.00</code></pre>
 <div id="fig-diagr_gral" class="quarto-figure quarto-figure-center anchored page-columns page-full">
 <figure class="figure page-columns page-full">
 <p><img src="images/diagrama_flujo_gral.png" class="img-fluid figure-img" width="450"></p>
-<p></p><figcaption class="figure-caption margin-caption">Figure B.2: Diagrama de flujo de trabajo usando la librería targets</figcaption><p></p>
+<p></p><figcaption class="figure-caption margin-caption">Figure&nbsp;B.2: Diagrama de flujo de trabajo usando la librería targets</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -993,7 +1008,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -1021,31 +1053,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>

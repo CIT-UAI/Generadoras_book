@@ -1,0 +1,373 @@
+---
+title: "Metetodología"
+fig-cap-location: "bottom"
+editor_options: 
+  chunk_output_type: console
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+options(kableExtra.latex.load_packages = FALSE)
+suppressPackageStartupMessages(library(sf))
+suppressPackageStartupMessages(library(dplyr))
+suppressPackageStartupMessages(library(knitr))
+suppressPackageStartupMessages(library(kableExtra))
+# suppressPackageStartupMessages(library(mapview))
+
+```
+
+# Materiales y Métodos
+
+## Materiales
+
+### Área de Estudio
+
+```{r}
+comunas <- readRDS("data/rds/R02_COMUNAS.rds")
+
+comunas_tbl <- comunas %>% 
+    mutate(Area = round(as.numeric(st_area(.)))/10000) %>% 
+    st_drop_geometry() %>% 
+    select(Provincia = NOM_PROVIN, Comuna = NOM_COMUNA, Area_hc = Area) %>% 
+    arrange(Provincia)
+```
+
+**Región de Antofagasta**
+
+Considerando que el análisis multicriterio tiene como objetivo identificar áreas adecuadas para construir plantas de generación de energía eléctrica, se eligió la Región de Antofagasta para aplicar el análisis multicriterio con las variables y criterios acordados.
+
+La Región de Antofagasta es una de las 16 regiones en las que se divide Chile y su capital es Antofagasta. Está ubicada al norte del país y limita al norte con la región de Tarapacá, al este con Bolivia, al sur con la región de Atacama y al oeste con el Océano Pacífico. Se caracteriza por su producción de cobre y su contribución a la economía chilena.
+
+Tiene una superficie de 126.049 $km^2$ y una población de 607.534 habitantes en 2017, según el [Instituto Nacional de Estadísticas](http://www.ine.cl/). La región está compuesta por las provincias de Antofagasta, El Loa y Tocopilla. Además, cuenta con el PIB per cápita más alto del país, superando los *USD* 25.000.
+
+Cuenta con una superficie de 126.049 $km^2$ y una población según el [Instituto Nacional de Estadísticas](http://www.ine.cl) (INE) de 607.534 habitantes en 2017. La región está compuesta por las provincias de Antofagasta, El Loa y Tocopilla. La región cuenta con el PIB per cápita más elevado del país, superando los *USD* 25.000.
+
+![Mapa de la Región de Antofagasta](images/densidad_ant.png){fig-align="center" width="1000"}
+
+**Comunas**
+
+La región de Antofagasta se encuentra en el norte de Chile y limita al norte con la región de Tarapacá, al este con Bolivia, al sur con la región de Atacama, y al oeste con el Océano Pacífico. Esta región es conocida por su producción de cobre y su contribución a la economía chilena.
+
+Dentro de la región de Antofagasta, existen 3 provincias y 9 comunas, que se distribuyen de la siguiente manera: la provincia de Antofagasta, con sus comunas homónimas y Mejillones; la provincia de El Loa, con sus comunas de Calama, San Pedro de Atacama y Ollagüe; y la provincia de Tocopilla, con sus comunas de Tocopilla, María Elena y la localidad de Baquedano (@fig-comMap). Cada una de estas provincias y comunas tiene características geográficas, culturales y económicas particulares que las hacen únicas y atractivas para visitar o establecerse en ellas.
+
+![Comunas de la Región de Antofagasta](images/hab_anto.png){#fig-comMap fig-align="center" width="1000"}
+
+```{r}
+#| label: tbl-areaCom
+#| tbl-cap: Comuna de la Región de Antofagasta
+#| 
+comunas_tbl %>% 
+    kbl() %>%
+    # kable_material_dark()
+    kable_styling(
+        latex_options = "striped")
+        # bootstrap_options = "striped",
+                # full_width = F, position = "center",
+                # font_size = 14)
+```
+
+### Variables espaciales base
+
+Un componente esencial en las decisiones multicriterio son precisamente los criterios que se utilizarán para ponderar la decisión por cada alternativa, en el caso de estudio estas corresponden a variables espaciales que se encuentra en formato de puntos o polígonos. Estas variables están relacionadas con diferentes temáticas como el medio ambiental, social, patrimonial y normativa. A continuación se muestran dos ejemplos de información espacial en formato de puntos y polígonos.
+
+
+
+
+::: {#fig-geoms layout-ncol="2"}
+![Comunidades Indigenes Antofagasta](images/c_indigenas.png){#fig-indegenasRaw fig-align="center" width="300"}
+
+![Riesgos unificados en Antofagasta](images/riesgos.png){#fig-riesgosRaw fig-align="center" width="300"}
+
+Información espacial base tipo puntos y polígonos
+:::
+
+### Cálculo de Distancia en Raster
+
+En esta etapa inicial, se procede a generar una grilla regular con una resolución espacial de 30x30 metros, la cual se utilizará para el cálculo de la distancia de cada pixel a los puntos o polígonos más cercanos, según su tipo de geometría espacial. Este proceso es esencial para el análisis de datos geoespaciales.
+
+Para el cálculo de la distancia, se utiliza la distancia euclidiana (@eq-DEuclidiana), la cual se obtiene a través de la ecuación que corresponde a la distancia entre dos puntos en un plano cartesiano. Este cálculo es crucial para determinar la cercanía entre los puntos y los polígonos, lo que a su vez permite la identificación de relaciones espaciales de proximidad de toda el área de estudio.
+
+$$d(P_1, P_2) = \sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$$ {#eq-DEuclidiana}
+
+Es importante destacar que la generación de esta grilla y el cálculo de la distancia son procesos fundamentales en el análisis de datos geoespaciales, y su precisión y exactitud son esenciales para obtener resultados confiables y precisos en el estudio de la distribución espacial de fenómenos y variables geográficas. Como resultado de lo anterior se obtiene un raster de distancia como se observa en la figura @fig-rDist
+
+::: {#fig-rDist layout-ncol="2"}
+![Distancia a comunidades indigenas](images/c_indigenas.png){#fig-rdis-indigenas fig-align="center" width="300"}
+
+![Distancia a Comunidades indígenas](images/indigenas_dist.png){#fig-rdist-riesgos fig-align="center" width="300"}
+
+Proceso de Cálculo de distancia hacia variables espaciales desde cada pixel de la región
+:::
+
+## Reclasificación {#sec-discret}
+
+Los resultados del proceso descrito anteriormente, en el cual se creó un raster regional con valores numéricos continuos, serán reclasificados y transformados en variables discretas del 1 al 5. Se seguirán los criterios acordados en los talleres de participación, análisis bibliográfico y técnico, los cuales se detallan en la matriz de criterios (@tbl-criterios).
+
+```{r echo=FALSE}
+#| label: tbl-criterios
+#| tbl-cap: Ejemplo de Criterios de variables de generación de energía solar fotovoltáica.
+
+tabla_crit <- openxlsx::read.xlsx("data/tablas/SF_criterios.xlsx") %>% 
+     dplyr::select(-starts_with("X"), -Raster,-MIN_GOOD, -N) %>% 
+      kbl() %>%
+ # kable_material_dark()
+  kable_styling(bootstrap_options = "striped", 
+                full_width = F, position = "center",
+                font_size = 13)
+
+tabla_crit
+
+```
+
+<br>
+
+A modo de ejemplo se presenta el proceso de reclasificación de un modelos digital de elevación correspondiente a una variable continua (@fig-rCont), la cual es reclasificada en una variable discreta(@fig-rDisc).
+
+::: {#fig-rClass layout-ncol="2"}
+![Modelo de Digital de Elevación con valores continuos](images/dem_continuo.png){#fig-rCont fig-align="center" width="250"}
+
+![Modelo de Digital de Elevación con valores discretos](images/dem_discreto.png){#fig-rDisc fig-align="center" width="250"}
+
+Proceso de Discretización de variables continuas, de acuerdo a criterios definidos por los actores relevantes en la región de Antofagasta
+:::
+
+```{r echo = FALSE}
+escala <-  read.csv("data/tablas/escalas_Saaty.csv", sep = ";", encoding = "latin-1", header = T)
+```
+
+# Proceso de Análisis Jerárquico (AHP)
+
+El Proceso de Análisis Jerárquico (AHP Analysis es una técnica estructurada para tratar con problemas complejos de decisión. Esta metodología permite la construcción de un problema a partir de objetivos, criterios y alternativas jerarquizados. El AHP fue desarrollado por @Saaty1980 y selecciona alternativas en función de una serie de criterios o variables normalmente jerarquizados. La aplicación del AHP puede ser utilizada para la selección de proyectos, la evaluación de riesgos, la toma de decisiones financieras, entre otros.
+
+El "Proceso de Análisis Jerárquico" es una metodología ampliamente utilizada en el ámbito de la toma de decisiones multicriterios espaciales. Esta metodología ha sido aplicada en una gran variedad de contextos, desde la selección de zonas adecuadas para la construcción de vertederos, hasta la identificación de áreas prioritarias para la conservación de la biodiversidad y a demostrado su eficacia en contextos similares. Como casos de uso de esta metodología en el campo de generación de Energía es el de @orrego_alisis_2021 que realizó un *Análisis espacial multicriterio para la ubicación de parques eólicos y granjas solares en Colombia*; otro caso el de [@guerrerohoyos2020] con su estudio llamado "*Energía eólica y territorio: sistemas de información geográfica y métodos de decisión multicriterio en La Guajira (Colombia)"* .
+
+Como referencia se puede considerar esta imagen de @abdelouhed_gis_2022 que utilizó para selección de sitios idónos parar ubicar un vertedero, donde se observa las dinámicas entre itéms, variables, criterios y resultados:
+
+![AHP de @abdelouhed_gis_2022](images/image-1204431624.png)
+
+<br> Para facilitar el entendimiento el proceso de cálculo del AHP se utiliza como ejemplo los pasos realizados para analizar las plantas de generación de energía Solar Fotovoltáica para región de estudio.
+
+![Planta de generación de energía Solar Fotovoltáica](images/paneles.png){fig-align="center"}
+
+Las variables (@tbl-var) espaciales utilizadas para realizar el procesos de análisis jerárquico corresponden a las siguiente:
+
+```{r}
+#| label: tbl-var
+#| tbl-cap: Tabla de variables utilizadas en AHP para el caso de generación solar fotovoltáica
+
+data.frame(
+  stringsAsFactors = FALSE,
+                Código = LETTERS[1:14],
+                Variables = c("Asentamientos y territorios indigenas","Poblamiento",
+                                             "Radiacion solar",
+                                             "Zonas saturadas y latentes","Areas protegidas",
+                                             "Pendiente","Uso agricola de suelo",
+                                             "Uso forestal del suelo",
+                                             "Uso Bosque mixto o nativo",
+                                             "Sitios arqueologicos y paleontologicos",
+                                             "Bienes nacionales protegidos",
+                                             "Lineas de transmision existente",
+                                             "Infraestructura existente",
+                                             "Zonas de interes turistico")) %>% 
+    kable(row.names = FALSE, 
+          align = "c", caption = NULL, 
+          format = "latex") %>% 
+    kable_styling(
+        bootstrap_options = 
+            c("striped", "hover", "condensed"),
+        position = "center", full_width = FALSE, font_size =13) 
+```
+
+## Matriz de Comparación de Criterios
+
+AHP es un método de comparación por pares que se utiliza en los criterios con respecto al objetivo, el cual es tomar la mejor decisión tomando en consideración diferentes criterios, por cada una de las alternativas, en el caso territorial serían las diferentes áreas
+
+Estas comparaciones por pares se llevan a cabo para todos los factores relevantes dentro de un análisis considerando la siguiente escala. (@tbl-esc)
+
+```{r echo=FALSE}
+#| label: tbl-esc
+#| tbl-cap: Escala fundamental, de acuerdo con Saaty.
+
+escala %>% 
+  kbl() %>%
+ # kable_material_dark()
+  kable_styling(bootstrap_options = "striped", 
+                full_width = F, position = "center",
+                font_size = 15)
+```
+
+De acuerdo con @Saaty1980, para $n$ criterios es posible construir una matriz $A=[a_{ij}]$, con $i,j =1,2,...,n$. El valor de cada $a_{ij}$ corresponde a la importancia relativa del criterio $C_i$ (fila i) sobre el criterio $C_j$ (columna $j$), según la escala fundamental propuesta por Saaty (@tbl-esc). Cuando $i=j$, el valor de $a_{ij}$ será igual a 1 ya que estamos comparando un criterio con el mismo.
+
+$$
+A= \begin{bmatrix}
+1 & a_{1,2} & a_{1,3} & \dots & a_{1,n} \\
+a_{2,1} & 1 & a_{2,3} & \dots & a_{2,n} \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+a_{n,1} & a_{n,2} & a_{n,3} & \dots & 1
+\end{bmatrix}
+$$
+
+<br>
+
+Como producto del análisis de los resultados obtenidos de lo talleres del apartado anterior, se realizó la jerarquización de cada una de las variables con respecto a las demás, construyendo una matriz $A$ de comparación (@tbl-A), esto para las variables de generación de energía eléctrica solar fotovoltaíca.
+
+```{r}
+#| label: tbl-A
+#| tbl-cap: Matriz $A$ para el caso de generación solar fotovoltáica
+
+A <-  read.csv("data/tablas/SF_A.csv", sep = ",", encoding = "latin-1", header =  T)
+rownames(A) <- A$X
+A$X <- NULL
+A %>% 
+    round(1) %>% 
+  kbl() %>%
+ # kable_material_dark()
+  kable_styling(bootstrap_options = "striped", 
+                full_width = F, position = "center",
+                font_size = 15)
+
+```
+
+## Análisis de Consistencia
+
+Para validar la consistencia razonable de los juicios en la matriz de comparación se calcula el índice de consistencia como medio de validación. La matriz $A$ es consistente si $aij.ajk = aik$ para $i,j,k = 1,2,...,n$.
+
+Para validar la consistencia de la matriz de comparación se calcula el índice de consistencia (IC) (@eq-IC). A partir de autovalor máximo $\lambda_{max}$ calculado de la matriz $A$ para luego calcular IC de acuerdo a la siguiente ecuación (@eq-RC):
+
+$$IC = \frac{\lambda_{max}-n}{n-1}$$ {#eq-IC}
+
+```{r}
+IA <- readRDS("data/rds/IA.rds") %>% 
+    mutate(n =as.character(n))
+```
+
+Otro elemento necesario es el índice de consistencia aleatorio (IA), que varía de acuerdo con el tamaño de la matriz A (@tbl-ia), que para el caso de generación eléctrica solar fotovoltáica son 14 variables y siguiendo la tabla @tbl-ia su valor es de `r IA[14,2]`.
+
+```{r echo=FALSE}
+#| label: tbl-ia
+#| tbl-cap: Índice de consistencia aleatorio (IA)
+
+ IA %>% 
+    t() %>% 
+    kable(row.names = FALSE, 
+          align = "c", caption = NULL, 
+          format = "latex") %>% 
+    kable_styling(
+        bootstrap_options = 
+            c("striped", "hover", "condensed"),
+        position = "center", full_width = FALSE, font_size = 14) 
+
+
+```
+
+Finalmente se debe calcular la Razón de Consistencia (RC) a través de la ecuación @eq-RC, donde la matriz de jerarquización de criterios $A$ se considera consistente si $RC < IA$; en caso contrario, se considera inconsistente y se puede aplicar la corrección de consistencia planteada por @saaty2003.
+
+$$RC = \frac{IC}{IA}$$ {#eq-RC}
+
+Para el caso de la Matriz de comparación $A$ del caso de estudio utilizado como referencia se considera consistente de acuerdo a los valores consignados en la tabla @tbl-consistencia.
+
+```{r echo=FALSE}
+#| label: tbl-consistencia
+#| tbl-cap: Resultados del Análisis de Consistencia
+
+tabla_ic <- openxlsx::read.xlsx("data/tablas/A_consistencia.xlsx") %>% 
+     dplyr::select(-starts_with("X")) %>% 
+      kbl() %>%
+ # kable_material_dark()
+  kable_styling(bootstrap_options = "striped", 
+                full_width = F, position = "center",
+                font_size = 15)
+
+tabla_ic
+
+```
+
+## Cálculo de Ponderadores $w$ {#sec-calw}
+
+Posteriormente de validar la matriz de comparación por pares a través del análisis de consistencia, se procede a calcular el vector de prioridades. Este vector indica la influencia de un criterio sobre el objetivo global, en estos casos la ubicación óptima de una planta de generación de energía eléctrica. Existen múltiples formas de calcular este vector, una de ellas es usando el método del vector propio principal $w$ tal que:
+
+$$A \times W = \lambda_{max} \times w$$
+
+Donde $\lambda_{max}$ es el máximo valor propio de la matriz $A$
+
+Para calcular los vectores propios en el AHP, se normaliza la matriz de comparación pairwise y luego se encuentra su valor propio dominante y el correspondiente vector propio. El valor propio dominante representa el grado en que las alternativas se han priorizado y el vector propio representa los pesos asignados a cada alternativa en términos de su prioridad.
+
+Luego, se calcula el valor propio dominante y el correspondiente vector propio usando técnicas matemáticas, como el método de potencias. El valor propio dominante ($\lambda_{max}$) se interpreta como el grado en que las alternativas se han priorizado, y el vector propio ($w$) se interpreta como los pesos asignados a cada alternativa en términos de su prioridad.
+
+Como resultado del proceso anterior se un vector $w$ (@tbl-w) que representa el grado de priorización de cada una de las variables como representa a continuación:
+
+```{r}
+#| label: tbl-w
+#| tbl-cap: Valores w (ponderador) para cada variable
+
+
+tabla_w <- openxlsx::read.xlsx("data/tablas/SF_Tab_w.xlsx") %>% 
+     dplyr::select(-starts_with("X")) %>% 
+      kbl() %>%
+ # kable_material_dark()
+  kable_styling(bootstrap_options = "striped", 
+                full_width = F, position = "center",
+                font_size = 15)
+
+tabla_w
+```
+
+Con los resultados de $w$ correspondiente a los ponderadores (@tbl-w), se puede comenzar el cálculo espacial por cada variable presente interviniente en el proceso de decisión, para determinar la idoneidad de construcción de una planta de generación eléctrica solar fotovoltaíca (ejemplo).
+
+# Procesos Espacial
+
+La etapa de evaluación final, corresponde al proceso de ponderación de las variables discretizadas por los criterios por cada valor de peso de ponderación $w$ resultante del Proceso de Análisis Jerárquico, posteriormente estos resultados se reducen a través de una suma obteniendo una representación espacial continua tipo raster, que presenta numéricamente la idoneidad para la construcción de alguna planta de generación de energía eléctrica. Posteriormente se procede a realizar filtros espaciales por restricción de acuerdo zonas declaradas inaceptables para la construcción. A continuación se explicarán cada uno de estos paso de forma detallada
+
+## Superposición Ponderada de Criterios por $w$ (APH)
+
+El proceso de superposición ponderada corresponde a la multiplicación espacial de de cada variable discretizada resultante de la reclasificación por criterio (@sec-discret) por cada ponderación $w$ resultante del proceso de análisis jerárquico (@sec-calw) de forma independiente.
+
+![Superposición ponderada](images/image-793702940.png){fig-align="center" width="300"}
+
+Luego todos estos resultados espaciales (rasters) se suman generando los resultados de idoneidad numéricamente para la generación de energía eléctrica.
+
+![](images/image-1079418637.png){fig-align="center" width="300"}
+
+## Restricciones
+
+Los resultados de superposición ponderada de variables por ponderaciones, de le debe aplicar dos tipos de restricciones. La primera corresponde a todos los territorios que fueron definidos como criterio de inaceptable (rango 1) en las diversas mesas de participación. La segunda restricción corresponde a territorios específicos que por sus condiciones y características normativas e instalaciones previas, se es posible construir alguna plata de generación de energía, algunos de los territorios que se requieren no considerar como zona idónea son las coberturas espaciales consignadas en la @tbl-restricciones a las que según sea el caso se le aplicó una ampliación de sus superficie por cierta cantidad metros denominado buffer.
+
+```{r echo=FALSE}
+#| label: tbl-restricciones
+#| tbl-cap: Restricciones Territoriales para la generación eléctrica fotovoltáica
+
+tabla_rest <- openxlsx::read.xlsx("data/tablas/SF_resticciones.xlsx") %>% 
+     dplyr::select(-starts_with("X")) %>% 
+      kbl() %>%
+ # kable_material_dark()
+  kable_styling(bootstrap_options = "striped", 
+                full_width = F, position = "center",
+                font_size = 15)
+
+tabla_rest
+
+```
+
+Para entender las restricciones territoriales antes descritas se puede entender como una resta directa de capas como se observa a continuación.
+
+![](images/image-1193631342.png)
+
+## Caterización de los resultados
+
+Los resultados de superposición ponderada de variables por ponderaciones ya filtrados por las coberturas de restricción, correspondientes a las zonas idóneas ordenadas numéricamente (valores continuos) se le aplica una clasificación (valores discretos) en tres niveles para facilitar su interpretación espacial en el territorio. Estos tres niveles se definieron con las categorías de "Potencial Bajo", "Potencial Medio", "Potencial Alto" , para la clasificación de los valores fue realizada dividiendo la distribución en tres rangos igiuales (@fig-q4).
+
+![Categorización de resultados](images/intervalos.png){#fig-q4 fig-align="center" width="200"} <!-- Espacialmente los resultado se presentan de la siguiente forma -->
+
+<!-- ![Actualizar esta imagen](images/image-741593790.png){fig-align="center" width="500"} -->
+
+## Resultados
+
+Los resultados del análisis jerárquico se usaron para crear una plataforma ([link](https://experience.arcgis.com/experience/eac65fab88a54c228eaf0b093781e9fd/page/Energ%C3%ADa-Eólica/ "DASHBOARD CRITERIOS DE LOCALIZACIÓN DE PROYECTOS DE GENERACIÓN ELÉCTRICA")) que permite visualizar las relaciones espaciales de todas las variables de decisión. Esta herramienta muestra la distribución espacial de los resultados del proceso en tres niveles: "Potencial Bajo", "Potencial Medio" y "Potencial Alto". La plataforma es muy útil para la toma de decisiones, ya que permite identificar las áreas con mayor potencial para la construcción de plantas de energía eléctrica en la Región de Antofagasta.
+
+![Actualizar esta imagen](images/dashboard.png){fig-align="center" width="800"}
+
+## Referencias Bibliográficas {.unnumbered}
+
+::: {#refs}
+:::

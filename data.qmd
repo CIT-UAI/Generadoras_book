@@ -1,37 +1,97 @@
 ---
 fig-cap-location: "bottom"
+editor_options: 
+  chunk_output_type: console
 ---
 
-# Data Geoespacial
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
 
-## Definción de Variables Temáticas
+suppressPackageStartupMessages(library(dplyr))
+suppressPackageStartupMessages(library(knitr))
+suppressPackageStartupMessages(library(kableExtra))
 
-### Ambiental
+```
 
-### Social
 
-![](images/c_indigenas.png){fig-align="center" width="400"}
+# Materiales 
+
+## Variables espaciales base
+
+Las variables que se utilizan en la matriz de comparación de la etapa siguiente de Proceso de Análisis Jerárquico,  se definen como información con representación territorial y que se encuentran en formato tipo de  puntos o polígonos. Estos hacen relación a diferentes temáticas como Ambiental, Social, Patrimonio, Normativo. A continuación se muestran dos ejemplos de información espacial en puntos y polígonos.
+
+
+
+::: {#fig-geoms layout-ncol=2}
+
+![Comunidades Indigenes Antofagasta](images/c_indigenas.png){fig-align="center" width="500" #fig-indegenasRaw}
+
+![Riesgos unificados en Antofagasta](images/riesgos.png){fig-align="center" width="500" #fig-riesgosRaw}
+
+Información espacial base tipo puntos y polígonos
+:::
+
+
+
 
 <!-- [descipción](https://www.arcgis.com/apps/dashboards/3d7ed6d578d545fc8d57da5b1751fdd6) --> <!-- [webmap](https://www.arcgis.com/apps/mapviewer/index.html?webmap=bfbde9b4133a414dac113bfb761f6c2f) -->
 
 <!-- [patrimonio](https://www.arcgis.com/apps/dashboards/3d7ed6d578d545fc8d57da5b1751fdd6) -->
 
-### Infraestructura
 
-### Normativo
-
-![](images/riesgos.png){fig-align="center" width="400"}
 
 ## Cálculo de Distancia en Raster
 
-En esta etapa se buscar tomar un raster regional vacío estandar para efectos del piloto se tomó como base el raster del DEM que tiene una resolución espacial de 30x30 metros. Posteriormente, considerando las variables espaciales definidas anteriormente y por cada una de ellas se calcula la distancia eclediana desde la geometría a cada uno de los pixeles del raster base.
+En esta etapa se procede a generar una grilla regular de una resolucuón espacial de 30x30 metros, y por cada tipo de geotría espacial se calcula la distancia de pada pixel a punto o polígono más cercanos.
+
+
+El tipo de calculo para determinar la distancia es la eclidiana coorrespondiente a la ecuación @eq-DEuclidiana:
+
+$$d(P_1, P_2) = \sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$${#eq-DEuclidiana}
+
+
+
+Como resultado de lo anterior se obtiene un raster de distancia como se observa en la figura @fig-rDist
+
 
 ::: {#fig-rDist layout-ncol="2"}
-![Distancia a comunidades indigenas](images/c_indigenas_r.png){#fig-rdis-indigenas fig-align="center" width="400"}
+![Distancia a comunidades indigenas](images/c_indigenas.png){#fig-rdis-indigenas fig-align="center" width="400"}
 
-![Distancia a riesgos generales](images/riesgos_r.png){#fig-rdist-riesgos fig-align="center" width="400"}
+![Distancia a Comunidades indígenas](images/indigenas_dist.png){#fig-rdist-riesgos fig-align="center" width="400"}
 
-Proceso de Cálculo de distancia hacia variables espaciales desde cada pixel de la laregión
+Proceso de Cálculo de distancia hacia variables espaciales desde cada pixel de la región
 :::
 
-## Reclasificación
+## Reclasificación {#sec-discret}
+
+Los resultados del proceso de cálculo de distancia representados por un raster regional cuyos valores corresponde a calculos numéricos continuos, estos se proceden a reclasificar a variables discretas de 1 a 5 de acuerdo a matriz de criterios (@tbl-criterios) acordados en los talleres de participación, análisis bibliográfico y técnico.
+
+
+```{r echo=FALSE}
+#| label: tbl-criterios
+#| tbl-cap: Ejemplo de Criterios de variables de generación de energía solar fotovoltáica.
+
+tabla_crit <- openxlsx::read.xlsx("data/tablas/SF_criterios.xlsx") %>% 
+     dplyr::select(-starts_with("X"), -Raster,-MIN_GOOD, -N) %>% 
+      kbl() %>%
+ # kable_material_dark()
+  kable_styling(bootstrap_options = "striped", 
+                full_width = F, position = "center",
+                font_size = 13)
+
+tabla_crit
+
+```
+
+
+<br>
+
+A modo de ejemplo se presenta el proceso de reclasificación de un modelos digital de elevación correspondiente a una variable continua (@fig-rCont), la cual es reclasificada en una variable discreta (@fig-rDisc).
+
+::: {#fig-rClass layout-ncol="2"}
+![Modelo de Digital de Elevación con valores continuos](images/dem_continuo.png){#fig-rCont fig-align="center" width="400"}
+
+![Modelo de Digital de Elevación con valores discretos](images/dem_discreto.png){#fig-rDisc fig-align="center" width="400"}
+
+Proceso de Discretización de variables continuas, de acuerdo a criterios definidos por los actores relevantes en la región de Antofagasta
+:::

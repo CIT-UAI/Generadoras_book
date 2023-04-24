@@ -29,20 +29,21 @@ comunas_tbl <- comunas %>%
 
 ## Región de Antofagasta
 
-Considerando que el análisis multicriterio tiene como objetivo es identificar zonas idóneas para la construcción de plantas de generación energía eléctrica, donde el espacio de territorial de búsqueda corresponde a la Región de Antofagasta.
+Considerando que el análisis multicriterio tiene como objetivo es identificar zonas idóneas para la construcción de plantas de generación energía eléctrica, como piloto se elige la Región de Antofagasta donde se aplicará el análisis multicriterio con las variables y criterios consensuados.
+
 
 La Región de Antofagasta es una de la 16 regiones en que se divide Chile. Su capital es la homónima Antofagasta. Ubicada en el extremo norte del país (norte grande), limita al norte con la Región de Tarapacá, al este con el departamento de Potosí en Bolivia y con las provincias de Jujuy, Salta y Catamarca pertenecientes a Argentina, al sur con la Región de Atacama y al oeste con el océano Pacífico.
 
 Cuenta con una superficie de 126.049 $km^2$ y una población según el [Instituto Nacional de Estadísticas](http://www.ine.cl) (INE) de 607.534 habitantes en 2017. La región está compuesta por las provincias de Antofagasta, El Loa y Tocopilla. La región cuenta con el PIB per cápita más elevado del país, superando los *USD* 25.000.
 
-![Mapa de la Región de Antofagasta](images/roi.png){fig-align="center" width="400"}
+![Mapa de la Región de Antofagasta](images/densidad_ant.png){fig-align="center" width="1000"}
 
 ## Comunas
 
 La región de Antofagasta tiene 3 provincias y 9 comunas, como se observa a continuación:
 
 
-![Comunas de la Región de Antofagasta](images/comunas_wiki.png){#fig-comMap fig-align="center" width="500"}
+![Comunas de la Región de Antofagasta](images/hab_anto.png){#fig-comMap fig-align="center" width="1000"}
 
 
 ```{r}
@@ -59,12 +60,3 @@ comunas_tbl %>%
 
 
 
-## Espacio grillado
-
-Para el proceso de análisis multicriterio espacial se debe contar con una espacio geométrico base para todas variables que permita evaluar a decidir la zona idónea de lo que se evalúa de acuerdo a los objetivos, para el caso del proyecto la instalación de una planta de generación de energía eléctrica ya sea eólica o fotovoltaica.
-
-
-Por lo anterior, considerando la extensión espacial de la Región de Antofagasta, se creó una geometría regular tipo grilla de 1000x1000 metros (@fig-grilla), que permite identificar las zonas de forma diferenciable y que permita realizar las operaciones computacionales complejas de forma eficiente.
-
-
-![Espacio grillado regular de 1000x1000 metros](images/grid.png){#fig-grilla fig-align="center"}

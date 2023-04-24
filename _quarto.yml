@@ -33,7 +33,8 @@ book:
   appendices:
     - ahp_def.qmd
     - ahp_general.qmd
-    - fuzzy_logic.qmd 
+    - fuzzy_logic.qmd
+    - informe_final.qmd
 
 bibliography: references.bib
 
