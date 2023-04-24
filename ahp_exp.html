@@ -172,7 +172,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./data.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Data Geoespacial</span></a>
+  <a href="./data.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Materiales</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -223,6 +223,11 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./fuzzy_logic.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">FAHP Fuzzy Logic</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./informe_final.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Metetodología</span></a>
   </div>
 </li>
       </ul>
@@ -363,7 +368,7 @@ div.csl-indent {
 <section id="matriz-de-comparación-de-criterios" class="level2" data-number="7.2">
 <h2 data-number="7.2" class="anchored" data-anchor-id="matriz-de-comparación-de-criterios"><span class="header-section-number">7.2</span> Matriz de Comparación de Criterios</h2>
 <p>AHP es un método de comparación por pares que se utiliza en los criterios con respecto al objetivo, el cual es tomar la mejor decisión tomando en consideración diferentes criterios, por cada una de las alternativas, en el caso territorial serían las diferentes áreas</p>
-<p>Estas comparaciones por pares se llevan a cabo para todos los factores relevantes dentro de un análisis considerando la siguiente escala. (<a href="#tbl-esc">Table&nbsp;<span>7.2</span></a>)</p>
+<p>Estas comparaciones por pares se llevan a cabo para todos los factores relevantes dentro de un análisis considerando la siguiente escala. (<a href="informe_final.html#tbl-esc">Table&nbsp;<span>F.1</span></a>)</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="tbl-esc" class="anchored">
@@ -413,7 +418,7 @@ div.csl-indent {
 </div>
 </div>
 </div>
-<p>De acuerdo con <span class="citation" data-cites="Saaty1980">T. L. Saaty (<a href="references.html#ref-Saaty1980" role="doc-biblioref">1980</a>)</span>, para <span class="math inline">n</span> criterios es posible construir una matriz <span class="math inline">A=[a_{ij}]</span>, con <span class="math inline">i,j =1,2,...,n</span>. El valor de cada <span class="math inline">a_{ij}</span> corresponde a la importancia relativa del criterio <span class="math inline">C_i</span> (fila i) sobre el criterio <span class="math inline">C_j</span> (columna <span class="math inline">j</span>), según la escala fundamental propuesta por Saaty (<a href="#tbl-esc">Table&nbsp;<span>7.2</span></a>). Cuando <span class="math inline">i=j</span>, el valor de <span class="math inline">a_{ij}</span> será igual a 1 ya que estamos comparando un criterio con el mismo.</p>
+<p>De acuerdo con <span class="citation" data-cites="Saaty1980">T. L. Saaty (<a href="references.html#ref-Saaty1980" role="doc-biblioref">1980</a>)</span>, para <span class="math inline">n</span> criterios es posible construir una matriz <span class="math inline">A=[a_{ij}]</span>, con <span class="math inline">i,j =1,2,...,n</span>. El valor de cada <span class="math inline">a_{ij}</span> corresponde a la importancia relativa del criterio <span class="math inline">C_i</span> (fila i) sobre el criterio <span class="math inline">C_j</span> (columna <span class="math inline">j</span>), según la escala fundamental propuesta por Saaty (<a href="informe_final.html#tbl-esc">Table&nbsp;<span>F.1</span></a>). Cuando <span class="math inline">i=j</span>, el valor de <span class="math inline">a_{ij}</span> será igual a 1 ya que estamos comparando un criterio con el mismo.</p>
 <p><span class="math display">
 A= \begin{bmatrix}
 1 &amp; a_{1,2} &amp; a_{1,3} &amp; \dots &amp; a_{1,n} \\
@@ -423,7 +428,7 @@ a_{n,1} &amp; a_{n,2} &amp; a_{n,3} &amp; \dots &amp; 1
 \end{bmatrix}
 </span></p>
 <p><br></p>
-<p>Como producto del análisis de los resultados obtenidos de lo talleres del apartado anterior, se realizó la jerarquización de cada una de las variables con respecto a las demás, construyendo una matriz <span class="math inline">A</span> de comparación (<a href="#tbl-A">Table&nbsp;<span>7.3</span></a>), esto para las variables de generación de energía eléctrica solar fotovoltaíca.</p>
+<p>Como producto del análisis de los resultados obtenidos de lo talleres del apartado anterior, se realizó la jerarquización de cada una de las variables con respecto a las demás, construyendo una matriz <span class="math inline">A</span> de comparación (<a href="informe_final.html#tbl-A">Table&nbsp;<span>F.2</span></a>), esto para las variables de generación de energía eléctrica solar fotovoltaíca.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="tbl-A" class="anchored">
@@ -697,7 +702,7 @@ a_{n,1} &amp; a_{n,2} &amp; a_{n,3} &amp; \dots &amp; 1
 <section id="análisis-de-consistencia" class="level2" data-number="7.3">
 <h2 data-number="7.3" class="anchored" data-anchor-id="análisis-de-consistencia"><span class="header-section-number">7.3</span> Análisis de Consistencia</h2>
 <p>Para validar la consistencia razonable de los juicios en la matriz de comparación se calcula el índice de consistencia como medio de validación. La matriz <span class="math inline">A</span> es consistente si <span class="math inline">aij.ajk = aik</span> para <span class="math inline">i,j,k = 1,2,...,n</span> (<a href="ahp_def.html#sec-robustez"><span>Section&nbsp;A.3</span></a>).</p>
-<p>Para validar la consistencia de la matriz de comparación se calcula el índice de consistencia (IC) (<a href="ahp_general.html#eq-IC">Equation&nbsp;<span>B.1</span></a>). A partir de autovalor máximo <span class="math inline">\lambda_{max}</span> calculado de la matriz <span class="math inline">A</span> para luego calcular IC de acuerdo a la siguiente ecuación (<a href="ahp_general.html#eq-RC">Equation&nbsp;<span>B.2</span></a>):</p>
+<p>Para validar la consistencia de la matriz de comparación se calcula el índice de consistencia (IC) (<a href="informe_final.html#eq-IC">Equation&nbsp;<span>F.1</span></a>). A partir de autovalor máximo <span class="math inline">\lambda_{max}</span> calculado de la matriz <span class="math inline">A</span> para luego calcular IC de acuerdo a la siguiente ecuación (<a href="informe_final.html#eq-RC">Equation&nbsp;<span>F.2</span></a>):</p>
 <p><span id="eq-IC"><span class="math display">IC = \frac{\lambda_{max}-n}{n-1} \tag{7.1}</span></span></p>
 <div class="cell">
 
@@ -749,9 +754,9 @@ a_{n,1} &amp; a_{n,2} &amp; a_{n,3} &amp; \dots &amp; 1
 </div>
 </div>
 </div>
-<p>Finalmente se debe calcular la Razón de Consistencia (RC) a través de la ecuación <a href="ahp_general.html#eq-RC">Equation&nbsp;<span>B.2</span></a>, donde la matriz de jeraquizació de criterios <span class="math inline">A</span> se considera consistente si <span class="math inline">RC &lt; IA</span>; en caso contrario, se considera inconsistente y se puede aplicar la corrección de consistencia planteada por <span class="citation" data-cites="saaty2003">Thomas L. Saaty (<a href="references.html#ref-saaty2003" role="doc-biblioref">2003</a>)</span>.</p>
+<p>Finalmente se debe calcular la Razón de Consistencia (RC) a través de la ecuación <a href="informe_final.html#eq-RC">Equation&nbsp;<span>F.2</span></a>, donde la matriz de jeraquizació de criterios <span class="math inline">A</span> se considera consistente si <span class="math inline">RC &lt; IA</span>; en caso contrario, se considera inconsistente y se puede aplicar la corrección de consistencia planteada por <span class="citation" data-cites="saaty2003">Thomas L. Saaty (<a href="references.html#ref-saaty2003" role="doc-biblioref">2003</a>)</span>.</p>
 <p><span id="eq-RC"><span class="math display">RC = \frac{IC}{IA} \tag{7.2}</span></span></p>
-<p>Para el caso de la Matriz de comparación <span class="math inline">A</span> del caso de estudio utilizado como referencia se considera consistente de acuerdo a los valores consignados en la tabla <a href="#tbl-consistencia">Table&nbsp;<span>7.5</span></a>.</p>
+<p>Para el caso de la Matriz de comparación <span class="math inline">A</span> del caso de estudio utilizado como referencia se considera consistente de acuerdo a los valores consignados en la tabla <a href="informe_final.html#tbl-consistencia">Table&nbsp;<span>F.3</span></a>.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="tbl-consistencia" class="anchored">
@@ -794,7 +799,7 @@ a_{n,1} &amp; a_{n,2} &amp; a_{n,3} &amp; \dots &amp; 1
 <p>Donde <span class="math inline">\lambda_{max}</span> es el máximo valor propio de la matriz <span class="math inline">A</span></p>
 <p>Para calcular los vectores propios en el AHP, se normaliza la matriz de comparación pairwise y luego se encuentra su valor propio dominante y el correspondiente vector propio. El valor propio dominante representa el grado en que las alternativas se han priorizado y el vector propio representa los pesos asignados a cada alternativa en términos de su prioridad.</p>
 <p>Luego, se calcula el valor propio dominante y el correspondiente vector propio usando técnicas matemáticas, como el método de potencias. El valor propio dominante (<span class="math inline">\lambda_{max}</span>) se interpreta como el grado en que las alternativas se han priorizado, y el vector propio (<span class="math inline">w</span>) se interpreta como los pesos asignados a cada alternativa en términos de su prioridad.</p>
-<p>Como resultado del proceso anterior se un vector <span class="math inline">w</span> (<a href="#tbl-w">Table&nbsp;<span>7.6</span></a>) que reperesenta el grado de prirización de cada una de las variables como respresetna a continuación:</p>
+<p>Como resultado del proceso anterior se un vector <span class="math inline">w</span> (<a href="informe_final.html#tbl-w">Table&nbsp;<span>F.4</span></a>) que reperesenta el grado de prirización de cada una de las variables como respresetna a continuación:</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="tbl-w" class="anchored">
@@ -884,7 +889,7 @@ a_{n,1} &amp; a_{n,2} &amp; a_{n,3} &amp; \dots &amp; 1
 </div>
 </div>
 </div>
-<p>Con los resultados de <span class="math inline">w</span> correndiente a los ponderadores (<a href="#tbl-w">Table&nbsp;<span>7.6</span></a>), se puede comenzar el cálculo espacial por cada variable presente interviniente en el proceso de decisión, para determinar la idonedad de construcción deuna planta de generación eléctrica solar fotovoltaíca (ejemplo).</p>
+<p>Con los resultados de <span class="math inline">w</span> correndiente a los ponderadores (<a href="informe_final.html#tbl-w">Table&nbsp;<span>F.4</span></a>), se puede comenzar el cálculo espacial por cada variable presente interviniente en el proceso de decisión, para determinar la idonedad de construcción deuna planta de generación eléctrica solar fotovoltaíca (ejemplo).</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
@@ -1037,7 +1042,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./data.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Data Geoespacial</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Materiales</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
